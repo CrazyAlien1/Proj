@@ -20,6 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('users/{user}', 'UserControllerApi@show');
 Route::get('users', 'UserControllerApi@allUsers');
+
+
 Route::get('games', 'GameControllerApi@allGames');
 Route::post('games', 'GameControllerApi@store');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
+
+
+Route::get('images', 'ImageControllerApi@allImages');

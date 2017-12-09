@@ -1,6 +1,10 @@
 <template>
     <div class="row">
-            <h3 class="text-center">{{ title }}</h3>
+            <h3 class="text-center">
+                <span v-if="isConnected" class="text-success">Online</span>
+                <span v-if="!isConnected" class="text-danger">Offline</span>
+                {{ title }}
+            </h3>
 
             <div class="row">
                 <button class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
@@ -9,6 +13,16 @@
             </div>
 
 
+            <div class="row">
+                <select v-model="selectedGameType">
+                    <option v-for="(type, key) in gameType" :key="key" selected="type">{{type}}</option>
+                </select>
+                <input v-model="rows">
+                <input v-model="cols">
+                <input v-model="gameName" placeholder="3 Musketeers">
+                <p><button class="btn btn-xs btn-success" v-on:click.prevent="createGame">Create a New Game</button></p>
+                <hr>
+            </div>
             <div class="row" >
                 <div class="col-12 col-md-3" v-show="showChat">
                     Put this on the left side floating and able to collapse
@@ -17,14 +31,6 @@
 
                 <div v-bind:class="lobbySize" v-show="showLobby">
                     <h3 class="text-center">Lobby</h3>
-                    <select v-model="selectedGameType">
-                        <option v-for="type in gameType">{{type}}</option>
-                    </select>
-                    <input v-model="rows">
-                    <input v-model="cols">
-                    <input v-model="gameName" placeholder="3 Musketeers">
-                    <p><button class="btn btn-xs btn-success" v-on:click.prevent="createGame">Create a New Game</button></p>
-                    <hr>
 
                     <h4>Pending games (<a @click.prevent="loadLobby">Refresh</a>)</h4>
 
@@ -34,7 +40,7 @@
             <div class="row">
                 <h1>GAMES!</h1>
                 <template v-for="game in myGames">
-                    <game :game="game" @play_piece="play"></game>
+                    <game :game="game" :images="images" :playerCurrGames="myGames.length" @play_piece="play"></game>
                 </template>
             </div>
 
@@ -45,6 +51,7 @@
     import WebChat from './web-chat.vue';
     import Lobby from './lobby-games.vue';
     import GameMemory from './game-memory.vue';
+    import createOfflineGame from '../model/singlePlayerGame';
 
     export default {
         data: function(){
@@ -66,6 +73,7 @@
                 cols : 2,
                 gameName : '',
                 isConnected : false,
+                images: [],
             }
         },
         sockets:{
@@ -75,6 +83,7 @@
             },
             success_join_server(){
                 //The Node server now has his name on it's list
+                console.log("Server took me back!");
                 this.isConnected = true;
             },
             request_authenticate(){
@@ -150,13 +159,19 @@
                         userId : this.user.id,
                         type : this.selectedGameType
                     }).then(response=> {
-                        console.log('Game Created!\n Sending Node the news!');
-                        console.log(response.data.gameID);
-                        this.$socket.emit('create_game', {  gameID: response.data.gameID,
-                                                            playerName: this.user.nickname,
-                                                            gameName: this.gameName,
-                                                            rows : this.rows,
-                                                            cols : this.cols });
+                        if(this.isConnected && this.selectedGameType === gameType[1]){
+                            console.log('Game Created!\n Sending Node the news!');
+                            this.$socket.emit('create_game', {  gameID: response.data.gameID,
+                                playerName: this.user.nickname,
+                                gameName: this.gameName,
+                                rows : this.rows,
+                                cols : this.cols });
+                        }else{
+                            //SinglePlayer!
+                            let newGame = createOfflineGame(response.data.gameID, this.gameName, this.rows, this.cols, this.images );
+
+                            this.myGames.push(newGame);
+                        }
                     }).catch(error=>{
                         console.log(error.response);
                         alert('[WARNING] '+ error.response.data.errors.type);
@@ -192,10 +207,7 @@
         },
         computed: {
             title() {
-                var connectedSpan = `<span class="alert alert-success"> Multiplayer</span>`;
-                var disconnectedSpan = '<span class="alert alert-warning"> Offline</span>';;
-                var status = (this.isConnected) ? connectedSpan : disconnectedSpan;
-                return status + ' Memory Game Welcome '+ (this.user !== undefined ? this.user.nickname : '');
+                return ' Memory Game ' + (this.user !== undefined ? this.user.nickname : '');
             },
         },
         components: {
@@ -205,14 +217,20 @@
         },
 
         mounted() {
-            var userID = prompt("Please enter your name", "Harry Potter");
-            axios.get('api/users/'+ userID)
-                .then(response => {
-                    this.user = response.data.data;
+            var userID = prompt("Enter user ID to fake login", "1");
+            axios.all([axios.get('api/users/'+ userID) , axios.get('api/images')])
+                .then(axios.spread((respUsers, respImg) => {
+                    //USERS
+                    this.user = respUsers.data.data;
                     this.loadLobby();
                     //Agora que ja tem o username ja pode enviar ao node o pedido de authenticate_server
                     this.joinServer();
-                });
+
+                    //IMAGES http://localhost:8000/storage/images/0.png
+                    this.images = respImg.data.data;
+
+                }));
+
         }
 
     }

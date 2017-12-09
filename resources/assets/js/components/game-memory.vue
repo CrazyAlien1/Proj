@@ -8,9 +8,9 @@
             <div class="alert" :class="alerttype">
                 <strong v-if="game.gameEnded">{{ message }} &nbsp;&nbsp;&nbsp;&nbsp;<a v-on:click.prevent="closeGame">Close Game</a></strong>
             </div>
-            <div class="board">
-                <div v-for="(piece, key) of game.board">
-                    <img v-bind:src="pieceImageURL(piece)" v-on:click="clickPiece(key)">
+            <div :class="boardClass">
+                <div v-for="(pieceID, key) of game.board">
+                    <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
                 </div>
             </div>
             <hr>
@@ -20,19 +20,11 @@
 
 <script type="text/javascript">
     export default {
-        props: ['game'],
+        props: ['game', 'playerCurrGames', 'images'],
         data: function(){
             return {
                 alerttype : "",
-            }
-        },
-        computed: {
-            message: function(){
-                // return Message to show
-                return "Winner Winner Chicken Dinner !" + ((this.game.winner == 1) ? this.game.player1.name : this.game.player2.name);
-            },
-            title: function(){
-                return this.game.player1.name + ((this.game.player2 != null) ? " vs " +this.game.player2.name : "");
+
             }
         },
         methods: {
@@ -44,11 +36,33 @@
                     {gameID: this.game.gameID,
                         piecePos: index});
             },
-            pieceImageURL: function (piece) {
-                var imgSrc = String(piece);
-                return 'img/' + imgSrc + '.png';
+            pieceImageURL: function (pieceID) {
+                //http://localhost:8000/storage/images/0.png
+                let image = this.images.find(ele=> ele.id === pieceID);
+                return './storage/images/'+ image.path;
             },
-        }
+        },
+        computed: {
+            message: function(){
+
+                if(this.$parent.user === undefined)
+                    return '';
+                return "Winner Winner Chicken Dinner !" + this.game.winner.nickname;
+            },
+            title: function(){
+                if(this.$parent.user === undefined)
+                    return ''
+                console.log(this.game);
+                return this.game.name;
+            },
+            boardClass: function(){
+                if(this.playerCurrGames === 2){
+                    return "board-400";
+                }else{
+                    return "board-400";
+                }
+            }
+        },
     }
 </script>
 
