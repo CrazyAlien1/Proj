@@ -26,16 +26,16 @@
 
 </head>
 <body>
-@yield('nav-bar')
+    @yield('nav-bar')
 
-<div class="container" id="app">
-    @yield('content')
-</div>
-@yield('footer')
+    <div class="container" id="app">
+        @yield('content')
+    </div>
+    @yield('footer')
 
-@yield('popups')
+    @yield('popups')
 
-@yield('pagescript')
+    @yield('pagescript')
 
 </body>
 </html>
