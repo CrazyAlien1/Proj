@@ -3,7 +3,7 @@
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
-                {{ title }}
+                Mrs Derp: {{ title }}
             </h3>
 
             <div class="row">
