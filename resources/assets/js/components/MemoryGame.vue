@@ -51,7 +51,6 @@
     import WebChat from './web-chat.vue';
     import Lobby from './lobby-games.vue';
     import GameMemory from './game-memory.vue';
-    import createOfflineGame from '../model/singlePlayerGame';
 
     export default {
         data: function(){
@@ -74,6 +73,7 @@
                 gameName : '',
                 isConnected : false,
                 images: [],
+                userId : undefined,
             }
         },
         sockets:{
@@ -81,10 +81,11 @@
                 console.log('socket connected');
                 this.socketId = this.$socket.id;
             },
-            success_join_server(){
+            success_join_server(userData){
                 //The Node server now has his name on it's list
                 console.log("Server took me back!");
                 this.isConnected = true;
+                this.user = userData;
             },
             request_authenticate(){
                   this.joinServer();
@@ -126,6 +127,9 @@
                     //this.activeGames[gameId] = resp;
                 }
             },
+            login_failed(error){
+              console.log(error);
+            },
             create_game_error(error){
                 this.nodeError(error);
             }
@@ -133,9 +137,7 @@
         methods: {
             joinServer(){
                 console.log("Joining Server...");
-                if(this.user !== undefined){
-                    this.$socket.emit('authenticate_server', {userName: this.user.nickname});
-                }
+                this.$socket.emit('authenticate_server', {userID: this.userID});
             },
             loadLobby(){
                 /// send message to server to load the list of games on the lobby
@@ -153,29 +155,15 @@
             createGame(){
                 // For this to work, server must handle (on event) the "create_game" message
                 if(this.user !== undefined){
-                    //Pedir ao Laravel para criar
-                    axios.post('/api/games',{
-                        //falta o csrf token!
-                        userId : this.user.id,
-                        type : this.selectedGameType
-                    }).then(response=> {
-                        if(this.isConnected && this.selectedGameType === gameType[1]){
-                            console.log('Game Created!\n Sending Node the news!');
-                            this.$socket.emit('create_game', {  gameID: response.data.gameID,
-                                playerName: this.user.nickname,
-                                gameName: this.gameName,
-                                rows : this.rows,
-                                cols : this.cols });
-                        }else{
-                            //SinglePlayer!
-                            let newGame = createOfflineGame(response.data.gameID, this.gameName, this.rows, this.cols, this.images );
-
-                            this.myGames.push(newGame);
-                        }
-                    }).catch(error=>{
-                        console.log(error.response);
-                        alert('[WARNING] '+ error.response.data.errors.type);
-                    });
+                    //Pedir ao Node para criar o Jogo
+                    console.log('Asking Node to ask Laravel if everything is OK');
+                    this.$socket.emit('create_game', {
+                                                        userID : this.userID,
+                                                        gameName: this.gameName,
+                                                        gameType: this.selectedGameType,
+                                                        rows : this.rows,
+                                                        cols : this.cols
+                                                    });
 
                 }
             },
@@ -196,12 +184,13 @@
             play(game){
                 // play a game - click on piece on specified index
                 //refresh the game...
-                this.loadActiveGames();
+
             },
             close(game){
                 // to close a game
             },
             nodeError(error){
+                console.log(error);
                 alert('[NODE]: '+ error);
             },
         },
@@ -215,10 +204,15 @@
             'lobby': Lobby,
             'game': GameMemory,
         },
-
         mounted() {
-            var userID = prompt("Enter user ID to fake login", "1");
-            axios.all([axios.get('api/users/'+ userID) , axios.get('api/images')])
+            this.userID = prompt("Enter user ID to fake login", "1");
+
+            this.loadLobby();
+            this.joinServer();
+            //Send node the username and password you want to login
+
+            /*
+            axios.all([axios.get('api/users/'+ this.userID) , axios.get('api/images')])
                 .then(axios.spread((respUsers, respImg) => {
                     //USERS
                     this.user = respUsers.data.data;
@@ -230,6 +224,7 @@
                     this.images = respImg.data.data;
 
                 }));
+            */
 
         }
 

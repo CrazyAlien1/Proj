@@ -8,7 +8,7 @@
             <div class="alert" :class="alerttype">
                 <strong v-if="game.gameEnded">{{ message }} &nbsp;&nbsp;&nbsp;&nbsp;<a v-on:click.prevent="closeGame">Close Game</a></strong>
             </div>
-            <div :class="boardClass">
+            <div class="board">
                 <div v-for="(pieceID, key) of game.board">
                     <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
                 </div>
@@ -51,17 +51,10 @@
             },
             title: function(){
                 if(this.$parent.user === undefined)
-                    return ''
+                    return '';
                 console.log(this.game);
                 return this.game.name;
             },
-            boardClass: function(){
-                if(this.playerCurrGames === 2){
-                    return "board-400";
-                }else{
-                    return "board-400";
-                }
-            }
         },
     }
 </script>

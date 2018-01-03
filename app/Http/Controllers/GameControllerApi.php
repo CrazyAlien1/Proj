@@ -42,13 +42,19 @@ class GameControllerApi extends Controller
      */
     public function store(StoreGamePost $post)
     {
-        $user = User::find($post->userId);
-        $gameID = $user->createGame($post);
+        $user = User::find($post->userID);
+        $game = $user->createGame($post);
 
+
+        return new GamesResource(Game::find($game->id));
         return response()->json([
-            'gameID' => $gameID,
+            'gameID' => $game->id,
+            'playerName' => $user->name,
+            'gameName' => $game->name,
+            'gameType' => $game->type,
+            'rows' => $post->rows,
+            'cols' => $post->cols
         ]);
-
     }
 
     /**

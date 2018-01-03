@@ -26,7 +26,9 @@ class StoreGamePost extends FormRequest
     {
         //Adicionar o: in['singleplayer','multiplayer']
         return [
-            'type'=> 'required'
+            'userID'=> 'required',
+            'type'=> 'required',
+            'name'=> 'required',
         ];
     }
 
