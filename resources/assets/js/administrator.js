@@ -15,7 +15,7 @@ window.Event = new Vue();
 //Vue.component('user-edit',require('./components/userEdit.vue'));
 
 Vue.component('user-list',require('./components/userList.vue'));
-
+Vue.component('game-list',require('./components/gameList.vue'));
 
 const app = new Vue({
     el: '#app',
