@@ -255,6 +255,7 @@
         mounted() {
             this.userID = prompt("Enter user ID to fake login", "1");
 
+
             this.loadLobby();
             this.joinServer();
             //Send node the username and password you want to login

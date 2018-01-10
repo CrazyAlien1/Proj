@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 
 use App\Game;
+use App\Mail\Block;
+use App\Mail\Reactive;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
+use Illuminate\Support\Facades\Mail;
 
 class UserControllerApi extends Controller
 {
@@ -22,6 +25,12 @@ class UserControllerApi extends Controller
 
     public function allUsers(){
         return UserResource::collection(User::all());
+    }
+
+    public function allUsersOrderByName(){
+        $users = User::orderBy('name')->get();
+
+        return $users;
     }
 
     /**
@@ -85,8 +94,42 @@ class UserControllerApi extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        print_r('DELETE');
+        $user = User::find($id);
+
+        \Mail::to($user)->send(new Remove($user,$request->reason_remove));
+
+        $user->delete();
+        return $user;
     }
+
+    public function block(Request $request, $id){
+        $user = User::find($id);
+        $user->reason_blocked = $request->reason_blocked;
+        $user->blocked = 1;
+
+        \Mail::to($user)->send(new Block($user));
+
+        $user->save();
+
+        return $user;
+    }
+
+    public function unBlock(Request $request,$id){
+        print_r('REACTIVE');
+        $user = User::find($id);
+
+        $user->blocked = 0;
+        $user->reason_reactivated = $request->reason_reative;
+
+        \Mail::to($user)->send(new Reactive($user));
+
+        $user->save();
+
+        return $user;
+    }
+
+
 }
