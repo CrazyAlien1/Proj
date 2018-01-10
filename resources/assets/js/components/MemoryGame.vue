@@ -1,5 +1,19 @@
 <template>
     <div class="row">
+            <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
+            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent=clickLogout>Logout</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+            <br></br>
+            <span v-if="showLogin && !logedIn">
+                <label for="currentUser.email">E-Mail Address</label>
+                <input v-model="email" type="email" class="form-control" id="currentUser.email" required autofocus>
+
+                <label for="currentUser.password">Password</label>
+                <input v-model="password" type="password" class="form-control" id="currentUser.password" required autofocus>
+
+                <button class="btn btn-xs btn-success" @click.prevent=clickLogin > Login</button>
+            </span>
+
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
@@ -64,6 +78,7 @@
                 myGames: [],
                 chatChannels: [],
                 socketId: "",
+                showLogin: false,
                 showChat: false,
                 showLobby : true,
                 gameType : ['singleplayer', 'multiplayer'],
@@ -74,6 +89,12 @@
                 isConnected : false,
                 images: [],
                 userId : undefined,
+                currentUser: {email: '', password: '' },
+                logedIn: false,
+                tokenType: '',
+                userToken: '',
+                email: '',
+                password: '',
             }
         },
         sockets:{
@@ -193,6 +214,33 @@
                 console.log(error);
                 alert('[NODE]: '+ error);
             },
+            clickLogin(){
+                console.log("teste" + " " + this.email + " " + this.password);
+                axios.post('api/login', { email: this.email, password: this.password })
+                    .then(response=>{
+                        this.tokenType = response.data.token_type;
+                        this.userToken = response.data.access_token;
+
+                        //console.log(response.data.access_token);  *caso seja necessario para fazer logout
+                        this.logedIn = true;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            },
+            clickLogout(){
+                axios.post('api/logout', {},{headers: {'Authorization': this.tokenType + " " + this.userToken}})
+                    .then(response=>{
+                        console.log(response.data.msg);
+                        this.logedIn = false;
+                        this.email = '';
+                        this.password = '';
+                        this.showLogin = !this.showLogin;
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
         },
         computed: {
             title() {
