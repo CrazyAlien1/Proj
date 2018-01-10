@@ -1,27 +1,18 @@
 @extends('master')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="panel panel-default">
-                    <div class="panel-heading">Administration</div>
 
                     <div class="panel-body">
-                        Hello Administrator
 
-                        <user-list :users="users">
+                        <router-link to="/admin">Profile</router-link>
 
-                        </user-list>
+                        <router-view></router-view>
 
-                        <game-list :games="games">
+                        <admin>
 
-                        </game-list>
+                        </admin>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 @endsection
 
 @section('pagescript')

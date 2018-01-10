@@ -27,6 +27,8 @@ Route::get('/home', function(){
 Route::get('/administration', function(){
     return view('vue.administration');
 });
+
+
 //Route::resource('users', 'AdministratorController');
 //Route::resource('games', 'AdministratorController');
 //Route::resource('uploadImg', 'AdministratorController');
