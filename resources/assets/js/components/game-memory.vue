@@ -10,19 +10,24 @@
                     <strong>{{msg}}</strong>
                 </div>
                 <strong v-if="game.gameEnded">{{ message }} &nbsp;&nbsp;&nbsp;&nbsp;<a v-on:click.prevent="closeGame">Close Game</a></strong>
-                <strong v-if="!game.game_ended">{{game.timer}}s remaining</strong>
+                <strong v-if="!game.gameEnded">{{game.timer}}s remaining</strong>
             </div>
-            <div class="board">
-                <div v-for="(pieceID, key) of game.board">
-                    <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
+            <div class="row">
+                <div class="col-xs-12 col-sm-5" v-if="showChat">
+                        <webchat :messages="game.chatMessages" @send-click="sendMessage"></webchat>
                 </div>
-            </div>
-            <div>
-                <ul>
-                    <li v-for="(player, key) in game.players">
-                        <p>{{player.name}} -> {{player.Points}}</p>
-                    </li>
-                </ul>
+                <div class="col-xs-12  col-sm-5 board">
+                    <div v-for="(pieceID, key) of game.board">
+                        <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                    <ul>
+                        <li v-for="(player, key) in game.players">
+                            <p>{{player.name}} -> {{player.Points}}</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <hr>
         </div>
@@ -30,6 +35,7 @@
 </template>
 
 <script type="text/javascript">
+    import WebChat from './web-chat.vue';
     const HIDDEN = './storage/images/hidden.png';
     const REVEALED = './storage/images/empty.png';
 
@@ -38,6 +44,7 @@
         data: function(){
             return {
                 alerttype : "",
+                showChat : true,
             }
         },
         methods: {
@@ -65,6 +72,10 @@
             },
             isPlayerTurn(){
                 return this.game.playerTurn.ID === this.$parent.user.id;
+            },
+            sendMessage(data){
+                data.gameId = this.game.id;
+                this.$emit('send-click', data);
             }
         },
         computed: {
@@ -72,7 +83,7 @@
 
                 if(this.$parent.user === undefined)
                     return '';
-                return "Winner Winner Chicken Dinner !" + this.game.winner.name + " "+ this.game.winner.Points;
+                return "Winner Winner Chicken Dinner!  " + this.game.winner.name + " "+ this.game.winner.Points;
             },
             title: function(){
                 if(this.$parent.user === undefined)
@@ -80,6 +91,9 @@
                 return this.game.name;
             },
         },
+        components: {
+            'webchat': WebChat,
+        }
     }
 </script>
 

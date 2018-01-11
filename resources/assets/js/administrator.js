@@ -25,4 +25,4 @@ const app = new Vue({
     },
     mounted() {
     }
-});
+}).$mount('#app');

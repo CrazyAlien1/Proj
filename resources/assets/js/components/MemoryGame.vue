@@ -69,7 +69,6 @@
             </h3>
 
             <div class="row">
-                <button v-if="logedIn" class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
                 <button class="btn btn-primary" @click.prevent="showLobby = !showLobby">Lobby</button>
                 <br>
             </div>
@@ -89,10 +88,6 @@
                 <hr>
             </div>
             <div class="row" >
-                <div class="col-12 col-md-3" v-show="showChat">
-                    Put this on the left side floating and able to collapse
-                    <webchat></webchat>
-                </div>
 
                 <div v-bind:class="lobbySize" v-show="showLobby">
                     <h3 class="text-center">Lobby</h3>
@@ -103,14 +98,15 @@
                                                 @start-game="start"
                                                 @delete-click="deleteGame"
                                                 @remove-click="removePlayer"
-                                                @leave-click="leaveGame">
+                                                @leave-click="leaveGame"
+                                                @send-click="sendMessage">
                     </lobby>
                 </div>
             </div>
             <div class="row">
                 <h1>GAMES!</h1>
                 <template v-for="game in myGames">
-                    <game :game="game" @close_game="closeGame"></game>
+                    <game :game="game" @close_game="closeGame"  @send-click="sendMessage"></game>
                 </template>
             </div>
 
@@ -118,7 +114,6 @@
 </template>
 
 <script type="text/javascript">
-    import WebChat from './web-chat.vue';
     import Lobby from './lobby-games.vue';
     import GameMemory from './game-memory.vue';
 
@@ -128,14 +123,12 @@
                 user : undefined,
                 lobbySize:{
                     "col-12" : true,
-                    "col-md-9" : this.showChat,
                 },
                 lobbyGames: [],
                 myGames: [],
                 chatChannels: [],
                 socketId: "",
                 showLogin: false,
-                showChat: false,
                 showLobby : true,
                 gameType : ['singleplayer', 'multiplayer'],
                 selectedGameType : 'singleplayer',
@@ -239,7 +232,17 @@
             },
             create_game_error(error){
                 this.nodeError(error);
-            }
+            },
+            got_message(resp){
+                console.log("MESSAGE!");
+                console.log(resp);
+                let game = this.getGame(this.myGames, resp.game);
+                if(game !== undefined){
+                    game.chatMessages.push(resp.msg);
+                }else{
+                    console.log("Game is undefined");
+                }
+            },
         },
         methods: {
             clearGameTimer(game){
@@ -392,6 +395,10 @@
                     .catch(function (error) {
                         console.log(error);
                     });
+            },
+            sendMessage(data){
+                console.log("Sending message", data);
+                this.$socket.emit('send_message', data);
             }
         },
         showRegister(){
@@ -420,7 +427,6 @@
             },
         },
         components: {
-            'webchat' : WebChat,
             'lobby': Lobby,
             'game': GameMemory,
         },
