@@ -24,7 +24,9 @@ Route::get('users', 'UserControllerApi@allUsers');
 
 Route::get('games', 'GameControllerApi@allGames');
 Route::post('games', 'GameControllerApi@store');
+Route::put('games', 'GameControllerApi@update');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
+//Route::put('games/{id}', 'GameControllerApi@update');
 
 
 Route::get('images', 'ImageControllerApi@allImages');
