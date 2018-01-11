@@ -33,7 +33,7 @@ Route::get('games', 'GameControllerApi@allGames');
 Route::post('games', 'GameControllerApi@store');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
 
-Route::delete('user/{id}', 'UserControllerApi@destroy');
+Route::delete('user/{id}', 'UserControllerApi@deleteUser');
 
 
 

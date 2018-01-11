@@ -22,7 +22,7 @@ class Remove extends Mailable
     public function __construct(User $user,$removeMessage)
     {
         $this -> user = $user;
-        $this -> $removeMessage= $removeMessage;
+        $this -> removeMessage= $removeMessage;
     }
 
     /**
@@ -32,6 +32,6 @@ class Remove extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.remove')->with('remove',removeMessage);
+        return $this->view('emails.remove');//->with('remove',$this->removeMessage);
     }
 }

@@ -53,7 +53,7 @@
                             placeholder="Why reactive that user" value="" />
                 </div>
                 <div class="form-group">
-                    <a class="btn btn-default" v-on:click.prevent="confirmReactive">Remove</a>
+                    <a class="btn btn-default" v-on:click.prevent="confirmReactive">Reative</a>
                     <a class="btn btn-default" v-on:click.prevent="cancelReactive">Cancel</a>
                 </div>
             </div>
@@ -147,12 +147,9 @@
                 this.deletingUser = false;
                 axios.delete('api/user/'+this.currentUser.id,{"reason_remove" : this.ressonRemoved })
                     .then(response => {
-                        let index = this.users.findIndex(response.id);
+                        console.log(response);
+                        console.log('User remove sucessufully');
 
-                        if(index>-1){
-                            this.users[index]=null;
-                            console.log('User remove sucessufully');
-                        }
                     });
             },cancelRemove(){
                 this.deletingUser = false;

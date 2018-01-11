@@ -10,6 +10,6 @@
     <body>
         Dear {{$user->name}}
         <br></br>
-        We decide to remove you because {{removeMessage}}
+        We decide to remove you because {{$removeMessage}}
     </body>
 </html>

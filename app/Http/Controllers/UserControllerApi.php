@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Game;
 use App\Mail\Block;
 use App\Mail\Reactive;
+use App\Mail\Remove;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
@@ -96,13 +97,22 @@ class UserControllerApi extends Controller
      */
     public function destroy(Request $request,$id)
     {
-        print_r('DELETE');
         $user = User::find($id);
 
         \Mail::to($user)->send(new Remove($user,$request->reason_remove));
 
         $user->delete();
         return $user;
+    }
+
+    public function deleteUser(Request $request,$id)
+    {
+        $user = User::find($id);
+
+        \Mail::to($user)->send(new Remove($user,$request->reason_remove));
+
+        $user->delete();
+        //return $user;
     }
 
     public function block(Request $request, $id){
@@ -118,7 +128,6 @@ class UserControllerApi extends Controller
     }
 
     public function unBlock(Request $request,$id){
-        print_r('REACTIVE');
         $user = User::find($id);
 
         $user->blocked = 0;
