@@ -3,7 +3,7 @@
             <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent=clickLogout>Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
-            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showRegister">Register</button>
+
             <br></br>
             <span v-if="showLogin && !logedIn">
                 <label for="currentUser.email">E-Mail Address</label>
@@ -12,7 +12,8 @@
                 <label for="currentUser.password">Password</label>
                 <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
-                <button class="btn btn-xs btn-success" @click.prevent=clickLogin > Login</button>
+                <button class="btn btn-xs btn-success" @click.prevent=clickLogin>Login</button>
+                <button class="btn btn-xs btn-success" @click.prevent=showRegister>Register</button>
 
                 <span v-if="loginError">
                     <h4 class="text-danger">{{ loginError }}</h4>
@@ -424,7 +425,8 @@
                     console.log(error);
 
                 });
-        },cancelRegister(){
+        },
+        cancelRegister(){
             this.showRegisterDiv = false;
         },
         computed: {
