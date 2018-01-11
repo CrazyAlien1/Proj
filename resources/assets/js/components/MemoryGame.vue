@@ -55,7 +55,7 @@
 
                     <h4>Pending games (<a @click.prevent="loadLobby">Refresh</a>)</h4>
 
-                    <lobby :games="lobbyGames" :token="token" @join-click="join" @delete-click="deleteGame"></lobby>
+                    <lobby :games="lobbyGames" @join-click="join" @delete-click="deleteGame"></lobby>
                 </div>
             </div>
             <div class="row">
