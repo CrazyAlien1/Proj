@@ -43,18 +43,18 @@ class GameControllerApi extends Controller
     public function store(StoreGamePost $post)
     {
         $user = User::find($post->userID);
-        $game = $user->createGame($post);
 
+        $game = new Game;
+        $game->type = $post->type;
+        $game->name = $post->name;
+        $game->rows = $post->rows;
+        $game->columns = $post->cols;
+
+        $game->owner()->associate($user);
+
+        $game->save();
 
         return new GamesResource(Game::find($game->id));
-        return response()->json([
-            'gameID' => $game->id,
-            'playerName' => $user->name,
-            'gameName' => $game->name,
-            'gameType' => $game->type,
-            'rows' => $post->rows,
-            'cols' => $post->cols
-        ]);
     }
 
     /**
@@ -86,9 +86,31 @@ class GameControllerApi extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+
+        $game = Game::find($request->id);
+
+
+        $game->status = $request->status;
+        $game->type = $request->type;
+
+        $game->total_players = count($request->players);
+
+        for( $i = 0; $i < count($request->players); $i++){
+            $user = User::find($request->players[$i]);
+
+            if($user != null){
+
+                $game->players()->attach($user->id);
+            }
+        }
+
+        $winner = User::find($request->winner);
+
+        $game->winner()->associate($winner);
+        $game->save();
+        //adicionar o winner á relacao e os players
     }
 
     /**

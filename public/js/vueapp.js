@@ -45849,7 +45849,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45860,12 +45860,10 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__web_chat_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lobby_games_vue__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__lobby_games_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_memory_vue__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__game_memory_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__game_memory_vue__);
 //
 //
 //
@@ -45978,7 +45976,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-
+//
+//
+//
+//
 
 
 
@@ -45988,18 +45989,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             user: undefined,
             lobbySize: {
-                "col-12": true,
-                "col-md-9": this.showChat
+                "col-12": true
             },
             lobbyGames: [],
             myGames: [],
             chatChannels: [],
             socketId: "",
             showLogin: false,
-            showChat: false,
             showLobby: true,
             gameType: ['singleplayer', 'multiplayer'],
-            selectedGameType: undefined,
+            selectedGameType: 'singleplayer',
+            maxPlayers: [1, 2, 3, 4],
+            selectedNumPlayers: 1,
             rows: 2,
             cols: 2,
             gameName: '',
@@ -46028,6 +46029,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.user = userData;
         },
         request_authenticate: function request_authenticate() {
+            console.log("SERVER ASKED TO AUTHENTICATE");
             this.joinServer();
         },
         disconnect: function disconnect() {
@@ -46036,44 +46038,93 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.isConnected = false;
         },
         player_disconnected: function player_disconnected(resp) {
-            var gameId = this.activeGames.findIndex(function (ele) {
-                return ele.gameID == resp.gameID;
-            });
-            var player = resp.playerName;
-            if (gameId >= 0 || gameId < this.activeGames.lenght) {
-                this.activeGames.splice(gameId, 1);
-                alert("Player " + player + " left the game");
-            }
+            console.log("Player Diconnect: " + resp.player);
+
+            this.updateGame(this.lobbyGames, resp.game);
+            var outcome = this.updateGame(this.myGames, resp.game);
         },
         lobby_changed: function lobby_changed() {
             // For this to work, websocket server must emit a message
             this.loadLobby();
         },
         lobby_updated: function lobby_updated(data) {
-            console.log("Got Lobby from Server");
             this.updateLobby(data);
+        },
+        game_started: function game_started(resp) {
+            console.log("Game Started");
+            //let outcome = this.updateGame(this.myGames, resp);
+
+            if (resp.type == 'multiplayer') {
+                this.startGameTimer(resp);
+            }
+
+            this.myGames.push(resp);
+            console.log(this.myGames);
         },
         game_refresh: function game_refresh(resp) {
             console.log("GAME_REFRESH");
-            var gameId = this.activeGames.findIndex(function (ele) {
-                return ele.gameID == resp.gameID;
-            });
 
-            if (gameId === -1) {
-                this.activeGames.push(resp);
-            } else {
-                Vue.set(this.activeGames, gameId, resp);
-                //this.activeGames[gameId] = resp;
+            this.softUpdate(this.myGames, resp);
+        },
+        game_ended: function game_ended(resp) {
+            console.log("GAME_ENDED");
+            var game = this.getGame(this.myGames, resp.id);
+            if (game.interval !== undefined) {
+                clearInterval(game.interval);
             }
+            this.clearGameTimer(game);
+            this.updateGame(this.myGames, resp);
+            //Nao deixar o user clicar mais nele...
+        },
+        game_switch_turn: function game_switch_turn(resp) {
+            console.log("~~~~SWITCHING  PLAYER:~~~~", resp);
+            var game = this.getGame(this.myGames, resp.id);
+            this.clearGameTimer(game);
+
+            if (resp.type == 'multiplayer') {
+                this.startGameTimer(resp);
+            }
+
+            this.updateGame(this.myGames, resp);
+        },
+        game_kick: function game_kick(resp) {
+            alert(resp);
+        },
+        invalid_play: function invalid_play(resp) {
+            alert(resp);
         },
         login_failed: function login_failed(error) {
             console.log(error);
         },
         create_game_error: function create_game_error(error) {
             this.nodeError(error);
+        },
+        got_message: function got_message(resp) {
+            console.log("MESSAGE!");
+            console.log(resp);
+            var game = this.getGame(this.myGames, resp.game);
+            if (game !== undefined) {
+                game.chatMessages.push(resp.msg);
+            } else {
+                console.log("Game is undefined");
+            }
         }
     },
     methods: {
+        clearGameTimer: function clearGameTimer(game) {
+            if (game.interval !== undefined) {
+                clearInterval(game.interval);
+            }
+        },
+        startGameTimer: function startGameTimer(game) {
+            game.timer = game.timer / 1000;
+            console.log("TIMER: " + game.timer);
+            this.clearGameTimer(game);
+            game.interval = setInterval(function () {
+                game.timer--;
+                //console.log("INTERVAL: "+ game.counterTimer);
+            }, 1000);
+        },
         joinServer: function joinServer() {
             console.log("Joining Server...");
             this.$socket.emit('authenticate_server', { userID: this.userID });
@@ -46087,8 +46138,43 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$socket.emit('get_my_active_games');
         },
         updateLobby: function updateLobby(response) {
-            console.log(response);
             this.lobbyGames = response;
+        },
+        updateGame: function updateGame(arr, updatedGame) {
+            var gameId = arr.findIndex(function (ele) {
+                return ele.id === updatedGame.id;
+            });
+
+            if (gameId === -1) {
+                return false;
+            } else {
+                Vue.set(arr, gameId, updatedGame);
+                return true;
+            }
+        },
+        softUpdate: function softUpdate(arr, updatedGame) {
+
+            var game = this.getGame(this.myGames, updatedGame.id);
+
+            //Se for o msm jogador da reset ao counter mas e se a jogada for 1 peca tb faz reset ao counter...
+            if (updatedGame.newTurn && updatedGame.type == 'multiplayer') {
+                console.log("RESTART TIMER");
+                game.timer = updatedGame.timer;
+                this.startGameTimer(game);
+            }
+            for (var i = 0; i < game.players.length; i++) {
+                game.players[i].Points = updatedGame.players[i].Points;
+            }
+
+            game.message = updatedGame.message;
+            game.board = updatedGame.board;
+            game.playerTurn = updatedGame.playerTurn;
+        },
+        getGame: function getGame(arr, id) {
+            var gameId = arr.findIndex(function (ele) {
+                return ele.id === id;
+            });
+            return arr[gameId];
         },
         createGame: function createGame() {
             // For this to work, server must handle (on event) the "create_game" message
@@ -46099,30 +46185,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     userID: this.userID,
                     gameName: this.gameName,
                     gameType: this.selectedGameType,
+                    gameMaxPlayers: this.selectedNumPlayers,
                     rows: this.rows,
                     cols: this.cols
                 });
             }
         },
-        deleteGame: function deleteGame(gameID) {
-            var _this = this;
-
-            axios.delete('api/games/' + gameID).then(function (response) {
-                console.log('Game successfully deleted');
-                _this.$socket.emit('delete_game', gameID);
+        closeGame: function closeGame(gameID) {
+            var gameId = this.myGames.findIndex(function (ele) {
+                return ele.id === gameID;
             });
+
+            if (gameId > -1) {
+                Vue.delete(this.myGames, gameId);
+            }
+        },
+        deleteGame: function deleteGame(gameID) {
+            this.$socket.emit('delete_game', gameID);
+        },
+        removePlayer: function removePlayer(data) {
+            this.$socket.emit('remove_player_game', { gameId: data.gameID, userID: data.playerID });
+        },
+        leaveGame: function leaveGame(gameID) {
+            this.$socket.emit('leave_game', { gameId: gameID });
         },
         join: function join(game) {
             // Click to join game
-            console.log("#####################");
-            console.log(game);
-            console.log("#####################");
-            this.$socket.emit('request_join_game', { gameID: game.gameID, playerName: this.currentPlayer });
+            this.$socket.emit('request_join_game', { gameId: game.id });
         },
-        play: function play(game) {
-            // play a game - click on piece on specified index
-            //refresh the game...
-
+        start: function start(game) {
+            //console.log("#####################");
+            //console.log(game);
+            //console.log("#####################");
+            this.$socket.emit('start_game', { gameId: game.id });
         },
         close: function close(game) {
             // to close a game
@@ -46132,38 +46227,42 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             alert('[NODE]: ' + error);
         },
         clickLogin: function clickLogin() {
-            var _this2 = this;
+            var _this = this;
 
             this.loginError = '';
             axios.post('api/login', { email: this.currentUser.email, password: this.currentUser.password }).then(function (response) {
-                _this2.tokenType = response.data.token_type;
-                _this2.userToken = response.data.access_token;
+                _this.tokenType = response.data.token_type;
+                _this.userToken = response.data.access_token;
 
-                _this2.token = _this2.tokenType + " " + _this2.userToken;
+                _this.token = _this.tokenType + " " + _this.userToken;
 
                 //console.log(response.data.access_token);  *caso seja necessario para fazer logout
                 console.log("Logged in");
-                _this2.logedIn = true;
+                _this.logedIn = true;
             }).catch(function (error) {
                 console.log(error.response.data.msg);
-                _this2.loginError = error.response.data.msg;
+                _this.loginError = error.response.data.msg;
             });
         },
         clickLogout: function clickLogout() {
-            var _this3 = this;
+            var _this2 = this;
 
             axios.post('api/logout', {}, { headers: { 'Authorization': this.token } }).then(function (response) {
                 console.log(response.data.msg);
-                _this3.logedIn = false;
-                _this3.currentUser.email = '';
-                _this3.currentUser.password = '';
-                _this3.showLogin = false;
-                _this3.token = '';
-                _this3.tokenType = '';
-                _this3.userToken = '';
+                _this2.logedIn = false;
+                _this2.currentUser.email = '';
+                _this2.currentUser.password = '';
+                _this2.showLogin = false;
+                _this2.token = '';
+                _this2.tokenType = '';
+                _this2.userToken = '';
             }).catch(function (error) {
                 console.log(error);
             });
+        },
+        sendMessage: function sendMessage(data) {
+            console.log("Sending message", data);
+            this.$socket.emit('send_message', data);
         }
     },
     showRegister: function showRegister() {
@@ -46186,9 +46285,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         }
     },
     components: {
-        'webchat': __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default.a,
-        'lobby': __WEBPACK_IMPORTED_MODULE_1__lobby_games_vue___default.a,
-        'game': __WEBPACK_IMPORTED_MODULE_2__game_memory_vue___default.a
+        'lobby': __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default.a,
+        'game': __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default.a
     },
     mounted: function mounted() {
         this.userID = prompt("Enter user ID to fake login", "1");
@@ -46196,19 +46294,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         this.loadLobby();
         this.joinServer();
         //Send node the username and password you want to login
-
-        /*
-        axios.all([axios.get('api/users/'+ this.userID) , axios.get('api/images')])
-            .then(axios.spread((respUsers, respImg) => {
-                //USERS
-                this.user = respUsers.data.data;
-                this.loadLobby();
-                //Agora que ja tem o username ja pode enviar ao node o pedido de authenticate_server
-                this.joinServer();
-                 //IMAGES http://localhost:8000/storage/images/0.png
-                this.images = respImg.data.data;
-             }));
-        */
     }
 });
 
@@ -46299,7 +46384,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -46315,11 +46400,74 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // Component code (not registered)
 module.exports = {
-    props: ['chatChannels'],
-    methods: {}
+    props: ['messages'],
+    data: function data() {
+        return {
+            msgToSend: undefined,
+            chatTextClass: function chatTextClass(sender) {
+                return sender == this.$parent.$parent.user.name ? "text-right" : "text-left";
+            }
+        };
+    },
+    methods: {
+        sendMessage: function sendMessage(messages) {
+            console.log("SENDING MESSAGE:: " + this.gameID);
+
+            this.$emit('send-click', { message: this.msgToSend });
+            messages.msgToSend = '';
+        },
+        calculateTime: function calculateTime(time) {
+            var now = new Date();
+            time = new Date(time);
+            var diffDays = DateDiff.DateMeasure(now - time);
+            console.log(diffDays.days + " M " + diffDays.hours);
+            if (diffDays.days <= 1) {
+                if (diffDays.hours < 1) {
+                    if (diffDays.minutes < 1) {
+                        return "Moments Ago..";
+                    }
+                    return diffDays.minutes + " min";
+                }
+                return time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+            }
+            return time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
+        }
+    }
+};
+var DateDiff = {
+    DateMeasure: function DateMeasure(ms) {
+        var d, h, m, s;
+        s = Math.floor(ms / 1000);
+        m = Math.floor(s / 60);
+        s = s % 60;
+        h = Math.floor(m / 60);
+        m = m % 60;
+        d = Math.floor(h / 24);
+        h = h % 24;
+
+        return {
+            days: d,
+            hours: h,
+            minutes: m,
+            seconds: s
+        };
+    }
 };
 
 /***/ }),
@@ -46330,20 +46478,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0, false, false)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("h1", [_vm._v("WebChat!")]),
-      _vm._v(" "),
-      _c("p", [_vm._v("Talk here!")])
+  return _c("div", [
+    _c("h1", [_vm._v("WebChat!")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card col-xs-12 col-sm-8" }, [
+      _c(
+        "div",
+        { staticClass: "card-body" },
+        [
+          _vm._l(_vm.messages, function(msg) {
+            return _c("blockquote", { staticClass: "blockquote" }, [
+              _c("p", { class: _vm.chatTextClass(msg.sender) }, [
+                _vm._v(
+                  "\n                    " +
+                    _vm._s(msg.text) +
+                    "\n                    "
+                ),
+                _c("small", [
+                  _vm._v(
+                    _vm._s(msg.sender) +
+                      " " +
+                      _vm._s(_vm.calculateTime(msg.date))
+                  )
+                ])
+              ])
+            ])
+          }),
+          _vm._v(" "),
+          _c("div", [
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.msgToSend,
+                  expression: "msgToSend"
+                }
+              ],
+              domProps: { value: _vm.msgToSend },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.msgToSend = $event.target.value
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-primary",
+                on: { click: _vm.sendMessage }
+              },
+              [_vm._v("Send")]
+            )
+          ])
+        ],
+        2
+      )
     ])
-  }
-]
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -46440,7 +46638,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -46449,6 +46647,27 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 /* 56 */
 /***/ (function(module, exports) {
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -46484,16 +46703,31 @@ module.exports = {
             console.log("Request Join");
             this.$emit('join-click', game);
         },
-        deleteGame: function deleteGame(game) {
-            this.$emit('delete-click', game);
+        start: function start(game) {
+            console.log("Request Start");
+            this.$emit('start-game', game);
         },
-        removePlayer: function removePlayer(user) {
-            this.$emit('remove-click', game);
+        deleteGame: function deleteGame(gameID) {
+            this.$emit('delete-click', gameID);
+        },
+        leaveGame: function leaveGame(game) {
+            this.$emit('leave-click', game);
+        },
+        removePlayer: function removePlayer(gameID, playerID) {
+            this.$emit('remove-click', { gameID: gameID, playerID: playerID });
         },
         isOwner: function isOwner(owner) {
             if (this.$parent.user.nickname !== undefined) {
-                return owner == this.$parent.user.nickname;
+                return owner === this.$parent.user.nickname;
             }
+        },
+        isInGame: function isInGame(game) {
+            for (var i = 0; i < game.players.length; i++) {
+                if (game.players[i].ID === this.$parent.user.id) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 };
@@ -46512,12 +46746,47 @@ var render = function() {
     _c(
       "tbody",
       _vm._l(_vm.games, function(game) {
-        return _c("tr", { key: game.gameID }, [
+        return _c("tr", { key: game.id }, [
+          _c("td", [_vm._v(_vm._s(game.id))]),
+          _vm._v(" "),
           _c("td", [_vm._v(_vm._s(game.name))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(game.owner))]),
+          _c("td", [_vm._v(_vm._s(game.owner.name))]),
           _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(game.numPieces))]),
+          _c(
+            "td",
+            _vm._l(game.players, function(player) {
+              return _c("div", { staticClass: "row" }, [
+                _c("div", { staticClass: "col col-xs-4" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(player.name) +
+                      "\n                "
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col col-xs-2" }, [
+                  game.owner.name != player.name
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger btn-xs",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.removePlayer(game.id, player.ID)
+                            }
+                          }
+                        },
+                        [_vm._v("X")]
+                      )
+                    : _vm._e()
+                ])
+              ])
+            })
+          ),
+          _vm._v(" "),
+          _c("td", [_vm._v(_vm._s(game.cols * game.rows))]),
           _vm._v(" "),
           _c("td", [
             game.isFull
@@ -46526,35 +46795,77 @@ var render = function() {
                 ])
               : _vm._e(),
             _vm._v(" "),
-            !game.isFull && !_vm.isOwner(game.owner)
-              ? _c(
-                  "a",
-                  {
-                    staticClass: "btn btn-xs btn-primary",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        _vm.join(game)
-                      }
-                    }
-                  },
-                  [_vm._v("Join")]
-                )
+            !_vm.isOwner(game.owner.name)
+              ? _c("div", [
+                  !game.isFull && !_vm.isInGame(game)
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-xs btn-primary",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.join(game)
+                            }
+                          }
+                        },
+                        [_vm._v("Join")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.isInGame(game)
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-xs btn-danger",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.leaveGame(game.ID)
+                            }
+                          }
+                        },
+                        [_vm._v("X")]
+                      )
+                    : _vm._e()
+                ])
               : _vm._e(),
             _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-xs btn-danger",
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.deleteGame(game.ID)
-                  }
-                }
-              },
-              [_vm._v("X")]
-            )
+            _vm.isOwner(game.owner.name)
+              ? _c("div", [
+                  _vm.isOwner(game.owner.name)
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-xs btn-success",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.start(game)
+                            }
+                          }
+                        },
+                        [_vm._v("Start")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.isOwner(game.owner.name)
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-xs btn-danger",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.deleteGame(game.ID)
+                            }
+                          }
+                        },
+                        [_vm._v("X")]
+                      )
+                    : _vm._e()
+                ])
+              : _vm._e()
           ])
         ])
       })
@@ -46570,7 +46881,11 @@ var staticRenderFns = [
       _c("tr", [
         _c("th", [_vm._v("ID")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Player 1")]),
+        _c("th", [_vm._v("Room")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Owner")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Players")]),
         _vm._v(" "),
         _c("th", [_vm._v("Board Size")]),
         _vm._v(" "),
@@ -46686,6 +47001,8 @@ exports.push([module.i, "\n.gameseparator[data-v-84b0b616]{\n    border-style: s
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__web_chat_vue__);
 //
 //
 //
@@ -46706,43 +47023,78 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+var HIDDEN = './storage/images/hidden.png';
+var REVEALED = './storage/images/empty.png';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['game', 'playerCurrGames', 'images'],
+    props: ['game'],
     data: function data() {
         return {
-            alerttype: ""
-
+            alerttype: "",
+            showChat: true
         };
     },
     methods: {
         closeGame: function closeGame() {
-            // Click to close game
+            this.$emit('close_game', this.game.id);
         },
         clickPiece: function clickPiece(index) {
-            this.$socket.emit('play_piece', { gameID: this.game.gameID,
-                piecePos: index });
+            if (this.game.gameEnded) {
+
+                return;
+            }
+            this.$socket.emit('play_piece', { gameId: this.game.id,
+                pieceIndex: index });
         },
 
         pieceImageURL: function pieceImageURL(pieceID) {
-            //http://localhost:8000/storage/images/0.png
-            var image = this.images.find(function (ele) {
-                return ele.id === pieceID;
-            });
-            return './storage/images/' + image.path;
+            if (pieceID === -1) {
+                return HIDDEN;
+            } else if (pieceID === -2) {
+                return REVEALED;
+            } else {
+                return './storage/images/' + pieceID + '.png';
+            }
+        },
+        isPlayerTurn: function isPlayerTurn() {
+            return this.game.playerTurn.ID === this.$parent.user.id;
+        },
+        sendMessage: function sendMessage(data) {
+            data.gameId = this.game.id;
+            this.$emit('send-click', data);
         }
     },
     computed: {
         message: function message() {
 
             if (this.$parent.user === undefined) return '';
-            return "Winner Winner Chicken Dinner !" + this.game.winner.nickname;
+            return "Winner Winner Chicken Dinner!  " + this.game.winner.name + " " + this.game.winner.Points;
         },
         title: function title() {
             if (this.$parent.user === undefined) return '';
-            console.log(this.game);
             return this.game.name;
         }
+    },
+    components: {
+        'webchat': __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default.a
     }
 });
 
@@ -46764,42 +47116,89 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "game-zone-content" }, [
-      _c("div", { staticClass: "alert", class: _vm.alerttype }, [
-        _vm.game.gameEnded
-          ? _c("strong", [
-              _vm._v(_vm._s(_vm.message) + "     "),
-              _c(
-                "a",
-                {
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.closeGame($event)
-                    }
-                  }
-                },
-                [_vm._v("Close Game")]
-              )
-            ])
-          : _vm._e()
-      ]),
-      _vm._v(" "),
       _c(
         "div",
-        { staticClass: "board" },
-        _vm._l(_vm.game.board, function(pieceID, key) {
-          return _c("div", [
-            _c("img", {
-              attrs: { src: _vm.pieceImageURL(pieceID) },
-              on: {
-                click: function($event) {
-                  _vm.clickPiece(key)
-                }
-              }
-            })
-          ])
-        })
+        { staticClass: "alert", class: _vm.alerttype },
+        [
+          _vm._l(_vm.game.message, function(msg) {
+            return _vm.game.message.length
+              ? _c("div", [
+                  _vm._v(">\n                "),
+                  _c("strong", [_vm._v(_vm._s(msg))])
+                ])
+              : _vm._e()
+          }),
+          _vm._v(" "),
+          _vm.game.gameEnded
+            ? _c("strong", [
+                _vm._v(_vm._s(_vm.message) + "     "),
+                _c(
+                  "a",
+                  {
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.closeGame($event)
+                      }
+                    }
+                  },
+                  [_vm._v("Close Game")]
+                )
+              ])
+            : _vm._e(),
+          _vm._v(" "),
+          !_vm.game.gameEnded
+            ? _c("strong", [_vm._v(_vm._s(_vm.game.timer) + "s remaining")])
+            : _vm._e()
+        ],
+        2
       ),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _vm.showChat
+          ? _c(
+              "div",
+              { staticClass: "col-xs-12 col-sm-5" },
+              [
+                _c("webchat", {
+                  attrs: { messages: _vm.game.chatMessages },
+                  on: { "send-click": _vm.sendMessage }
+                })
+              ],
+              1
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-xs-12  col-sm-5 board" },
+          _vm._l(_vm.game.board, function(pieceID, key) {
+            return _c("div", [
+              _c("img", {
+                attrs: { src: _vm.pieceImageURL(pieceID) },
+                on: {
+                  click: function($event) {
+                    _vm.clickPiece(key)
+                  }
+                }
+              })
+            ])
+          })
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xs-12 col-sm-2" }, [
+          _c(
+            "ul",
+            _vm._l(_vm.game.players, function(player, key) {
+              return _c("li", [
+                _c("p", [
+                  _vm._v(_vm._s(player.name) + " -> " + _vm._s(player.Points))
+                ])
+              ])
+            })
+          )
+        ])
+      ]),
       _vm._v(" "),
       _c("hr")
     ])
@@ -47161,22 +47560,6 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _vm.logedIn
-        ? _c(
-            "button",
-            {
-              staticClass: "btn btn-primary",
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  _vm.showChat = !_vm.showChat
-                }
-              }
-            },
-            [_vm._v("WebChat")]
-          )
-        : _vm._e(),
-      _vm._v(" "),
       _c(
         "button",
         {
@@ -47225,6 +47608,40 @@ var render = function() {
         _vm._l(_vm.gameType, function(type, key) {
           return _c("option", { key: key, attrs: { selected: "type" } }, [
             _vm._v(_vm._s(type))
+          ])
+        })
+      ),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.selectedNumPlayers,
+              expression: "selectedNumPlayers"
+            }
+          ],
+          on: {
+            change: function($event) {
+              var $$selectedVal = Array.prototype.filter
+                .call($event.target.options, function(o) {
+                  return o.selected
+                })
+                .map(function(o) {
+                  var val = "_value" in o ? o._value : o.value
+                  return val
+                })
+              _vm.selectedNumPlayers = $event.target.multiple
+                ? $$selectedVal
+                : $$selectedVal[0]
+            }
+          }
+        },
+        _vm._l(_vm.maxPlayers, function(max, key) {
+          return _c("option", { key: key, attrs: { selected: "max" } }, [
+            _vm._v(_vm._s(max))
           ])
         })
       ),
@@ -47317,28 +47734,6 @@ var render = function() {
             {
               name: "show",
               rawName: "v-show",
-              value: _vm.showChat,
-              expression: "showChat"
-            }
-          ],
-          staticClass: "col-12 col-md-3"
-        },
-        [
-          _vm._v(
-            "\n                Put this on the left side floating and able to collapse\n                "
-          ),
-          _c("webchat")
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
               value: _vm.showLobby,
               expression: "showLobby"
             }
@@ -47367,7 +47762,14 @@ var render = function() {
           _vm._v(" "),
           _c("lobby", {
             attrs: { games: _vm.lobbyGames },
-            on: { "join-click": _vm.join, "delete-click": _vm.deleteGame }
+            on: {
+              "join-click": _vm.join,
+              "start-game": _vm.start,
+              "delete-click": _vm.deleteGame,
+              "remove-click": _vm.removePlayer,
+              "leave-click": _vm.leaveGame,
+              "send-click": _vm.sendMessage
+            }
           })
         ],
         1
@@ -47383,12 +47785,8 @@ var render = function() {
         _vm._l(_vm.myGames, function(game) {
           return [
             _c("game", {
-              attrs: {
-                game: game,
-                images: _vm.images,
-                playerCurrGames: _vm.myGames.length
-              },
-              on: { play_piece: _vm.play }
+              attrs: { game: game },
+              on: { close_game: _vm.closeGame, "send-click": _vm.sendMessage }
             })
           ]
         })

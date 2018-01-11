@@ -43136,7 +43136,7 @@ var app = new Vue({
     data: {},
     methods: {},
     mounted: function mounted() {}
-});
+}).$mount('#app');
 
 /***/ }),
 /* 67 */
