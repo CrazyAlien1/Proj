@@ -37,6 +37,7 @@
                                             <td>{{ user.name }}</td>
                                             <td>{{ user.email }}</td>
                                             <td>{{ user.nickname }}</td>
+
                                         </tr>
                                         </tbody>
                                     </table>
@@ -84,13 +85,14 @@
                 axios.get('api/games')
                     .then(response=>{this.games = response.data.data;});
             },showStatistic(){
+                this.getStatistiscs();
+
                 if(this.statistichs == true){
                     this.statistichs = false;
                 }else {
                     this.statistichs = true;
                 }
                 this.show = false;
-                this.getStatistiscs();
             },getStatistiscs(){
                 axios.get('api/statistics')
                     .then(response=>{Object.assign(this.stats, response.data);});

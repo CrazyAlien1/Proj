@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });*/
 
 Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
+Route::post('user', 'UserControllerApi@store');
 
 //blocked/unblock route
 Route::put('user/block/{id}', 'UserControllerApi@block');

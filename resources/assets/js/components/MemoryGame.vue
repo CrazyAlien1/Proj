@@ -3,6 +3,7 @@
             <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent=clickLogout>Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showRegister">Register</button>
             <br></br>
             <span v-if="showLogin && !logedIn">
                 <label for="currentUser.email">E-Mail Address</label>
@@ -17,6 +18,46 @@
                     <h4 class="text-danger">{{ loginError }}</h4>
                 </span>
             </span>
+
+        <div class="jumbotron" v-if="showRegisterDiv">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input
+                        type="text" class="form-control" v-model="newUser.name"
+                        name="name" id="inputName"
+                        placeholder="Fullname" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputUserName">User Name</label>
+                <input
+                        type="text" class="form-control" v-model="newUser.username"
+                        name="name" id="inputUserName"
+                        placeholder="User Name" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input
+                        type="email" class="form-control" v-model="newUser.email"
+                        name="email" id="inputEmail"
+                        placeholder="Email address" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                        type="password" class="form-control" v-model="newUser.password"
+                        name="name" id="inputPassword"
+                        placeholder="Password" required/>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-default" v-on:click.prevent="saveUser">Register</a>
+                <a class="btn btn-default" v-on:click.prevent="cancelRegister">Cancel</a>
+            </div>
+        </div>
 
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
@@ -102,6 +143,8 @@
                 userToken: '',
                 loginError: '',
                 token: '',
+                showRegisterDiv : false,
+                newUser:{name:'',username:'',email: '', password: '' },
             }
         },
         sockets:{
@@ -256,6 +299,26 @@
                         console.log(error);
                     });
             }
+        },
+        showRegister(){
+            this.showRegisterDiv = true;
+        },
+        saveUser(){
+            axios.post('api/user',
+                {"name" : this.newUser.name},
+                {"username" : this.newUser.username},
+                {"email" : this.newUser.email },
+                {"password" : this.newUser.password })
+                .then(response=>{
+                    console.log("New User created");
+
+                })
+                .catch(error=>{
+                    console.log(error);
+
+                });
+        },cancelRegister(){
+            this.showRegisterDiv = false;
         },
         computed: {
             title() {
