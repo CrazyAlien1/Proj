@@ -6,22 +6,29 @@
             <br></br>
             <span v-if="showLogin && !logedIn">
                 <label for="currentUser.email">E-Mail Address</label>
-                <input v-model="email" type="email" class="form-control" id="currentUser.email" required autofocus>
+                <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
 
                 <label for="currentUser.password">Password</label>
-                <input v-model="password" type="password" class="form-control" id="currentUser.password" required autofocus>
+                <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
                 <button class="btn btn-xs btn-success" @click.prevent=clickLogin > Login</button>
+
+                <span v-if="loginError">
+                    <h4 class="text-danger">{{ loginError }}</h4>
+                </span>
             </span>
 
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
-                Mrs Derp: {{ title }}
+
+                Mrs Derp:
+                <span v-if="logedIn" >{{ currentUser.email }}</span>
+                {{ title }}
             </h3>
 
             <div class="row">
-                <button class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
+                <button v-if="logedIn" class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
                 <button class="btn btn-primary" @click.prevent="showLobby = !showLobby">Lobby</button>
                 <br>
             </div>
@@ -48,7 +55,7 @@
 
                     <h4>Pending games (<a @click.prevent="loadLobby">Refresh</a>)</h4>
 
-                    <lobby :games="lobbyGames" @join-click="join" @delete-click="deleteGame"></lobby>
+                    <lobby :games="lobbyGames" :token="token" @join-click="join" @delete-click="deleteGame"></lobby>
                 </div>
             </div>
             <div class="row">
@@ -93,8 +100,8 @@
                 logedIn: false,
                 tokenType: '',
                 userToken: '',
-                email: '',
-                password: '',
+                loginError: '',
+                token: '',
             }
         },
         sockets:{
@@ -215,27 +222,35 @@
                 alert('[NODE]: '+ error);
             },
             clickLogin(){
-                console.log("teste" + " " + this.email + " " + this.password);
-                axios.post('api/login', { email: this.email, password: this.password })
+                this.loginError = '';
+                axios.post('api/login', { email: this.currentUser.email, password: this.currentUser.password })
                     .then(response=>{
                         this.tokenType = response.data.token_type;
                         this.userToken = response.data.access_token;
 
+                        this.token = this.tokenType + " " + this.userToken;
+
                         //console.log(response.data.access_token);  *caso seja necessario para fazer logout
+                        console.log("Logged in");
                         this.logedIn = true;
+
                     })
-                    .catch(function (error) {
-                        console.log(error);
+                    .catch(error=>{
+                        console.log(error.response.data.msg);
+                        this.loginError = error.response.data.msg;
                     });
             },
             clickLogout(){
-                axios.post('api/logout', {},{headers: {'Authorization': this.tokenType + " " + this.userToken}})
+                axios.post('api/logout', {},{headers: {'Authorization': this.token}})
                     .then(response=>{
                         console.log(response.data.msg);
                         this.logedIn = false;
-                        this.email = '';
-                        this.password = '';
-                        this.showLogin = !this.showLogin;
+                        this.currentUser.email = '';
+                        this.currentUser.password = '';
+                        this.showLogin = false;
+                        this.token = '';
+                        this.tokenType = '';
+                        this.userToken = '';
                     })
                     .catch(function (error) {
                         console.log(error);
