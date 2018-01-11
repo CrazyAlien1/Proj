@@ -12,14 +12,29 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
-});
+});*/
 
+Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
+Route::post('user', 'UserControllerApi@store');
+
+//blocked/unblock route
+Route::put('user/block/{id}', 'UserControllerApi@block');
+Route::put('user/unblock/{id}', 'UserControllerApi@unBlock');
+
+Route::post('login', 'LoginControllerAPI@login');
+Route::middleware('auth:api')->post('logout','LoginControllerAPI@logout');
+
+Route::middleware('auth:api')->get('teste', function () {
+return response()->json(['msg'=>'U have permitions!! :D :D'], 200);
+});
 
 Route::get('users/{user}', 'UserControllerApi@show');
 Route::get('users', 'UserControllerApi@allUsers');
+
+
 
 
 Route::get('games', 'GameControllerApi@allGames');
@@ -28,5 +43,10 @@ Route::put('games', 'GameControllerApi@update');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
 //Route::put('games/{id}', 'GameControllerApi@update');
 
+Route::delete('user/{id}', 'UserControllerApi@deleteUser');
+
+
 
 Route::get('images', 'ImageControllerApi@allImages');
+
+Route::get('statistics', 'StatisticsControllerApi@getStatistics');

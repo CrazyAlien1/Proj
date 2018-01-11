@@ -45816,7 +45816,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45923,6 +45923,68 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -45940,6 +46002,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             myGames: [],
             chatChannels: [],
             socketId: "",
+            showLogin: false,
             showChat: false,
             showLobby: true,
             gameType: ['singleplayer', 'multiplayer'],
@@ -45951,7 +46014,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             gameName: '',
             isConnected: false,
             images: [],
-            userId: undefined
+            userId: undefined,
+            currentUser: { email: '', password: '' },
+            logedIn: false,
+            tokenType: '',
+            userToken: '',
+            loginError: '',
+            token: '',
+            showRegisterDiv: false,
+            newUser: { name: '', username: '', email: '', password: '' }
         };
     },
     sockets: {
@@ -46152,8 +46223,56 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         nodeError: function nodeError(error) {
             console.log(error);
             alert('[NODE]: ' + error);
+        },
+        clickLogin: function clickLogin() {
+            var _this = this;
+
+            this.loginError = '';
+            axios.post('api/login', { email: this.currentUser.email, password: this.currentUser.password }).then(function (response) {
+                _this.tokenType = response.data.token_type;
+                _this.userToken = response.data.access_token;
+
+                _this.token = _this.tokenType + " " + _this.userToken;
+
+                //console.log(response.data.access_token);  *caso seja necessario para fazer logout
+                console.log("Logged in");
+                _this.logedIn = true;
+            }).catch(function (error) {
+                console.log(error.response.data.msg);
+                _this.loginError = error.response.data.msg;
+            });
+        },
+        clickLogout: function clickLogout() {
+            var _this2 = this;
+
+            axios.post('api/logout', {}, { headers: { 'Authorization': this.token } }).then(function (response) {
+                console.log(response.data.msg);
+                _this2.logedIn = false;
+                _this2.currentUser.email = '';
+                _this2.currentUser.password = '';
+                _this2.showLogin = false;
+                _this2.token = '';
+                _this2.tokenType = '';
+                _this2.userToken = '';
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     },
+    showRegister: function showRegister() {
+        this.showRegisterDiv = true;
+    },
+    saveUser: function saveUser() {
+        axios.post('api/user', { "name": this.newUser.name }, { "username": this.newUser.username }, { "email": this.newUser.email }, { "password": this.newUser.password }).then(function (response) {
+            console.log("New User created");
+        }).catch(function (error) {
+            console.log(error);
+        });
+    },
+    cancelRegister: function cancelRegister() {
+        this.showRegisterDiv = false;
+    },
+
     computed: {
         title: function title() {
             return ' Memory Game ' + (this.user !== undefined ? this.user.nickname : '');
@@ -46167,21 +46286,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         this.userID = prompt("Enter user ID to fake login", "1");
 
+        this.loadLobby();
         this.joinServer();
         //Send node the username and password you want to login
-
-        /*
-        axios.all([axios.get('api/users/'+ this.userID) , axios.get('api/images')])
-            .then(axios.spread((respUsers, respImg) => {
-                //USERS
-                this.user = respUsers.data.data;
-                this.loadLobby();
-                //Agora que ja tem o username ja pode enviar ao node o pedido de authenticate_server
-                this.joinServer();
-                 //IMAGES http://localhost:8000/storage/images/0.png
-                this.images = respImg.data.data;
-             }));
-        */
     }
 });
 
@@ -46472,9 +46579,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 // Component code (not registered)
 module.exports = {
-    props: ['games'],
+    props: ['games', 'token'], //token contem o token type (Bearer) e o access_token necessarios para os metodos que passarem
     methods: {
+        // por auth. Assim devem de adicionar um header {headers: {'Authorization': token}} de modo a
         join: function join(game) {
+            // validar o user
             console.log("Request Join");
             this.$emit('join-click', game);
         },
@@ -46966,6 +47075,329 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _vm.logedIn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.admin($event)
+              }
+            }
+          },
+          [_vm._v("Administration")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.logedIn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-danger",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.clickLogout($event)
+              }
+            }
+          },
+          [_vm._v("Logout")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.logedIn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-success",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.showLogin = !_vm.showLogin
+              }
+            }
+          },
+          [_vm._v("Log me")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.logedIn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-success",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.showRegister($event)
+              }
+            }
+          },
+          [_vm._v("Register")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _c("br"),
+    _c("br"),
+    _vm._v(" "),
+    _vm.showLogin && !_vm.logedIn
+      ? _c("span", [
+          _c("label", { attrs: { for: "currentUser.email" } }, [
+            _vm._v("E-Mail Address")
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.currentUser.email,
+                expression: "currentUser.email"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "email",
+              id: "currentUser.email",
+              required: "",
+              autofocus: ""
+            },
+            domProps: { value: _vm.currentUser.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.currentUser, "email", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "currentUser.password" } }, [
+            _vm._v("Password")
+          ]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.currentUser.password,
+                expression: "currentUser.password"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "password",
+              id: "currentUser.password",
+              required: "",
+              autofocus: ""
+            },
+            domProps: { value: _vm.currentUser.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.currentUser, "password", $event.target.value)
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-success",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.clickLogin($event)
+                }
+              }
+            },
+            [_vm._v(" Login")]
+          ),
+          _vm._v(" "),
+          _vm.loginError
+            ? _c("span", [
+                _c("h4", { staticClass: "text-danger" }, [
+                  _vm._v(_vm._s(_vm.loginError))
+                ])
+              ])
+            : _vm._e()
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.showRegisterDiv
+      ? _c("div", { staticClass: "jumbotron" }, [
+          _c("h2", [_vm._v("Register")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "inputName" } }, [_vm._v("Name")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.newUser.name,
+                  expression: "newUser.name"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "name",
+                id: "inputName",
+                placeholder: "Fullname",
+                required: ""
+              },
+              domProps: { value: _vm.newUser.name },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.newUser, "name", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "inputUserName" } }, [
+              _vm._v("User Name")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.newUser.username,
+                  expression: "newUser.username"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "name",
+                id: "inputUserName",
+                placeholder: "User Name",
+                required: ""
+              },
+              domProps: { value: _vm.newUser.username },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.newUser, "username", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "inputEmail" } }, [_vm._v("Email")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.newUser.email,
+                  expression: "newUser.email"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                name: "email",
+                id: "inputEmail",
+                placeholder: "Email address",
+                required: ""
+              },
+              domProps: { value: _vm.newUser.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.newUser, "email", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "inputPassword" } }, [
+              _vm._v("Password")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.newUser.password,
+                  expression: "newUser.password"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "password",
+                name: "name",
+                id: "inputPassword",
+                placeholder: "Password",
+                required: ""
+              },
+              domProps: { value: _vm.newUser.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.newUser, "password", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-default",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.saveUser($event)
+                  }
+                }
+              },
+              [_vm._v("Register")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-default",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.cancelRegister($event)
+                  }
+                }
+              },
+              [_vm._v("Cancel")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
     _c("h3", { staticClass: "text-center" }, [
       _vm.isConnected
         ? _c("span", { staticClass: "text-success" }, [_vm._v("Online")])
@@ -46974,23 +47406,29 @@ var render = function() {
       !_vm.isConnected
         ? _c("span", { staticClass: "text-danger" }, [_vm._v("Offline")])
         : _vm._e(),
-      _vm._v("\n            Mrs Derp: " + _vm._s(_vm.title) + "\n        ")
+      _vm._v("\n\n            Mrs Derp:\n            "),
+      _vm.logedIn
+        ? _c("span", [_vm._v(_vm._s(_vm.currentUser.email))])
+        : _vm._e(),
+      _vm._v("\n            " + _vm._s(_vm.title) + "\n        ")
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          on: {
-            click: function($event) {
-              $event.preventDefault()
-              _vm.showChat = !_vm.showChat
-            }
-          }
-        },
-        [_vm._v("WebChat")]
-      ),
+      _vm.logedIn
+        ? _c(
+            "button",
+            {
+              staticClass: "btn btn-primary",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.showChat = !_vm.showChat
+                }
+              }
+            },
+            [_vm._v("WebChat")]
+          )
+        : _vm._e(),
       _vm._v(" "),
       _c(
         "button",

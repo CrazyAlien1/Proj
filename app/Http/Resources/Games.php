@@ -29,4 +29,9 @@ class Games extends Resource
             'updated_at' => $this->updated_at,
         ];
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(Users::class);
+    }
 }

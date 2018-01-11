@@ -1,13 +1,75 @@
 <template>
     <div class="row">
+            <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
+            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent=clickLogout>Logout</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showRegister">Register</button>
+            <br></br>
+            <span v-if="showLogin && !logedIn">
+                <label for="currentUser.email">E-Mail Address</label>
+                <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
+
+                <label for="currentUser.password">Password</label>
+                <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
+
+                <button class="btn btn-xs btn-success" @click.prevent=clickLogin > Login</button>
+
+                <span v-if="loginError">
+                    <h4 class="text-danger">{{ loginError }}</h4>
+                </span>
+            </span>
+
+        <div class="jumbotron" v-if="showRegisterDiv">
+            <h2>Register</h2>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input
+                        type="text" class="form-control" v-model="newUser.name"
+                        name="name" id="inputName"
+                        placeholder="Fullname" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputUserName">User Name</label>
+                <input
+                        type="text" class="form-control" v-model="newUser.username"
+                        name="name" id="inputUserName"
+                        placeholder="User Name" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input
+                        type="email" class="form-control" v-model="newUser.email"
+                        name="email" id="inputEmail"
+                        placeholder="Email address" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input
+                        type="password" class="form-control" v-model="newUser.password"
+                        name="name" id="inputPassword"
+                        placeholder="Password" required/>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-default" v-on:click.prevent="saveUser">Register</a>
+                <a class="btn btn-default" v-on:click.prevent="cancelRegister">Cancel</a>
+            </div>
+        </div>
+
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
-                Mrs Derp: {{ title }}
+
+                Mrs Derp:
+                <span v-if="logedIn" >{{ currentUser.email }}</span>
+                {{ title }}
             </h3>
 
             <div class="row">
-                <button class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
+                <button v-if="logedIn" class="btn btn-primary" @click.prevent="showChat = !showChat">WebChat</button>
                 <button class="btn btn-primary" @click.prevent="showLobby = !showLobby">Lobby</button>
                 <br>
             </div>
@@ -72,6 +134,7 @@
                 myGames: [],
                 chatChannels: [],
                 socketId: "",
+                showLogin: false,
                 showChat: false,
                 showLobby : true,
                 gameType : ['singleplayer', 'multiplayer'],
@@ -84,6 +147,14 @@
                 isConnected : false,
                 images: [],
                 userId : undefined,
+                currentUser: {email: '', password: '' },
+                logedIn: false,
+                tokenType: '',
+                userToken: '',
+                loginError: '',
+                token: '',
+                showRegisterDiv : false,
+                newUser:{name:'',username:'',email: '', password: '' },
             }
         },
         sockets:{
@@ -287,6 +358,61 @@
                 console.log(error);
                 alert('[NODE]: '+ error);
             },
+            clickLogin(){
+                this.loginError = '';
+                axios.post('api/login', { email: this.currentUser.email, password: this.currentUser.password })
+                    .then(response=>{
+                        this.tokenType = response.data.token_type;
+                        this.userToken = response.data.access_token;
+
+                        this.token = this.tokenType + " " + this.userToken;
+
+                        //console.log(response.data.access_token);  *caso seja necessario para fazer logout
+                        console.log("Logged in");
+                        this.logedIn = true;
+
+                    })
+                    .catch(error=>{
+                        console.log(error.response.data.msg);
+                        this.loginError = error.response.data.msg;
+                    });
+            },
+            clickLogout(){
+                axios.post('api/logout', {},{headers: {'Authorization': this.token}})
+                    .then(response=>{
+                        console.log(response.data.msg);
+                        this.logedIn = false;
+                        this.currentUser.email = '';
+                        this.currentUser.password = '';
+                        this.showLogin = false;
+                        this.token = '';
+                        this.tokenType = '';
+                        this.userToken = '';
+                    })
+                    .catch(function (error) {
+                        console.log(error);
+                    });
+            }
+        },
+        showRegister(){
+            this.showRegisterDiv = true;
+        },
+        saveUser(){
+            axios.post('api/user',
+                {"name" : this.newUser.name},
+                {"username" : this.newUser.username},
+                {"email" : this.newUser.email },
+                {"password" : this.newUser.password })
+                .then(response=>{
+                    console.log("New User created");
+
+                })
+                .catch(error=>{
+                    console.log(error);
+
+                });
+        },cancelRegister(){
+            this.showRegisterDiv = false;
         },
         computed: {
             title() {
@@ -301,23 +427,9 @@
         mounted() {
             this.userID = prompt("Enter user ID to fake login", "1");
 
+            this.loadLobby();
             this.joinServer();
             //Send node the username and password you want to login
-
-            /*
-            axios.all([axios.get('api/users/'+ this.userID) , axios.get('api/images')])
-                .then(axios.spread((respUsers, respImg) => {
-                    //USERS
-                    this.user = respUsers.data.data;
-                    this.loadLobby();
-                    //Agora que ja tem o username ja pode enviar ao node o pedido de authenticate_server
-                    this.joinServer();
-
-                    //IMAGES http://localhost:8000/storage/images/0.png
-                    this.images = respImg.data.data;
-
-                }));
-            */
 
         }
 

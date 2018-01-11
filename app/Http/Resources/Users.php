@@ -32,4 +32,9 @@ class Users extends Resource
             'updated_at' => $this->updated_at,
         ];
     }
+
+    public function games()
+    {
+        return $this->hasMany(Games::class);
+    }
 }
