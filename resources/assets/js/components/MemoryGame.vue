@@ -1,7 +1,7 @@
 <template>
     <div class="row">
             <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
-            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent=clickLogout>Logout</button>
+            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
 
             <br></br>
@@ -12,8 +12,9 @@
                 <label for="currentUser.password">Password</label>
                 <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
-                <button class="btn btn-xs btn-success" @click.prevent=clickLogin>Login</button>
-                <button class="btn btn-xs btn-success" @click.prevent=showRegister>Register</button>
+                <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
+                <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
+
 
                 <span v-if="loginError">
                     <h4 class="text-danger">{{ loginError }}</h4>
@@ -55,8 +56,8 @@
             </div>
 
             <div class="form-group">
-                <a class="btn btn-default" v-on:click.prevent="saveUser">Register</a>
-                <a class="btn btn-default" v-on:click.prevent="cancelRegister">Cancel</a>
+                <a class="btn btn-primary btn-success" v-on:click.prevent="saveUser">Register</a>
+                <a class="btn btn-primary btn-danger" v-on:click.prevent="cancelRegister">Cancel</a>
             </div>
         </div>
 
@@ -118,6 +119,7 @@
     import Lobby from './lobby-games.vue';
     import GameMemory from './game-memory.vue';
 
+
     export default {
         data: function(){
             return {
@@ -140,7 +142,7 @@
                 gameName : '',
                 isConnected : false,
                 images: [],
-                userId : undefined,
+                userID : undefined,
                 currentUser: {email: '', password: '' },
                 logedIn: false,
                 tokenType: '',
@@ -400,28 +402,37 @@
             sendMessage(data){
                 console.log("Sending message", data);
                 this.$socket.emit('send_message', data);
-            }
-        },
-        showRegister(){
-            this.showRegisterDiv = true;
-        },
-        saveUser(){
-            axios.post('api/user',
-                {"name" : this.newUser.name},
-                {"username" : this.newUser.username},
-                {"email" : this.newUser.email },
-                {"password" : this.newUser.password })
-                .then(response=>{
-                    console.log("New User created");
+            },
+            admin(){
+                //axios.get('');
+            },
+            saveUser(){
+                axios.post('api/user',
+                    {"name" : this.newUser.name},
+                    {"username" : this.newUser.username},
+                    {"email" : this.newUser.email },
+                    {"password" : this.newUser.password })
+                    .then(response=>{
+                        console.log("New User created");
+                        console.log('fake i guess   by: cloro');
 
-                })
-                .catch(error=>{
-                    console.log(error);
-
-                });
-        },
-        cancelRegister(){
-            this.showRegisterDiv = false;
+                        this.showRegisterDiv = false;
+                        this.newUser.name = '';
+                        this.newUser.username = '';
+                        this.newUser.email = '';
+                        this.newUser.password = '';
+                    })
+                    .catch(error=>{
+                        console.log(error);
+                    });
+            },
+            cancelRegister(){
+                this.showRegisterDiv = false;
+                this.newUser.name = '';
+                this.newUser.username = '';
+                this.newUser.email = '';
+                this.newUser.password = '';
+            },
         },
         computed: {
             title() {
