@@ -18,6 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });*/
 
 Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
+Route::post('user', 'UserControllerApi@store');
 
 //blocked/unblock route
 Route::put('user/block/{id}', 'UserControllerApi@block');
@@ -40,7 +41,7 @@ Route::get('games', 'GameControllerApi@allGames');
 Route::post('games', 'GameControllerApi@store');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
 
-Route::delete('user/{id}', 'UserControllerApi@destroy');
+Route::delete('user/{id}', 'UserControllerApi@deleteUser');
 
 
 
