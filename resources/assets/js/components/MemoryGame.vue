@@ -194,6 +194,8 @@
                     this.startGameTimer(resp);
                 }
 
+                resp.chatMessages = [];
+
                 this.myGames.push(resp);
                 console.log(this.myGames);
             },
@@ -286,7 +288,11 @@
                 if(gameId === -1){
                     return false;
                 }else{
+                    let keepChat = arr.chatMessages;
+
                     Vue.set(arr, gameId, updatedGame);
+
+                    arr.chatMessages = keepChat;
                     return true;
                 }
             },
