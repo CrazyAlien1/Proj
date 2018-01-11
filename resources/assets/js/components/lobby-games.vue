@@ -27,9 +27,9 @@
 <script type="text/javascript">
     // Component code (not registered)
     module.exports={
-        props: ['games', 'token'],  //token contem o token type (Bearer) e o access_token necessarios para os metodos que passarem
-        methods: {                  // por auth. Assim devem de adicionar um header {headers: {'Authorization': token}} de modo a
-            join(game) {            // validar o user
+        props: ['games'],
+        methods: {
+            join(game) {
                 console.log("Request Join");
                 this.$emit('join-click', game);
             },
