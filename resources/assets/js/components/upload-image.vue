@@ -12,6 +12,7 @@
 
             <p>Select image to upload</p>
             <input type="file"  name="file" id="file">
+
         </div>
 
     </div>

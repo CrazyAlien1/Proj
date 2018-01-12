@@ -45849,7 +45849,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45864,6 +45864,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__game_memory_vue__);
+//
 //
 //
 //
@@ -46273,22 +46274,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         sendMessage: function sendMessage(data) {
             console.log("Sending message", data);
             this.$socket.emit('send_message', data);
+        },
+        admin: function admin() {
+            //axios.get('');
+        },
+        saveUser: function saveUser() {
+            var _this3 = this;
+
+            axios.post('api/user', { "name": this.newUser.name }, { "username": this.newUser.username }, { "email": this.newUser.email }, { "password": this.newUser.password }).then(function (response) {
+                console.log("New User created");
+                console.log('fake i guess   by: cloro');
+
+                _this3.showRegisterDiv = false;
+                _this3.newUser.name = '';
+                _this3.newUser.username = '';
+                _this3.newUser.email = '';
+                _this3.newUser.password = '';
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        cancelRegister: function cancelRegister() {
+            this.showRegisterDiv = false;
+            this.newUser.name = '';
+            this.newUser.username = '';
+            this.newUser.email = '';
+            this.newUser.password = '';
         }
     },
-    showRegister: function showRegister() {
-        this.showRegisterDiv = true;
-    },
-    saveUser: function saveUser() {
-        axios.post('api/user', { "name": this.newUser.name }, { "username": this.newUser.username }, { "email": this.newUser.email }, { "password": this.newUser.password }).then(function (response) {
-            console.log("New User created");
-        }).catch(function (error) {
-            console.log(error);
-        });
-    },
-    cancelRegister: function cancelRegister() {
-        this.showRegisterDiv = false;
-    },
-
     computed: {
         title: function title() {
             return ' Memory Game ' + (this.user !== undefined ? this.user.nickname : '');
@@ -47410,11 +47423,11 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "btn btn-xs btn-success",
+              staticClass: "btn btn-xs btn-primary",
               on: {
                 click: function($event) {
                   $event.preventDefault()
-                  _vm.showRegister($event)
+                  _vm.showRegisterDiv = !_vm.showRegisterDiv
                 }
               }
             },
@@ -47571,7 +47584,7 @@ var render = function() {
             _c(
               "a",
               {
-                staticClass: "btn btn-default",
+                staticClass: "btn btn-primary btn-success",
                 on: {
                   click: function($event) {
                     $event.preventDefault()
@@ -47585,7 +47598,7 @@ var render = function() {
             _c(
               "a",
               {
-                staticClass: "btn btn-default",
+                staticClass: "btn btn-primary btn-danger",
                 on: {
                   click: function($event) {
                     $event.preventDefault()
