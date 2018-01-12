@@ -11,9 +11,6 @@ require('./bootstrap');
 window.Vue = require('vue');
 window.Event = new Vue();
 
-/*Vue.component('user-list',require('./components/userList.vue'));
-Vue.component('game-list',require('./components/gameList.vue'));*/
-
 Vue.component('admin',require('./components/administrator.vue'));
 
 const app = new Vue({
