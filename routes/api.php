@@ -44,13 +44,17 @@ Route::put('games', 'GameControllerApi@update');
 Route::delete('games/{id}', 'GameControllerApi@destroy');
 //Route::put('games/{id}', 'GameControllerApi@update');
 
+Route::delete('removeAccount/{email}', 'UserControllerApi@removeAccount');
 Route::delete('user/{id}', 'UserControllerApi@deleteUser');
 
 
 
 Route::get('images', 'ImageControllerApi@allImages');
 
+Route::get('user/{email}', 'UserControllerApi@getUserDetails');
+
 Route::get('allStats', 'StatisticsControllerApi@allStats');
+Route::get('myStats/{email}', 'StatisticsControllerApi@allUserStats');
 
 Route::get('statistics', 'StatisticsControllerApi@getStatistics');
 

@@ -3,7 +3,9 @@
             <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
-            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline Statistics</button>
+            <button class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline statistics</button>
+            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="getMyStats">My statistics</button>
+            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="showProfile">Profile</button>
 
             <br></br>
             <span v-if="showLogin && !logedIn">
@@ -21,6 +23,30 @@
                     <h4 class="text-danger">{{ loginError }}</h4>
                 </span>
             </span>
+
+        <div class="jumbotron" v-if="showUserProfile">
+            <h2>Profile</h2>
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <output name="name">{{ authUser.name}} </output>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName">Nickname</label>
+                <output name="name">{{ authUser.username}} </output>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName">email</label>
+                <output name="name">{{authUser.email }} </output>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-success" v-on:click.prevent="editUser">Edit profile</a>
+                <a class="btn btn-primary btn-danger" v-on:click.prevent="removeUser">Remove</a>
+                <a class="btn btn-primary btn-danger" v-on:click.prevent="desactive">Desactive account</a>
+            </div>
+        </div>
 
         <div class="jumbotron" v-if="showRegisterDiv">
             <h2>Register</h2>
@@ -80,6 +106,27 @@
                     </tr>
                     </tbody>
                 </table>
+        </div>
+
+        <div v-if="myStats">
+            <h2>My statistics</h2>
+            <p>Total Single Player Games: {{this.myStats['singlePlayer']}}</p>
+            <p>Total Multi Player Games: {{this.myStats['multiplayer']}}</p>
+            <p>Total Played Games: {{this.myStats['totalPlayed']}}</p>
+            <p>Total Wins: {{this.myStats['totalWin']}}</p>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nickname</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="user in this.allStats['winner']"  :key="user.id">
+                    <td>{{ user }}</td>
+
+                </tr>
+                </tbody>
+            </table>
         </div>
 
             <h3 class="text-center">
@@ -174,6 +221,10 @@
                 newUser:{name:'',username:'',email: '', password: '' },
                 allStats:[],
                 statistics: false,
+                myStats:false,
+                userStats:[],
+                showUserProfile:false,
+                authUser:{name:'',username:'',email: '', password: '' },
             }
         },
         sockets:{
@@ -472,9 +523,45 @@
                 axios.get('api/allStats')
                     .then(response=>{
                         Object.assign(this.allStats,response.data);
-                        this.statistics = true;
-                        console.log(this.allStats['winner']);
+                        this.statistics = !this.statistics;
                     });
+            },getMyStats(){
+                console.log(this.currentUser.email);
+                axios.get('api/myStats/'+this.currentUser.email)
+                    .then(response=>{
+                        Object.assign(this.userStats,response.data);
+                        this.myStats = !this.myStats;
+                    }).catch(error=>{
+                    console.log(error);
+
+                });
+            },
+            showProfile(){
+                axios.get('api/user/'+this.currentUser.email)
+                    .then(response=>{
+                        console.log(response.data);
+                        this.authUser.name = response.data.name;
+                        this.authUser.username = response.data.nickname;
+                        this.authUser.email = response.data.email;
+                        //this.authUser.password = response.data.password;
+                        this.showUserProfile = !this.showUserProfile;
+                    }).catch(error=>{
+                    console.log(error);
+
+                });
+            },editUser(){
+
+            },removeUser(){
+                axios.delete('api/removeAccount/'+this.currentUser.email)
+                    .then(response => {
+                        console.log(response);
+                        console.log('User remove sucessufully');
+                        this.showUserProfile=!this.showUserProfile;
+                        this.clickLogout();
+                    });
+
+            },desactive(){
+
             }
         },
         computed: {

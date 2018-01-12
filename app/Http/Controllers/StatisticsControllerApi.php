@@ -36,14 +36,14 @@ class StatisticsControllerApi extends Controller
         return $statistics;
     }
 
-    public function allUserStats($id){
+    public function allUserStats($email){
         //logado
-        $user = User::find($id);
+        $user = User::find($email);
 
         $statistics =array (
-            "singlePlayer"  => $user->gamesPlayed()->where('type','multiplayer')->count(),
-            "multiplayer"   => $user->gamesPlayed()->where('type','singleplayer')->count(),
-            "totalPlayed"  =>  $user->gamesPlayed()->where('status','terminated')->count(),
+            "singlePlayer"  => $user->gamesPlayed->where('type','multiplayer')->count(),
+            "multiplayer"   => $user->gamesPlayed->where('type','singleplayer')->count(),
+            "totalPlayed"  =>  $user->gamesPlayed->where('status','terminated')->count(),
             "totalWin"     =>  Game::all()->where('winner',$user->nickname)->count(),
         );
 

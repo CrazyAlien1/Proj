@@ -36,6 +36,20 @@ class UserControllerApi extends Controller
         return $users;
     }
 
+    public function getUserDetails($email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        return $currentUser;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -123,6 +137,22 @@ class UserControllerApi extends Controller
         \Mail::to($user)->send(new Remove($user,$request->reason_remove));
 
         $user->delete();
+        //return $user;
+    }
+
+    public function removeAccount($email)
+    {
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->delete();
         //return $user;
     }
 
