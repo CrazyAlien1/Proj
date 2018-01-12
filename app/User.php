@@ -39,6 +39,7 @@ class User extends Authenticatable
         return $this->belongsToMany(Game::class, 'game_user', 'user_id');
     }
 
+
     public function createGame(StoreGamePost $post){
         $game = new Game();
         $game->created_by = $this->id;

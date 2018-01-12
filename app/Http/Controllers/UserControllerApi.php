@@ -53,6 +53,16 @@ class UserControllerApi extends Controller
     public function store(Request $request)
     {
         //TODO
+        $user = new User();
+
+        $user->name = $request->name;
+        $user -> email = $request->email;
+        $user->nickname = $request->username;
+        $user->password = $request -> password; //faltar encryptar
+
+       // \Mail::to($user)->send(new Welcome($user)); erro ao criar por causa do passaporte
+
+        $user->save();
     }
 
     /**

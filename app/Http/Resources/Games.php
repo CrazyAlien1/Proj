@@ -30,8 +30,5 @@ class Games extends Resource
         ];
     }
 
-    public function users()
-    {
-        return $this->belongsToMany(Users::class);
-    }
+
 }
