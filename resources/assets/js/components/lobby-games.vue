@@ -1,42 +1,40 @@
 <template>
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
         <thead>
         <tr>
             <th>ID</th>
             <th>Room</th>
-            <th>Owner</th>
             <th>Players</th>
             <th>Board Size</th>
             <th>Actions</th>
         </tr>
         </thead>
         <tbody>
-        <tr v-for="game in games"  :key="game.id">
+        <tr v-for="game in games"  :key="game.id" v-bind:class="rowGameStatus(game.isFull)">
             <td>{{ game.id }}</td>
             <td>{{ game.name }}</td>
-            <td>{{ game.owner.name }}</td>
             <td>
                 <div class="row" v-for="player in game.players">
                     <div class="col col-xs-4">
                         {{player.name}}
                     </div>
-                    <div class="col col-xs-2">
+                    <div class="col col-xs-2" v-if="isOwner(game.owner.name)">
                         <button v-if="game.owner.name != player.name" class="btn btn-danger btn-xs" v-on:click.prevent="removePlayer(game.id, player.ID)">X</button>
                     </div>
                 </div>
             </td>
             <td>{{game.cols * game.rows}}</td>
+            <td>{{ game.created_at.date }}</td>
             <td>
-                <span v-if="game.isFull" class="alert alert-danger">Game is full!</span>
 
                 <div v-if="!isOwner(game.owner.name)">
                     <a v-if="!game.isFull && !isInGame(game)" class="btn btn-xs btn-primary" v-on:click.prevent="join(game)">Join</a>
-                    <a v-if="isInGame(game)" class="btn btn-xs btn-danger" v-on:click.prevent="leaveGame(game.ID)">X</a>
+                    <a v-if="isInGame(game)" class="btn btn-xs btn-danger" v-on:click.prevent="leaveGame(game.id)">X</a>
                 </div>
 
                 <div v-if="isOwner(game.owner.name)">
                     <a v-if="isOwner(game.owner.name)" class="btn btn-xs btn-success" v-on:click.prevent="start(game)">Start</a>
-                    <a v-if="isOwner(game.owner.name)" class="btn btn-xs btn-danger" v-on:click.prevent="deleteGame(game.ID)">X</a>
+                    <a v-if="isOwner(game.owner.name)" class="btn btn-xs btn-danger" v-on:click.prevent="deleteGame(game.id)">X</a>
                 </div>
             </td>
         </tr>
@@ -49,6 +47,13 @@
     // Component code (not registered)
     module.exports={
         props: ['games'],
+        data: function(){
+            return {
+                rowGameStatus : function(isFull){
+                    return (isFull) ? "danger" : "active";
+                }
+            }
+        },
         methods: {
             join(game) {
                 console.log("Request Join");

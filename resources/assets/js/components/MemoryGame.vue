@@ -3,6 +3,7 @@
             <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline Statistics</button>
 
             <br></br>
             <span v-if="showLogin && !logedIn">
@@ -61,6 +62,26 @@
             </div>
         </div>
 
+        <div v-if="statistics">
+            <h2>Statistics</h2>
+            <p>Total Single Player Games: {{this.allStats['singlePlayer']}}</p>
+            <p>Total Multi Player Games: {{this.allStats['multiplayer']}}</p>
+            <p>Total Played Games: {{this.allStats['totalPlayed']}}</p>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nickname</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="user in this.allStats['winner']"  :key="user.id">
+                        <td>{{ user }}</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+        </div>
+
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
@@ -108,7 +129,7 @@
             <div class="row">
                 <h1>GAMES!</h1>
                 <template v-for="game in myGames">
-                    <game :game="game" @close_game="closeGame"  @send-click="sendMessage"></game>
+                    <game :game="game" :user="user" @close_game="closeGame"  @send-click="sendMessage"></game>
                 </template>
             </div>
 
@@ -134,8 +155,8 @@
                 showLobby : true,
                 gameType : ['singleplayer', 'multiplayer'],
                 selectedGameType : 'singleplayer',
-                maxPlayers : [1, 2, 3, 4],
-                selectedNumPlayers : 1,
+                maxPlayers : [ 2, 3, 4 ],
+                selectedNumPlayers : 2,
                 rows : 2,
                 cols : 2,
                 gameName : '',
@@ -150,6 +171,8 @@
                 token: '',
                 showRegisterDiv : false,
                 newUser:{name:'',username:'',email: '', password: '' },
+                allStats:[],
+                statistics: false,
             }
         },
         sockets:{
@@ -174,6 +197,7 @@
             },
             player_disconnected(resp){
                 console.log("Player Diconnect: " + resp.player);
+
 
                 this.updateGame(this.lobbyGames, resp.game);
                 let outcome = this.updateGame(this.myGames, resp.game);
@@ -223,6 +247,8 @@
                     this.startGameTimer(resp);
                 }
 
+                console.log("GAME BEFORE SWITCH", game);
+
                 this.updateGame(this.myGames, resp);
             },
             game_kick(resp){
@@ -241,7 +267,7 @@
                 console.log("MESSAGE!");
                 console.log(resp);
                 let game = this.getGame(this.myGames, resp.game);
-                if(game !== undefined){
+                if(game !== undefined && game.chatMessages !== undefined){
                     game.chatMessages.push(resp.msg);
                 }else{
                     console.log("Game is undefined");
@@ -286,12 +312,13 @@
 
                 if(gameId === -1){
                     return false;
-                }else{
-                    let keepChat = arr.chatMessages;
+                }else if(arr[gameId].status == 'active'){
+                    let keepChat = arr[gameId].chatMessages;
+                    console.log("KEEP CHAT...", keepChat.chatMessages);
 
                     Vue.set(arr, gameId, updatedGame);
 
-                    arr.chatMessages = keepChat;
+                    arr[gameId].chatMessages = keepChat;
                     return true;
                 }
             },
@@ -344,7 +371,8 @@
                 }
             },
             deleteGame(gameID){
-                this.$socket.emit('delete_game', gameID);
+                console.log(gameID);
+                this.$socket.emit('delete_game', {gameId : gameID});
             },
             removePlayer(data){
                 this.$socket.emit('remove_player_game', {gameId: data.gameID, userID: data.playerID});
@@ -412,6 +440,7 @@
                 router.push({ name: 'administraton'});
             },
             saveUser(){
+                console.log(this.newUser);
                 axios.post('api/user',
                     {"name" : this.newUser.name},
                     {"username" : this.newUser.username},
@@ -438,6 +467,14 @@
                 this.newUser.email = '';
                 this.newUser.password = '';
             },
+            getOfflineStats(){
+                axios.get('api/allStats')
+                    .then(response=>{
+                        Object.assign(this.allStats,response.data);
+                        this.statistics = true;
+                        console.log(this.allStats['winner']);
+                    });
+            }
         },
         computed: {
             title() {

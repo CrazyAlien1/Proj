@@ -12,3 +12,4 @@ yarn-error.log
 .env
 app/Http/Controllers/LoginControllerAPI.php
 public/mix-manifest.json
+app/Http/Controllers/LoginControllerAPI.php

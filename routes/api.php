@@ -27,7 +27,7 @@ return response()->json(['msg'=>'U have permitions!! :D :D'], 200);
 Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
 Route::post('user', 'UserControllerApi@store');
 
-Route::get('users/{user}', 'UserControllerApi@show');
+Route::middleware('auth:api')->get('users/{user}', 'UserControllerApi@show');
 
 //blocked/unblock route
 Route::put('user/block/{id}', 'UserControllerApi@block');
@@ -50,4 +50,8 @@ Route::delete('user/{id}', 'UserControllerApi@deleteUser');
 
 Route::get('images', 'ImageControllerApi@allImages');
 
+Route::get('allStats', 'StatisticsControllerApi@allStats');
+
 Route::get('statistics', 'StatisticsControllerApi@getStatistics');
+
+Route::post('image/upload', 'ImageControllerApi@upload');

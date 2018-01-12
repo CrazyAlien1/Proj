@@ -18,6 +18,10 @@ class Images extends Resource
             'id' => $this->id,
             'path' => $this->path,
             'face' => $this->face,
+            'active' => $this->active,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at,
+
         ];
     }
 }
