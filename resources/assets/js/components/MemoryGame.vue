@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-            <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
+            <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
 
@@ -118,7 +118,6 @@
 <script type="text/javascript">
     import Lobby from './lobby-games.vue';
     import GameMemory from './game-memory.vue';
-
 
     export default {
         data: function(){
@@ -410,7 +409,7 @@
                 this.$socket.emit('send_message', data);
             },
             admin(){
-                //axios.get('');
+                router.push({ name: 'administraton'});
             },
             saveUser(){
                 axios.post('api/user',
