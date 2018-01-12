@@ -40,6 +40,8 @@ class User extends Authenticatable
     }
 
 
+
+
     public function createGame(StoreGamePost $post){
         $game = new Game();
         $game->created_by = $this->id;
