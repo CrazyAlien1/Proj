@@ -50,4 +50,6 @@ Route::delete('user/{id}', 'UserControllerApi@deleteUser');
 
 Route::get('images', 'ImageControllerApi@allImages');
 
+Route::get('allStats', 'StatisticsControllerApi@allStats');
+
 Route::get('statistics', 'StatisticsControllerApi@getStatistics');

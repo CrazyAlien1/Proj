@@ -24,24 +24,27 @@ class StatisticsControllerApi extends Controller
 
     public function allStats(){
         //nao logado
+        $games =  Game::all();
+
         $statistics =array (
             "singlePlayer"  => Game::all()->where('type','multiplayer')->count(),
             "multiplayer"   => Game::all()->where('type','singleplayer')->count(),
             "totalPlayed"  =>  Game::all()->where('status','terminated')->count(),
-            "winner"     =>    Game::all()->groupBY('winner')->take(3)->get(),
+            "winner"     =>   $games->groupBy('winner')->take(3)->count(),
         );
 
         return $statistics;
     }
 
-    public function allUserStats(User $user){
+    public function allUserStats($id){
         //logado
-        //TODO ver com o bot
+        $user = User::find($id);
+
         $statistics =array (
             "singlePlayer"  => $user->gamesPlayed()->where('type','multiplayer')->count(),
             "multiplayer"   => $user->gamesPlayed()->where('type','singleplayer')->count(),
             "totalPlayed"  =>  $user->gamesPlayed()->where('status','terminated')->count(),
-            "totalWin"     =>  Game::all()->where('winner',$user->name)->count(),
+            "totalWin"     =>  Game::all()->where('winner',$user->nickname)->count(),
         );
 
         return $statistics;

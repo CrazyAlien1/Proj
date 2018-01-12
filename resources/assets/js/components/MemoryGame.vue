@@ -3,6 +3,7 @@
             <button v-if="logedIn" class="btn btn-primary" @click.prevent="admin">Administration</button>
             <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
             <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline Statistics</button>
 
             <br></br>
             <span v-if="showLogin && !logedIn">
@@ -59,6 +60,26 @@
                 <a class="btn btn-primary btn-success" v-on:click.prevent="saveUser">Register</a>
                 <a class="btn btn-primary btn-danger" v-on:click.prevent="cancelRegister">Cancel</a>
             </div>
+        </div>
+
+        <div v-if="statistics">
+            <h2>Statistics</h2>
+            <p>Total Single Player Games: {{this.allStats['singlePlayer']}}</p>
+            <p>Total Multi Player Games: {{this.allStats['multiplayer']}}</p>
+            <p>Total Played Games: {{this.allStats['totalPlayed']}}</p>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nickname</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="user in this.allStats['winner']"  :key="user.id">
+                        <td>{{ user }}</td>
+
+                    </tr>
+                    </tbody>
+                </table>
         </div>
 
             <h3 class="text-center">
@@ -151,6 +172,8 @@
                 token: '',
                 showRegisterDiv : false,
                 newUser:{name:'',username:'',email: '', password: '' },
+                allStats:[],
+                statistics: false,
             }
         },
         sockets:{
@@ -413,6 +436,7 @@
                 //axios.get('');
             },
             saveUser(){
+                console.log(this.newUser);
                 axios.post('api/user',
                     {"name" : this.newUser.name},
                     {"username" : this.newUser.username},
@@ -439,6 +463,14 @@
                 this.newUser.email = '';
                 this.newUser.password = '';
             },
+            getOfflineStats(){
+                axios.get('api/allStats')
+                    .then(response=>{
+                        Object.assign(this.allStats,response.data);
+                        this.statistics = true;
+                        console.log(this.allStats['winner']);
+                    });
+            }
         },
         computed: {
             title() {
