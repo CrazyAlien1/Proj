@@ -45849,7 +45849,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45860,10 +45860,11 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__game_memory_vue__);
+//
 //
 //
 //
@@ -45998,8 +45999,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             showLobby: true,
             gameType: ['singleplayer', 'multiplayer'],
             selectedGameType: 'singleplayer',
-            maxPlayers: [1, 2, 3, 4],
-            selectedNumPlayers: 1,
+            maxPlayers: [2, 3, 4],
+            selectedNumPlayers: 2,
             rows: 2,
             cols: 2,
             gameName: '',
@@ -46086,6 +46087,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 this.startGameTimer(resp);
             }
 
+            console.log("GAME BEFORE SWITCH", game);
+
             this.updateGame(this.myGames, resp);
         },
         game_kick: function game_kick(resp) {
@@ -46104,7 +46107,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             console.log("MESSAGE!");
             console.log(resp);
             var game = this.getGame(this.myGames, resp.game);
-            if (game !== undefined) {
+            if (game !== undefined && game.chatMessages !== undefined) {
                 game.chatMessages.push(resp.msg);
             } else {
                 console.log("Game is undefined");
@@ -46148,12 +46151,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             if (gameId === -1) {
                 return false;
-            } else {
-                var keepChat = arr.chatMessages;
+            } else if (arr[gameId].status == 'active') {
+                var keepChat = arr[gameId].chatMessages;
+                console.log("KEEP CHAT...", keepChat.chatMessages);
 
                 Vue.set(arr, gameId, updatedGame);
 
-                arr.chatMessages = keepChat;
+                arr[gameId].chatMessages = keepChat;
                 return true;
             }
         },
@@ -46206,7 +46210,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
         },
         deleteGame: function deleteGame(gameID) {
-            this.$socket.emit('delete_game', gameID);
+            console.log(gameID);
+            this.$socket.emit('delete_game', { gameId: gameID });
         },
         removePlayer: function removePlayer(data) {
             this.$socket.emit('remove_player_game', { gameId: data.gameID, userID: data.playerID });
@@ -46321,260 +46326,6 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-267d3008"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources\\assets\\js\\components\\web-chat.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-267d3008", Component.options)
-  } else {
-    hotAPI.reload("data-v-267d3008", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(50);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(2)("8c2a65a4", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-267d3008\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./web-chat.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-267d3008\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./web-chat.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports) {
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// Component code (not registered)
-module.exports = {
-    props: ['messages'],
-    data: function data() {
-        return {
-            msgToSend: undefined,
-            chatTextClass: function chatTextClass(sender) {
-                return sender == this.$parent.$parent.user.name ? "text-right" : "text-left";
-            }
-        };
-    },
-    methods: {
-        sendMessage: function sendMessage(messages) {
-            console.log("SENDING MESSAGE:: " + this.gameID);
-
-            this.$emit('send-click', { message: this.msgToSend });
-            messages.msgToSend = '';
-        },
-        calculateTime: function calculateTime(time) {
-            var now = new Date();
-            time = new Date(time);
-            var diffDays = DateDiff.DateMeasure(now - time);
-            console.log(diffDays.days + " M " + diffDays.hours);
-            if (diffDays.days <= 1) {
-                if (diffDays.hours < 1) {
-                    if (diffDays.minutes < 1) {
-                        return "Moments Ago..";
-                    }
-                    return diffDays.minutes + " min";
-                }
-                return time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-            }
-            return time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
-        }
-    }
-};
-var DateDiff = {
-    DateMeasure: function DateMeasure(ms) {
-        var d, h, m, s;
-        s = Math.floor(ms / 1000);
-        m = Math.floor(s / 60);
-        s = s % 60;
-        h = Math.floor(m / 60);
-        m = m % 60;
-        d = Math.floor(h / 24);
-        h = h % 24;
-
-        return {
-            days: d,
-            hours: h,
-            minutes: m,
-            seconds: s
-        };
-    }
-};
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("WebChat!")]),
-    _vm._v(" "),
-    _c("div", { staticClass: "card col-xs-12 col-sm-8" }, [
-      _c(
-        "div",
-        { staticClass: "card-body" },
-        [
-          _vm._l(_vm.messages, function(msg) {
-            return _c("blockquote", { staticClass: "blockquote" }, [
-              _c("p", { class: _vm.chatTextClass(msg.sender) }, [
-                _vm._v(
-                  "\n                    " +
-                    _vm._s(msg.text) +
-                    "\n                    "
-                ),
-                _c("small", [
-                  _vm._v(
-                    _vm._s(msg.sender) +
-                      " " +
-                      _vm._s(_vm.calculateTime(msg.date))
-                  )
-                ])
-              ])
-            ])
-          }),
-          _vm._v(" "),
-          _c("div", [
-            _c("textarea", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.msgToSend,
-                  expression: "msgToSend"
-                }
-              ],
-              domProps: { value: _vm.msgToSend },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.msgToSend = $event.target.value
-                }
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-primary",
-                on: { click: _vm.sendMessage }
-              },
-              [_vm._v("Send")]
-            )
-          ])
-        ],
-        2
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-267d3008", module.exports)
-  }
-}
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(54)
-}
-var normalizeComponent = __webpack_require__(3)
-/* script */
-var __vue_script__ = __webpack_require__(56)
-/* template */
-var __vue_template__ = __webpack_require__(57)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
 var __vue_scopeId__ = "data-v-8b6548fa"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
@@ -46609,13 +46360,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 54 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -46635,7 +46386,7 @@ if(false) {
 }
 
 /***/ }),
-/* 55 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -46643,17 +46394,15 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 56 */
+/* 51 */
 /***/ (function(module, exports) {
 
-//
-//
 //
 //
 //
@@ -46702,11 +46451,16 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 // Component code (not registered)
 module.exports = {
-    props: ['games', 'token'], //token contem o token type (Bearer) e o access_token necessarios para os metodos que passarem
+    props: ['games'],
+    data: function data() {
+        return {
+            rowGameStatus: function rowGameStatus(isFull) {
+                return isFull ? "danger" : "active";
+            }
+        };
+    },
     methods: {
-        // por auth. Assim devem de adicionar um header {headers: {'Authorization': token}} de modo a
         join: function join(game) {
-            // validar o user
             console.log("Request Join");
             this.$emit('join-click', game);
         },
@@ -46740,141 +46494,141 @@ module.exports = {
 };
 
 /***/ }),
-/* 57 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("table", { staticClass: "table table-striped" }, [
+  return _c("table", { staticClass: "table table-striped table-hover" }, [
     _vm._m(0, false, false),
     _vm._v(" "),
     _c(
       "tbody",
       _vm._l(_vm.games, function(game) {
-        return _c("tr", { key: game.id }, [
-          _c("td", [_vm._v(_vm._s(game.id))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(game.name))]),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(game.owner.name))]),
-          _vm._v(" "),
-          _c(
-            "td",
-            _vm._l(game.players, function(player) {
-              return _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col col-xs-4" }, [
-                  _vm._v(
-                    "\n                    " +
-                      _vm._s(player.name) +
-                      "\n                "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col col-xs-2" }, [
-                  game.owner.name != player.name
-                    ? _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger btn-xs",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.removePlayer(game.id, player.ID)
-                            }
-                          }
-                        },
-                        [_vm._v("X")]
-                      )
-                    : _vm._e()
-                ])
-              ])
-            })
-          ),
-          _vm._v(" "),
-          _c("td", [_vm._v(_vm._s(game.cols * game.rows))]),
-          _vm._v(" "),
-          _c("td", [
-            game.isFull
-              ? _c("span", { staticClass: "alert alert-danger" }, [
-                  _vm._v("Game is full!")
-                ])
-              : _vm._e(),
+        return _c(
+          "tr",
+          { key: game.id, class: _vm.rowGameStatus(game.isFull) },
+          [
+            _c("td", [_vm._v(_vm._s(game.id))]),
             _vm._v(" "),
-            !_vm.isOwner(game.owner.name)
-              ? _c("div", [
-                  !game.isFull && !_vm.isInGame(game)
-                    ? _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-xs btn-primary",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.join(game)
-                            }
-                          }
-                        },
-                        [_vm._v("Join")]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.isInGame(game)
-                    ? _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-xs btn-danger",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.leaveGame(game.ID)
-                            }
-                          }
-                        },
-                        [_vm._v("X")]
-                      )
-                    : _vm._e()
-                ])
-              : _vm._e(),
+            _c("td", [_vm._v(_vm._s(game.name))]),
             _vm._v(" "),
-            _vm.isOwner(game.owner.name)
-              ? _c("div", [
-                  _vm.isOwner(game.owner.name)
-                    ? _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-xs btn-success",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.start(game)
-                            }
-                          }
-                        },
-                        [_vm._v("Start")]
-                      )
-                    : _vm._e(),
+            _c(
+              "td",
+              _vm._l(game.players, function(player) {
+                return _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col col-xs-4" }, [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(player.name) +
+                        "\n                "
+                    )
+                  ]),
                   _vm._v(" "),
                   _vm.isOwner(game.owner.name)
-                    ? _c(
-                        "a",
-                        {
-                          staticClass: "btn btn-xs btn-danger",
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.deleteGame(game.ID)
-                            }
-                          }
-                        },
-                        [_vm._v("X")]
-                      )
+                    ? _c("div", { staticClass: "col col-xs-2" }, [
+                        game.owner.name != player.name
+                          ? _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-danger btn-xs",
+                                on: {
+                                  click: function($event) {
+                                    $event.preventDefault()
+                                    _vm.removePlayer(game.id, player.ID)
+                                  }
+                                }
+                              },
+                              [_vm._v("X")]
+                            )
+                          : _vm._e()
+                      ])
                     : _vm._e()
                 ])
-              : _vm._e()
-          ])
-        ])
+              })
+            ),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(game.cols * game.rows))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(game.created_at.date))]),
+            _vm._v(" "),
+            _c("td", [
+              !_vm.isOwner(game.owner.name)
+                ? _c("div", [
+                    !game.isFull && !_vm.isInGame(game)
+                      ? _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-xs btn-primary",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.join(game)
+                              }
+                            }
+                          },
+                          [_vm._v("Join")]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isInGame(game)
+                      ? _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-xs btn-danger",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.leaveGame(game.id)
+                              }
+                            }
+                          },
+                          [_vm._v("X")]
+                        )
+                      : _vm._e()
+                  ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.isOwner(game.owner.name)
+                ? _c("div", [
+                    _vm.isOwner(game.owner.name)
+                      ? _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-xs btn-success",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.start(game)
+                              }
+                            }
+                          },
+                          [_vm._v("Start")]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.isOwner(game.owner.name)
+                      ? _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-xs btn-danger",
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.deleteGame(game.id)
+                              }
+                            }
+                          },
+                          [_vm._v("X")]
+                        )
+                      : _vm._e()
+                  ])
+                : _vm._e()
+            ])
+          ]
+        )
       })
     )
   ])
@@ -46889,8 +46643,6 @@ var staticRenderFns = [
         _c("th", [_vm._v("ID")]),
         _vm._v(" "),
         _c("th", [_vm._v("Room")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Owner")]),
         _vm._v(" "),
         _c("th", [_vm._v("Players")]),
         _vm._v(" "),
@@ -46911,17 +46663,17 @@ if (false) {
 }
 
 /***/ }),
-/* 58 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(59)
+  __webpack_require__(54)
 }
 var normalizeComponent = __webpack_require__(3)
 /* script */
-var __vue_script__ = __webpack_require__(61)
+var __vue_script__ = __webpack_require__(56)
 /* template */
 var __vue_template__ = __webpack_require__(62)
 /* template functional */
@@ -46963,13 +46715,13 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 59 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(60);
+var content = __webpack_require__(55);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -46989,7 +46741,7 @@ if(false) {
 }
 
 /***/ }),
-/* 60 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -47003,13 +46755,15 @@ exports.push([module.i, "\n.gameseparator[data-v-0a65efb5]{\n    border-style: s
 
 
 /***/ }),
-/* 61 */
+/* 56 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue__ = __webpack_require__(57);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__web_chat_vue__);
+//
+//
 //
 //
 //
@@ -47052,7 +46806,7 @@ var HIDDEN = './storage/images/hidden.png';
 var REVEALED = './storage/images/empty.png';
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    props: ['game'],
+    props: ['game', 'user'],
     data: function data() {
         return {
             alerttype: "",
@@ -47098,12 +46852,290 @@ var REVEALED = './storage/images/empty.png';
         title: function title() {
             if (this.$parent.user === undefined) return '';
             return this.game.name;
+        },
+        loginToogleButton: function loginToogleButton() {
+            if (this.showChat) {
+                return 'Collapse Chat';
+            } else {
+                return 'Show Chat';
+            }
         }
     },
     components: {
         'webchat': __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default.a
     }
 });
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(58)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+var __vue_script__ = __webpack_require__(60)
+/* template */
+var __vue_template__ = __webpack_require__(61)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-267d3008"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources\\assets\\js\\components\\web-chat.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-267d3008", Component.options)
+  } else {
+    hotAPI.reload("data-v-267d3008", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(59);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("8c2a65a4", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-267d3008\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./web-chat.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-267d3008\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./web-chat.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.web-chat-text[data-v-267d3008] {\n    height: 200px;\n    overflow: scroll;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// Component code (not registered)
+module.exports = {
+    props: ['messages'],
+    data: function data() {
+        return {
+            msgToSend: undefined,
+            chatTextClass: function chatTextClass(sender) {
+                console.log(sender, " == ", this.$parent.user.nickname);
+                return sender != this.$parent.user.nickname ? "blockquote" : "blockquote blockquote-reverse";
+            }
+        };
+    },
+    methods: {
+        sendMessage: function sendMessage() {
+            console.log("SENDING MESSAGE:: " + this.gameID);
+
+            this.$emit('send-click', { message: this.msgToSend });
+            this.msgToSend = '';
+        },
+        calculateTime: function calculateTime(time) {
+            var now = new Date();
+            time = new Date(time);
+            var diffDays = DateDiff.DateMeasure(now - time);
+            console.log(diffDays.days + " M " + diffDays.hours);
+            if (diffDays.days <= 1) {
+                if (diffDays.hours < 1) {
+                    if (diffDays.minutes < 1) {
+                        return "Moments Ago..";
+                    }
+                    return diffDays.minutes + " min";
+                }
+                return time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+            }
+            return time.getDate() + "-" + (time.getMonth() + 1) + "-" + time.getFullYear();
+        }
+    },
+    watch: {
+        'messages': function messages(val, oldVal) {
+            this.$nextTick(function () {
+                console.log("\t\t\tTHICK!");
+                var el = document.getElementById("chatMsgScrollable");
+                el.scrollTop = el.scrollHeight;
+            });
+        }
+    }
+};
+
+var DateDiff = {
+    DateMeasure: function DateMeasure(ms) {
+        var d, h, m, s;
+        s = Math.floor(ms / 1000);
+        m = Math.floor(s / 60);
+        s = s % 60;
+        h = Math.floor(m / 60);
+        m = m % 60;
+        d = Math.floor(h / 24);
+        h = h % 24;
+
+        return {
+            days: d,
+            hours: h,
+            minutes: m,
+            seconds: s
+        };
+    }
+};
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", [_vm._v("WebChat!")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-body" }, [
+      _c(
+        "div",
+        { staticClass: "web-chat-text", attrs: { id: "chatMsgScrollable" } },
+        _vm._l(_vm.messages, function(msg) {
+          return _c("blockquote", { class: _vm.chatTextClass(msg.sender) }, [
+            _c("p", [
+              _vm._v(
+                "\n                    " +
+                  _vm._s(msg.text) +
+                  "\n                    "
+              ),
+              msg.sender
+                ? _c("small", [
+                    _vm._v(
+                      _vm._s(msg.sender) +
+                        " " +
+                        _vm._s(_vm.calculateTime(msg.date))
+                    )
+                  ])
+                : _vm._e()
+            ])
+          ])
+        })
+      ),
+      _vm._v(" "),
+      _c("div", [
+        _c("textarea", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.msgToSend,
+              expression: "msgToSend"
+            }
+          ],
+          domProps: { value: _vm.msgToSend },
+          on: {
+            keyup: function($event) {
+              if (
+                !("button" in $event) &&
+                _vm._k($event.keyCode, "enter", 13, $event.key)
+              ) {
+                return null
+              }
+              _vm.sendMessage($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.msgToSend = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          { staticClass: "btn btn-primary", on: { click: _vm.sendMessage } },
+          [_vm._v("Send")]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-267d3008", module.exports)
+  }
+}
 
 /***/ }),
 /* 62 */
@@ -47162,15 +47194,31 @@ var render = function() {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "row" }, [
-        _vm.showChat
+        _vm.game.type == "multiplayer"
           ? _c(
               "div",
               { staticClass: "col-xs-12 col-sm-5" },
               [
-                _c("webchat", {
-                  attrs: { messages: _vm.game.chatMessages },
-                  on: { "send-click": _vm.sendMessage }
-                })
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.showChat = !_vm.showChat
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(_vm.loginToogleButton))]
+                ),
+                _vm._v(" "),
+                _vm.showChat
+                  ? _c("webchat", {
+                      attrs: { messages: _vm.game.chatMessages },
+                      on: { "send-click": _vm.sendMessage }
+                    })
+                  : _vm._e()
               ],
               1
             )
@@ -47278,22 +47326,6 @@ var render = function() {
         )
       : _vm._e(),
     _vm._v(" "),
-    !_vm.logedIn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-primary btn-success",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.showRegister($event)
-              }
-            }
-          },
-          [_vm._v("Register")]
-        )
-      : _vm._e(),
-    _vm._v(" "),
     _c("br"),
     _c("br"),
     _vm._v(" "),
@@ -47372,7 +47404,21 @@ var render = function() {
                 }
               }
             },
-            [_vm._v(" Login")]
+            [_vm._v("Login")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-success",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.showRegister($event)
+                }
+              }
+            },
+            [_vm._v("Register")]
           ),
           _vm._v(" "),
           _vm.loginError
@@ -47794,7 +47840,7 @@ var render = function() {
         _vm._l(_vm.myGames, function(game) {
           return [
             _c("game", {
-              attrs: { game: game },
+              attrs: { game: game, user: _vm.user },
               on: { close_game: _vm.closeGame, "send-click": _vm.sendMessage }
             })
           ]
