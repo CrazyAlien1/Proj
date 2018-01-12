@@ -129,7 +129,7 @@
             <div class="row">
                 <h1>GAMES!</h1>
                 <template v-for="game in myGames">
-                    <game :game="game" @close_game="closeGame"  @send-click="sendMessage"></game>
+                    <game :game="game" :user="user" @close_game="closeGame"  @send-click="sendMessage"></game>
                 </template>
             </div>
 
@@ -156,8 +156,8 @@
                 showLobby : true,
                 gameType : ['singleplayer', 'multiplayer'],
                 selectedGameType : 'singleplayer',
-                maxPlayers : [1, 2, 3, 4],
-                selectedNumPlayers : 1,
+                maxPlayers : [ 2, 3, 4 ],
+                selectedNumPlayers : 2,
                 rows : 2,
                 cols : 2,
                 gameName : '',
@@ -198,6 +198,7 @@
             },
             player_disconnected(resp){
                 console.log("Player Diconnect: " + resp.player);
+
 
                 this.updateGame(this.lobbyGames, resp.game);
                 let outcome = this.updateGame(this.myGames, resp.game);
@@ -247,6 +248,8 @@
                     this.startGameTimer(resp);
                 }
 
+                console.log("GAME BEFORE SWITCH", game);
+
                 this.updateGame(this.myGames, resp);
             },
             game_kick(resp){
@@ -265,7 +268,7 @@
                 console.log("MESSAGE!");
                 console.log(resp);
                 let game = this.getGame(this.myGames, resp.game);
-                if(game !== undefined){
+                if(game !== undefined && game.chatMessages !== undefined){
                     game.chatMessages.push(resp.msg);
                 }else{
                     console.log("Game is undefined");
@@ -310,12 +313,13 @@
 
                 if(gameId === -1){
                     return false;
-                }else{
-                    let keepChat = arr.chatMessages;
+                }else if(arr[gameId].status == 'active'){
+                    let keepChat = arr[gameId].chatMessages;
+                    console.log("KEEP CHAT...", keepChat.chatMessages);
 
                     Vue.set(arr, gameId, updatedGame);
 
-                    arr.chatMessages = keepChat;
+                    arr[gameId].chatMessages = keepChat;
                     return true;
                 }
             },
@@ -368,7 +372,8 @@
                 }
             },
             deleteGame(gameID){
-                this.$socket.emit('delete_game', gameID);
+                console.log(gameID);
+                this.$socket.emit('delete_game', {gameId : gameID});
             },
             removePlayer(data){
                 this.$socket.emit('remove_player_game', {gameId: data.gameID, userID: data.playerID});

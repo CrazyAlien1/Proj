@@ -13,8 +13,10 @@
                 <strong v-if="!game.gameEnded">{{game.timer}}s remaining</strong>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-5" v-if="showChat">
-                        <webchat :messages="game.chatMessages" @send-click="sendMessage"></webchat>
+
+                <div class="col-xs-12 col-sm-5" v-if="game.type == 'multiplayer'">
+                    <button class="btn btn-primary" v-on:click.prevent="showChat = !showChat">{{loginToogleButton}}</button>
+                        <webchat v-if="showChat" :messages="game.chatMessages" @send-click="sendMessage"></webchat>
                 </div>
                 <div class="col-xs-12  col-sm-5 board">
                     <div v-for="(pieceID, key) of game.board">
@@ -40,7 +42,7 @@
     const REVEALED = './storage/images/empty.png';
 
     export default {
-        props: ['game'],
+        props: ['game', 'user'],
         data: function(){
             return {
                 alerttype : "",
@@ -90,6 +92,13 @@
                     return '';
                 return this.game.name;
             },
+            loginToogleButton : function(){
+                if(this.showChat){
+                    return 'Collapse Chat';
+                }else{
+                    return 'Show Chat';
+                }
+            }
         },
         components: {
             'webchat': WebChat,

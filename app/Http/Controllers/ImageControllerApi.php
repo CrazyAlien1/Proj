@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Image;
 use Illuminate\Http\Request;
 use App\Http\Resources\Images as ImagesResource;
+use \Input as Input;
 
 class ImageControllerApi extends Controller
 {
@@ -75,6 +76,15 @@ class ImageControllerApi extends Controller
     public function update(Request $request, $id)
     {
         //
+    }
+
+    public function upload(){
+        if(Input::hasFile('file')){
+
+            $file = Input::file('file');
+            $file->move('storage/images', $file->getClientOriginalName());
+        }
+
     }
 
     /**
