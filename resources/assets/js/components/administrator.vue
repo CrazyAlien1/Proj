@@ -30,6 +30,7 @@
                                             <th>Total single Player games played:</th>
                                             <th>Total multilayer Player games played:</th>
                                             <th>Total games played:</th>
+                                            <th>Total Wins:</th>
                                         </tr>
                                         </thead>
                                         <tbody>

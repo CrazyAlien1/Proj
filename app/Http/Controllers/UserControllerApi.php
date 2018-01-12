@@ -7,10 +7,12 @@ use App\Game;
 use App\Mail\Block;
 use App\Mail\Reactive;
 use App\Mail\Remove;
+use App\Mail\Welcome;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Hash;
 
 class UserControllerApi extends Controller
 {
@@ -52,7 +54,16 @@ class UserControllerApi extends Controller
      */
     public function store(Request $request)
     {
-        //TODO
+        $user = new User();
+
+        $user->name = $request->name;
+        $user -> email = $request->email;
+        $user->nickname = $request->username;
+        $user->password = Hash::make($request -> password);
+
+        \Mail::to($user)->send(new Welcome($user));
+
+        $user->save();
     }
 
     /**

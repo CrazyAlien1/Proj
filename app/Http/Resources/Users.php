@@ -33,8 +33,4 @@ class Users extends Resource
         ];
     }
 
-    public function games()
-    {
-        return $this->hasMany(Games::class);
-    }
 }
