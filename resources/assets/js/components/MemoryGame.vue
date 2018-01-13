@@ -460,6 +460,12 @@
 
                     //Pedir ao Node para criar o Jogo
                     console.log('Asking Node to ask Laravel if everything is OK');
+
+                    axios.get('api/verifyPieces',{"row":this.rows ,"cols":this.cols})
+                        .then(response=>{
+                            console.log(response);
+                        });
+
                     this.$socket.emit('create_game', {
                                                         userID : this.userID,
                                                         gameName: this.gameName,

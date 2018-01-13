@@ -3,7 +3,7 @@
 Dear {{$user->name}},
 click the button bellow to ative your account
 
-@component('mail::button', ['url' => URL::asset('http://proj_dad.teste/api/activateAccount/'.$user->id)])
+@component('mail::button', ['url' => 'http://proj_dad.teste'])
 Activate
 @endcomponent
 
