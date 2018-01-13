@@ -582,6 +582,7 @@
             getOfflineStats(){
                 axios.get('api/allStats')
                     .then(response=>{
+                        console.log(response.data);
                         Object.assign(this.allStats,response.data);
                         this.statistics = !this.statistics;
                     });

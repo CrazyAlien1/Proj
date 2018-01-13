@@ -30,7 +30,7 @@ class StatisticsControllerApi extends Controller
             "singlePlayer"  => Game::all()->where('type','multiplayer')->count(),
             "multiplayer"   => Game::all()->where('type','singleplayer')->count(),
             "totalPlayed"  =>  Game::all()->where('status','terminated')->count(),
-            "winner"     =>   $games->groupBy('winner')->take(3)->count(),
+            "winner"     =>   $games->groupBy('winner')->take(3),
         );
 
         return $statistics;
