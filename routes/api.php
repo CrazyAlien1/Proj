@@ -25,6 +25,8 @@ return response()->json(['msg'=>'U have permitions!! :D :D'], 200);
 });
 
 Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
+Route::get('users/gamesplayed', 'UserControllerApi@usersGamesPlayedStats');
+
 Route::post('user', 'UserControllerApi@store');
 
 

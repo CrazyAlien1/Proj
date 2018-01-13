@@ -16,7 +16,11 @@ use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+<<<<<<< HEAD
+use Illuminate\Support\Facades\DB;
+=======
 use Illuminate\Support\Facades\Storage;
+>>>>>>> ecf094f6fc829d74e1738bd8bcdcc1177dab8841
 
 class UserControllerApi extends Controller
 {
@@ -35,12 +39,31 @@ class UserControllerApi extends Controller
     }
 
     public function allUsersOrderByName(){
+<<<<<<< HEAD
+        $users = DB::table('users')->select('name', 'email', 'nickname')->orderBy('name')->get();
+        return $users;
+    }
+
+    public function usersGamesPlayedStats(){
+        $usersPlayed = DB::table('users')
+                    ->leftJoin('game_user', 'users.id', '=', 'game_user.user_id', 'outer')
+                    ->join('games', 'games.id', '=', 'game_user.game_id')
+                    ->groupBy('game_user.user_id', 'games.type')
+                    ->select('users.name', 'users.email', 'users.nickname', 'games.type', DB::raw('count(*) as totalGames, games.type'), DB::raw('count(games.winner) as totalWins, games.type'))
+                    ->orderBy('users.name')
+                    ->get();
+        return $usersPlayed;
+    }
+
+    public function getUserDetails($email){
+=======
         $users = User::orderBy('name')->gamesPlayed->get();
 
         return $users;
     }
 
     public function getUserDetails(Request $request,$email){
+>>>>>>> ecf094f6fc829d74e1738bd8bcdcc1177dab8841
         $users = User::all();
         $currentUser= null;
 
@@ -201,6 +224,8 @@ class UserControllerApi extends Controller
 
         return $user;
     }
+<<<<<<< HEAD
+=======
 
     public function disableUser($email){
         $users = User::all();
@@ -291,4 +316,5 @@ class UserControllerApi extends Controller
 
         \Mail::to($currentUser)->send(new Reset($currentUser));
     }
+>>>>>>> ecf094f6fc829d74e1738bd8bcdcc1177dab8841
 }
