@@ -40,14 +40,22 @@ class UserControllerApi extends Controller
     }
 
     public function usersGamesPlayedStats(){
-        $usersPlayed = DB::table('users')
-                    ->leftJoin('game_user', 'users.id', '=', 'game_user.user_id', 'outer')
-                    ->join('games', 'games.id', '=', 'game_user.game_id')
-                    ->groupBy('game_user.user_id', 'games.type')
+        $games = DB::table('games')
+                    ->join('game_user', 'games.id', '=', 'game_user.game_id')
+                    ->join('users', 'users.id', '=', 'game_user.user_id')
+                    ->groupBy('games.type')
                     ->select('users.name', 'users.email', 'users.nickname', 'games.type', DB::raw('count(*) as totalGames, games.type'), DB::raw('count(games.winner) as totalWins, games.type'))
-                    ->orderBy('users.name')
+                    ->orderBy('games.type')
                     ->get();
-        return $usersPlayed;
+
+        $gamesTypeTotal =array (
+            "type"  => "total",
+            "totalGames" => Game::all()->count()
+        );
+
+        $games->push($gamesTypeTotal);
+
+        return $games;
     }
 
     public function getUserDetails($email){
