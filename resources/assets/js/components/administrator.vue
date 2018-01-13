@@ -3,7 +3,8 @@
         <h2 class="panel-heading">Administration</h2>
 
         <div class="panel-body">
-            <a class="btn btn-primary" href="http://dadproj.dad/">Back</a>
+            <!--<a class="btn btn-primary" href="http://dadproj.dad/">Back</a>-->
+            <router-link :to="{ name: 'home' }" class="btn btn-primary">Back</router-link>
             <a class="btn btn-primary" v-on:click.prevent="showUpload">Upload</a>
             <button class="btn btn-primary" @click.prevent="showStatistic">Statistics</button>
             <button class="btn btn-default" @click.prevent="showUsers=!showUsers">Users</button>
@@ -36,18 +37,19 @@
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.nickname }}</td>
-                        <td>
+                        <td>{{ usersGamesPlayed }}</td>
+                        <!--<td>
                             <span v-for="userGame in usersGamesPlayed">
                                 <td v-if="user.name === userGame.name && userGame.type == 'singleplayer'">{{ userGame.totalGames }}</td>
                                 <td v-else>0</td>
                                 <td v-if="user.name === userGame.name && userGame.type == 'multiplayer'">{{ userGame.totalGames }}</td>
                                 <td v-else>0</td>
 
-                                <!--FALTA AQUI-->
+                                <--FALTA AQUI--
                                 <td>totalplay</td>
                                 <td>totalwin</td>
                             </span>
-                        </td>
+                        </td>-->
                     </tr>
                     </tbody>
                 </table>

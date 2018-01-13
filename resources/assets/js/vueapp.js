@@ -19,7 +19,7 @@ const memoryGame = Vue.component('memorygame', require('./components/MemoryGame.
 const administration = Vue.component('administrator', require('./components/administrator.vue'));
 
 const routes = [
-    { path: '/', component: memoryGame },
+    { path: '/', name: 'home', component: memoryGame },
     { path: '/memorygame', component: memoryGame },
     { path: '/administration', name: 'administration', component: administration }
 ];

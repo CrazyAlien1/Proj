@@ -1,8 +1,8 @@
 <template>
     <div class="row">
         <br><br>
-        <!--<router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>-->
-        <a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>
+        <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
+        <!--<a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>-->
         <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
         <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
         <button class="btn btn-primary" @click.prevent="getOfflineStats">Offline statistics</button>
