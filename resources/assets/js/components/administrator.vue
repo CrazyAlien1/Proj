@@ -9,6 +9,18 @@
                             <div class="panel-body">
                                 Hello Administrator
                                 <p></p>
+
+                                <a class="btn btn-xs btn-primary" v-on:click.prevent="showUpload">Upload</a>
+                                <div v-if="showUploadInput">
+                                    <input style="display: inline-block" type="file" @change="processFile($event)">
+                                    <a class="btn btn-primary btn-success" v-on:click.prevent="uploadImages">Upload</a>
+                                </div>
+
+                                <a class="btn btn-xs btn-primary" v-on:click.prevent="showResestPassowrd">Reset Password</a>
+                                <div v-if="showUploadInput">
+
+                                </div>
+
                                 <a class="btn btn-xs btn-primary" v-on:click.prevent="showStatistic">Statistics</a>
 
                                 <!-- Statistics -->
@@ -51,8 +63,6 @@
                                 <game-list :games="games">
 
                                 </game-list>
-
-
                         </div>
                     </div>
                 </div>
@@ -74,6 +84,9 @@
                 stats:[],
                 show : false,
                 usersData:[],
+                file : undefined,
+                showUploadInput:false,
+                authUser:undefined,
             }
         },
 
@@ -106,7 +119,24 @@
                 }else {
                     this.show = true;
                 }
-            }
+            },showUpload(){
+                this.showUploadInput = !this.showUploadInput;
+            },processFile(event) {
+                console.log(event);
+                console.log(event.target.files[0]);
+                this.file = event.target.files[0]
+            },uploadImages(){
+                const formData = new FormData();
+                formData.append( 'image', this.file );
+                axios.post('api/upload',
+                    {"image" : formData})
+                    .then(response=>{
+                        console.log("Uploaded sucessefully");
+                    })
+                    .catch(error=>{
+                        console.log(error);
+                    });
+            },
         },
         components: {
             'user-list' : userList,

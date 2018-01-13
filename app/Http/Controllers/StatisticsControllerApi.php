@@ -38,13 +38,22 @@ class StatisticsControllerApi extends Controller
 
     public function allUserStats($email){
         //logado
-        $user = User::find($email);
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
 
         $statistics =array (
-            "singlePlayer"  => $user->gamesPlayed->where('type','multiplayer')->count(),
-            "multiplayer"   => $user->gamesPlayed->where('type','singleplayer')->count(),
-            "totalPlayed"  =>  $user->gamesPlayed->where('status','terminated')->count(),
-            "totalWin"     =>  Game::all()->where('winner',$user->nickname)->count(),
+            "singlePlayer"  => $currentUser->gamesPlayed->where('type','multiplayer')->count(),
+            "multiplayer"   => $currentUser->gamesPlayed->where('type','singleplayer')->count(),
+            "totalPlayed"  =>  $currentUser->gamesPlayed->where('status','terminated')->count(),
+            "totalWin"     =>  Game::all()->where('winner',$currentUser->nickname)->count(),
         );
 
         return $statistics;

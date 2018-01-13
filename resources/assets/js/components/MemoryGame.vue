@@ -26,25 +26,51 @@
 
         <div class="jumbotron" v-if="showUserProfile">
             <h2>Profile</h2>
-            <div class="form-group">
+
+            <!-- name -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">Name</label>
                 <output name="name">{{ authUser.name}} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">Name</label>
+                <input value="authUser.name" v-model="editUser.name" type="text" class="form-control" id="editUser.name" required autofocus>
+            </div>
 
-            <div class="form-group">
+            <!-- NickName -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">Nickname</label>
                 <output name="name">{{ authUser.username}} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">Nickname</label>
+                <input value="authUser.username" v-model="editUser.username" type="text" class="form-control" id="editUser.nickname" required autofocus>
+            </div>
 
-            <div class="form-group">
+            <!-- email -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">email</label>
                 <output name="name">{{authUser.email }} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">email</label>
+                <input value="authUser.email" v-model="editUser.email" type="email" class="form-control" id="editUser.email" required autofocus>
+            </div>
+
+            <!-- password -->
+            <div class="form-group" v-if="editingUser">
+                <label for="inputPassword">Password</label>
+                <input v-model="editUser.password" type="password" class="form-control" id="editUser.password" required autofocus>
+            </div>
 
             <div class="form-group">
-                <a class="btn btn-primary btn-success" v-on:click.prevent="editUser">Edit profile</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="removeUser">Remove</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="desactive">Desactive account</a>
+                <a class="btn btn-primary btn-success" v-if="!editingUser" v-on:click.prevent="editUserProfile">Edit profile</a>
+                <a class="btn btn-primary btn-danger" v-if="!editingUser" v-on:click.prevent="removeUser">Remove</a>
+                <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="desactive">Desactive account</a>
+                <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="backEdit">Back</a>
+                <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="cancelEdit">Cancel</a>
+                <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="saveChanges">Save Changes</a>
+                <a class="btn btn-primary btn-default" v-if="isAdmin" v-on:click.prevent="resetPassword">ResetPaword</a>
             </div>
         </div>
 
@@ -224,6 +250,9 @@
                 userStats:[],
                 showUserProfile:false,
                 authUser:{name:'',username:'',email: '', password: '' },
+                editUser:{name:'',username:'',email: '', password: '' },
+                editingUser : false,
+                isAdmin:false,
             }
         },
         sockets:{
@@ -457,7 +486,6 @@
 
                         this.token = this.tokenType + " " + this.userToken;
 
-                        //console.log(response.data.access_token);  *caso seja necessario para fazer logout
                         console.log("Logged in");
                         this.logedIn = true;
 
@@ -492,6 +520,8 @@
             },
             saveUser(){
                 console.log(this.newUser);
+                console.log(this.newUser.email);
+
                 axios.post('api/user',
                     {"name" : this.newUser.name},
                     {"username" : this.newUser.username},
@@ -517,6 +547,7 @@
                 this.newUser.username = '';
                 this.newUser.email = '';
                 this.newUser.password = '';
+
             },
             getOfflineStats(){
                 axios.get('api/allStats')
@@ -548,19 +579,53 @@
                     console.log(error);
 
                 });
-            },editUser(){
+            },editUserProfile(){
+                this.editingUser= !this.editingUser;
 
             },removeUser(){
+                this.clickLogout();
                 axios.delete('api/removeAccount/'+this.currentUser.email)
                     .then(response => {
                         console.log(response);
                         console.log('User remove sucessufully');
                         this.showUserProfile=!this.showUserProfile;
-                        this.clickLogout();
                     });
 
             },desactive(){
+                axios.put('api/disable/'+this.currentUser.email
+                )
+                    .then(response => {
+                        console.log(response);
+                        console.log('User remove sucessufully');
+                        this.showUserProfile=!this.showUserProfile;
+                        this.clickLogout();
 
+                    }).catch(function (error){
+                    console.log(error);
+                });
+            },cancelEdit(){
+                this.showUserProfile = false;
+            },backEdit(){
+                this.showUserProfile = false;
+            },saveChanges(){
+                axios.put('api/user/'+this.authUser.email,
+                    {"name" : this.editUser.name ,
+                        "nickname" :this.editUser.username,
+                        "email" :this.editUser.email,
+                        "password" :this.editUser.password},
+                )
+                    .then(response => {
+                        console.log(response);
+                        console.log('User edited sucessufully');
+                        this.editingUser = false;
+
+                        this.authUser.name = this.editUser.name;
+                        this.authUser.username = this.editUser.username;
+                        this.authUser.email = this.editUser.email;
+                        this.authUser.password = this.editUser.password;
+                    }).catch(function (error){
+                    console.log(error);
+                });
             }
         },
         computed: {

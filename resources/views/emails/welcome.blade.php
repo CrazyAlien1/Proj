@@ -1,12 +1,12 @@
 @component('mail::message')
 # Introduction
 
-The body of your message.
+Dear {{$user->name}} , click the link bellow to ative your account
 
-@component('mail::button', ['url' => 'http://proj_dad.teste'])
+@component('mail::button', ['url' => 'http://proj_dad.teste/'])
 Activate
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+
 @endcomponent

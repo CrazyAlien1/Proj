@@ -11,8 +11,10 @@ use App\Mail\Welcome;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserControllerApi extends Controller
 {
@@ -69,13 +71,15 @@ class UserControllerApi extends Controller
     public function store(Request $request)
     {
         $user = new User();
-
+        print_r($request->email);
         $user->name = $request->name;
         $user -> email = $request->email;
         $user->nickname = $request->username;
         $user->password = Hash::make($request -> password);
 
         \Mail::to($user)->send(new Welcome($user));
+
+        $user->ative = 0;
 
         $user->save();
     }
@@ -109,9 +113,24 @@ class UserControllerApi extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $email)
     {
-        //
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->name = $request->name;
+        $currentUser->email = $request->email;
+        $currentUser->nickname = $request->nickname;
+        $currentUser->password = Hash::make($request -> password);
+
+        $currentUser->save();
     }
 
     /**
@@ -181,5 +200,49 @@ class UserControllerApi extends Controller
         return $user;
     }
 
+    public function disableUser($email){
+        $users = User::all();
+        $currentUser= null;
 
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->ative = 0;
+
+        $currentUser->save();
+    }
+
+    public function upload(Request $request){
+
+        if ($request->hasFile('image'))
+        {
+            $num = (Image::all()->count() - 2);
+            $imageName = $num +1;
+            console.log($request->image);
+            $image = $request->image;
+            Storage::disk('local/public/storage ')->putFileAs($imageName, $request->file('image'), $image->path);
+            //Storage::disk('local')->putFileAs($imageName, $request->file('image'), $image->path);
+        }
+    }
+
+    public function reactiveUser($nickname){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->nickname === $nickname){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->ative = 1;
+        $currentUser->save();
+
+        return redirect()->route('/');
+    }
 }
