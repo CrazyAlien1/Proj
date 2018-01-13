@@ -1,28 +1,30 @@
 <template>
     <div class="row">
-            <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
-            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
-            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
-            <button class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline statistics</button>
-            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="getMyStats">My statistics</button>
-            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="showProfile">Profile</button>
+        <br><br>
+        <!--<router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>-->
+        <!--<a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>-->
+        <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
+        <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+        <button class="btn btn-primary" @click.prevent="getOfflineStats">Offline statistics</button>
+        <button v-if="logedIn" class="btn btn-primary" @click.prevent="getMyStats">My statistics</button>
+        <button v-if="logedIn" class="btn btn-primary" @click.prevent="showProfile">Profile</button>
 
-            <br></br>
-            <span v-if="showLogin && !logedIn">
-                <label for="currentUser.email">E-Mail Address</label>
-                <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
+        <br></br>
+        <span v-if="showLogin && !logedIn">
+            <label for="currentUser.email">E-Mail Address</label>
+            <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
 
-                <label for="currentUser.password">Password</label>
-                <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
+            <label for="currentUser.password">Password</label>
+            <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
-                <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
-                <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
+            <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
+            <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
 
 
-                <span v-if="loginError">
-                    <h4 class="text-danger">{{ loginError }}</h4>
-                </span>
+            <span v-if="loginError">
+                <h4 class="text-danger">{{ loginError }}</h4>
             </span>
+        </span>
 
         <div class="jumbotron" v-if="showUserProfile">
             <h2>Profile</h2>
@@ -100,7 +102,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="user in this.allStats['winner']"  :key="user.id">
+                    <tr v-for="user in this.allStats['winner']"  :key="user.nickname">
                         <td>{{ user }}</td>
 
                     </tr>
@@ -132,8 +134,6 @@
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
-
-                Mrs Derp:
                 <span v-if="logedIn" >{{ currentUser.email }}</span>
                 {{ title }}
             </h3>
@@ -158,7 +158,6 @@
                 <hr>
             </div>
             <div class="row" >
-
                 <div v-bind:class="lobbySize" v-show="showLobby">
                     <h3 class="text-center">Lobby</h3>
 
@@ -179,7 +178,6 @@
                     <game :game="game" :user="user" @close_game="closeGame"  @send-click="sendMessage"></game>
                 </template>
             </div>
-
     </div>
 </template>
 
@@ -342,7 +340,8 @@
             },
             joinServer(){
                 console.log("Joining Server...");
-                this.$socket.emit('authenticate_server', {userID: this.userID});
+
+                this.$socket.emit('authenticate_server', {userID: this.userID, token: this.token});
             },
             loadLobby(){
                 /// send message to server to load the list of games on the lobby
@@ -487,9 +486,6 @@
                 console.log("Sending message", data);
                 this.$socket.emit('send_message', data);
             },
-            admin(){
-                router.push({ name: 'administraton'});
-            },
             saveUser(){
                 console.log(this.newUser);
                 axios.post('api/user',
@@ -499,7 +495,6 @@
                     {"password" : this.newUser.password })
                     .then(response=>{
                         console.log("New User created");
-                        console.log('fake i guess   by: cloro');
 
                         this.showRegisterDiv = false;
                         this.newUser.name = '';
@@ -558,7 +553,6 @@
                         this.showUserProfile=!this.showUserProfile;
                         this.clickLogout();
                     });
-
             },desactive(){
 
             }

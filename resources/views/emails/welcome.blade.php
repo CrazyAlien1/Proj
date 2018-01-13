@@ -3,7 +3,7 @@
 
 The body of your message.
 
-@component('mail::button', ['url' => 'http://proj_dad.teste'])
+@component('mail::button', ['url' => 'http://dadproj.dad'])
 Activate
 @endcomponent
 

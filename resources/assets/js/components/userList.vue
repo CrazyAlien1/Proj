@@ -5,7 +5,7 @@
             <tr>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Nick Name</th>
+                <th>Username</th>
                 <th>Actions</th>
             </tr>
             </thead>
@@ -16,7 +16,7 @@
                 <td>{{ user.nickname }}</td>
                 <td>
                     <a class="btn btn-xs btn-primary" v-if="!user.blocked" v-on:click.prevent="blockUser(user)">Block</a>
-                    <a class="btn btn-xs btn-primary" v-if="user.blocked" v-on:click.prevent="reativeUser(user)">Reactive</a>
+                    <a class="btn btn-xs btn-success" v-if="user.blocked" v-on:click.prevent="reativeUser(user)">Reactive</a>
                     <a class="btn btn-xs btn-danger" v-on:click.prevent="deleteUser(user)">Delete</a>
                 </td>
             </tr>
@@ -35,8 +35,8 @@
                             placeholder="Why blocked that user" value="" />
                 </div>
                 <div class="form-group">
-                    <a class="btn btn-default" v-on:click.prevent="confirmBlock">Block</a>
-                    <a class="btn btn-default" v-on:click.prevent="cancelBlock">Cancel</a>
+                    <a class="btn btn-danger" v-on:click.prevent="confirmBlock">Block</a>
+                    <a class="btn btn-primary" v-on:click.prevent="blockingUser = false">Cancel</a>
                 </div>
             </div>
         </div>
@@ -53,8 +53,8 @@
                             placeholder="Why reactive that user" value="" />
                 </div>
                 <div class="form-group">
-                    <a class="btn btn-default" v-on:click.prevent="confirmReactive">Reative</a>
-                    <a class="btn btn-default" v-on:click.prevent="cancelReactive">Cancel</a>
+                    <a class="btn btn-success" v-on:click.prevent="confirmReactive">Reative</a>
+                    <a class="btn btn-primary" v-on:click.prevent="reactivingUser = false">Cancel</a>
                 </div>
             </div>
         </div>
@@ -71,8 +71,8 @@
                             placeholder="Why remove that user" value="" />
                 </div>
                 <div class="form-group">
-                    <a class="btn btn-default" v-on:click.prevent="confirmRemove">Remove</a>
-                    <a class="btn btn-default" v-on:click.prevent="cancelRemove">Cancel</a>
+                    <a class="btn btn-danger" v-on:click.prevent="confirmRemove">Remove</a>
+                    <a class="btn btn-primary" v-on:click.prevent="deletingUser = false">Cancel</a>
                 </div>
             </div>
         </div>
@@ -90,6 +90,7 @@
                 reactivingUser: false,
                 deletingUser:false,
                 ressonRemoved: '',
+                message: '',
             }
         },
         methods:{
@@ -116,15 +117,13 @@
 
                         if(index>-1){
                             this.users[index]=response.data;
-                            console.log('User blocked sucessufully');
+                            console.log('User blocked successfully');
+                            this.message = 'User blocked successfully!';
                         }
 
                     }).catch(function (error){
                         console.log(error);
                 });
-            },
-            cancelBlock(){
-                this.blockingUser = false;
             },
             confirmReactive(){
                 this.reactivingUser = false;
@@ -137,22 +136,20 @@
 
                         if(index>-1){
                             this.users[index]=response;
-                            console.log('User reative sucessufully');
+                            console.log('User reativated successfully');
+                            this.message = 'User reactivated successfully!';
                         }
                     });
             },
-            cancelReactive(){
-                this.reactivingUser = false;
-            },confirmRemove(){
+            confirmRemove(){
                 this.deletingUser = false;
                 axios.delete('api/user/'+this.currentUser.id,{"reason_remove" : this.ressonRemoved })
                     .then(response => {
-                        console.log(response);
-                        console.log('User remove sucessufully');
+                        //console.log(response);
+                        console.log('User removed sucessufully');
+                        this.message = 'User removed successfully!';
 
                     });
-            },cancelRemove(){
-                this.deletingUser = false;
             }
         }
     }

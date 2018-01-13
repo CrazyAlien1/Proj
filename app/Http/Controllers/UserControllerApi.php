@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class UserControllerApi extends Controller
 {
@@ -31,9 +32,19 @@ class UserControllerApi extends Controller
     }
 
     public function allUsersOrderByName(){
-        $users = User::orderBy('name')->get();
-
+        $users = DB::table('users')->select('name', 'email', 'nickname')->orderBy('name')->get();
         return $users;
+    }
+
+    public function usersGamesPlayedStats(){
+        $usersPlayed = DB::table('users')
+                    ->leftJoin('game_user', 'users.id', '=', 'game_user.user_id', 'outer')
+                    ->join('games', 'games.id', '=', 'game_user.game_id')
+                    ->groupBy('game_user.user_id', 'games.type')
+                    ->select('users.name', 'users.email', 'users.nickname', 'games.type', DB::raw('count(*) as totalGames, games.type'), DB::raw('count(games.winner) as totalWins, games.type'))
+                    ->orderBy('users.name')
+                    ->get();
+        return $usersPlayed;
     }
 
     public function getUserDetails($email){
@@ -180,6 +191,4 @@ class UserControllerApi extends Controller
 
         return $user;
     }
-
-
 }
