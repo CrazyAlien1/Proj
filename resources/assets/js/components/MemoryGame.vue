@@ -2,7 +2,7 @@
     <div class="row">
         <br><br>
         <!--<router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>-->
-        <!--<a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>-->
+        <a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>
         <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
         <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
         <button class="btn btn-primary" @click.prevent="getOfflineStats">Offline statistics</button>
@@ -17,14 +17,9 @@
             <label for="currentUser.password">Password</label>
             <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
-<<<<<<< HEAD
-            <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
-            <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
-=======
                 <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
                 <button class="btn btn-xs btn-success" @click.prevent="clickReset">Reset Password</button>
                 <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
->>>>>>> ecf094f6fc829d74e1738bd8bcdcc1177dab8841
 
 
             <span v-if="loginError">
@@ -138,25 +133,25 @@
             </div>
 
             <div class="form-group">
-                <a class="btn btn-primary btn-success" v-on:click.prevent="saveUser">Register</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="cancelRegister">Cancel</a>
+                <a class="btn btn-primary btn-success" @click.prevent="saveUser">Register</a>
+                <a class="btn btn-primary btn-danger" @click.prevent="cancelRegister">Cancel</a>
             </div>
         </div>
 
         <div v-if="statistics">
             <h2>Statistics</h2>
-            <p>Total Single Player Games: {{this.allStats['singlePlayer']}}</p>
-            <p>Total Multi Player Games: {{this.allStats['multiplayer']}}</p>
-            <p>Total Played Games: {{this.allStats['totalPlayed']}}</p>
+            <p>Total Single Player Games: {{allStats['singlePlayer']}}</p>
+            <p>Total Multi Player Games: {{allStats['multiplayer']}}</p>
+            <p>Total Played Games: {{allStats['totalPlayed']}}</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Nickname</th>
+                        <th>Username</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr v-for="user in this.allStats['winner']"  :key="user.nickname">
-                        <td>{{ user }}</td>
+                        <td>{{ user.nickname }}</td>
 
                     </tr>
                     </tbody>
@@ -165,10 +160,14 @@
 
         <div v-if="myStats">
             <h2>My statistics</h2>
-            <p>Total Single Player Games: {{this.myStats['singlePlayer']}}</p>
-            <p>Total Multi Player Games: {{this.myStats['multiplayer']}}</p>
-            <p>Total Played Games: {{this.myStats['totalPlayed']}}</p>
-            <p>Total Wins: {{this.myStats['totalWin']}}</p>
+            <p v-if="myStats['singlePlayer']">Total Single Player Games: {{myStats['singlePlayer']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['multiplayer']">Total Multi Player Games: {{myStats['multiplayer']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['totalPlayed']">Total Played Games: {{myStats['totalPlayed']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['totalWin']">Total Wins: {{myStats['totalWin']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
         </div>
 
             <h3 class="text-center">
