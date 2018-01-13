@@ -45849,7 +45849,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45864,6 +45864,39 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__game_memory_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -46015,7 +46048,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             loginError: '',
             token: '',
             showRegisterDiv: false,
-            newUser: { name: '', username: '', email: '', password: '' }
+            newUser: { name: '', username: '', email: '', password: '' },
+            allStats: [],
+            statistics: false,
+            botModes: [0, 1, 2, 3, 4],
+            selectedBotType: 0,
+            bots: []
         };
     },
     sockets: {
@@ -46189,6 +46227,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         createGame: function createGame() {
             // For this to work, server must handle (on event) the "create_game" message
             if (this.user !== undefined) {
+                var names = ['Bot.dawey', 'Bot.almeida', 'Bot.DOOM'];
+                for (var i = 0; i < this.selectedNumPlayers - 1; i++) {
+                    this.bots.push({ botType: this.selectedBotType, name: names[i] });
+                }
+
                 //Pedir ao Node para criar o Jogo
                 console.log('Asking Node to ask Laravel if everything is OK');
                 this.$socket.emit('create_game', {
@@ -46197,7 +46240,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     gameType: this.selectedGameType,
                     gameMaxPlayers: this.selectedNumPlayers,
                     rows: this.rows,
-                    cols: this.cols
+                    cols: this.cols,
+                    bots: this.bots
                 });
             }
         },
@@ -46281,6 +46325,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         saveUser: function saveUser() {
             var _this3 = this;
 
+            console.log(this.newUser);
             axios.post('api/user', { "name": this.newUser.name }, { "username": this.newUser.username }, { "email": this.newUser.email }, { "password": this.newUser.password }).then(function (response) {
                 console.log("New User created");
                 console.log('fake i guess   by: cloro');
@@ -46300,7 +46345,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.newUser.username = '';
             this.newUser.email = '';
             this.newUser.password = '';
-        }
+        },
+        getOfflineStats: function getOfflineStats() {
+            var _this4 = this;
+
+            axios.get('api/allStats').then(function (response) {
+                Object.assign(_this4.allStats, response.data);
+                _this4.statistics = true;
+                console.log(_this4.allStats['winner']);
+            });
+        },
+        setUpBots: function setUpBots(botDificulty) {}
     },
     computed: {
         title: function title() {
@@ -46813,6 +46868,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 var HIDDEN = './storage/images/hidden.png';
@@ -46832,7 +46888,6 @@ var REVEALED = './storage/images/empty.png';
         },
         clickPiece: function clickPiece(index) {
             if (this.game.gameEnded) {
-
                 return;
             }
             this.$socket.emit('play_piece', { gameId: this.game.id,
@@ -46866,13 +46921,24 @@ var REVEALED = './storage/images/empty.png';
             if (this.$parent.user === undefined) return '';
             return this.game.name;
         },
-        loginToogleButton: function loginToogleButton() {
+        chatToogleButton: function chatToogleButton() {
             if (this.showChat) {
                 return 'Collapse Chat';
             } else {
                 return 'Show Chat';
             }
+        },
+        playerTurn: function playerTurn() {
+            var _this = this;
+
+            var playerId = this.game.players.findIndex(function (ele) {
+                return ele.ID === _this.game.playerTurn;
+            });
+            return this.game.players[playerId];
         }
+    },
+    watch: {
+        'game': function game(val, oldVal) {}
     },
     components: {
         'webchat': __WEBPACK_IMPORTED_MODULE_0__web_chat_vue___default.a
@@ -47036,7 +47102,6 @@ module.exports = {
     watch: {
         'messages': function messages(val, oldVal) {
             this.$nextTick(function () {
-                console.log("\t\t\tTHICK!");
                 var el = document.getElementById("chatMsgScrollable");
                 el.scrollTop = el.scrollHeight;
             });
@@ -47223,7 +47288,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v(_vm._s(_vm.loginToogleButton))]
+                  [_vm._v(_vm._s(_vm.chatToogleButton))]
                 ),
                 _vm._v(" "),
                 _vm.showChat
@@ -47236,6 +47301,8 @@ var render = function() {
               1
             )
           : _vm._e(),
+        _vm._v(" "),
+        _c("h3", [_vm._v(_vm._s(_vm.playerTurn.name))]),
         _vm._v(" "),
         _c(
           "div",
@@ -47336,6 +47403,22 @@ var render = function() {
             }
           },
           [_vm._v("Log me")]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.logedIn
+      ? _c(
+          "button",
+          {
+            staticClass: "btn btn-primary btn-success",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.getOfflineStats($event)
+              }
+            }
+          },
+          [_vm._v("Offline Statistics")]
         )
       : _vm._e(),
     _vm._v(" "),
@@ -47612,6 +47695,45 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
+    _vm.statistics
+      ? _c("div", [
+          _c("h2", [_vm._v("Statistics")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Total Single Player Games: " +
+                _vm._s(this.allStats["singlePlayer"])
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Total Multi Player Games: " +
+                _vm._s(this.allStats["multiplayer"])
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Total Played Games: " + _vm._s(this.allStats["totalPlayed"])
+            )
+          ]),
+          _vm._v(" "),
+          _c("table", { staticClass: "table table-striped" }, [
+            _vm._m(0, false, false),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(this.allStats["winner"], function(user) {
+                return _c("tr", { key: user.id }, [
+                  _c("td", [_vm._v(_vm._s(user))])
+                ])
+              })
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
     _c("h3", { staticClass: "text-center" }, [
       _vm.isConnected
         ? _c("span", { staticClass: "text-success" }, [_vm._v("Online")])
@@ -47646,73 +47768,114 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c(
-        "select",
-        {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.selectedGameType,
-              expression: "selectedGameType"
+      _c("div", { staticClass: "col-xs-2" }, [
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.selectedGameType,
+                expression: "selectedGameType"
+              }
+            ],
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.selectedGameType = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
             }
-          ],
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.selectedGameType = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        _vm._l(_vm.gameType, function(type, key) {
-          return _c("option", { key: key, attrs: { selected: "type" } }, [
-            _vm._v(_vm._s(type))
-          ])
-        })
-      ),
+          },
+          _vm._l(_vm.gameType, function(type, key) {
+            return _c("option", { key: key, attrs: { selected: "type" } }, [
+              _vm._v(_vm._s(type))
+            ])
+          })
+        )
+      ]),
       _vm._v(" "),
-      _c(
-        "select",
-        {
-          directives: [
+      _c("div", { staticClass: "col-xs-2" }, [
+        _c("div", [
+          _vm._v("\n                    Max Players\n                    "),
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.selectedNumPlayers,
-              expression: "selectedNumPlayers"
-            }
-          ],
-          on: {
-            change: function($event) {
-              var $$selectedVal = Array.prototype.filter
-                .call($event.target.options, function(o) {
-                  return o.selected
-                })
-                .map(function(o) {
-                  var val = "_value" in o ? o._value : o.value
-                  return val
-                })
-              _vm.selectedNumPlayers = $event.target.multiple
-                ? $$selectedVal
-                : $$selectedVal[0]
-            }
-          }
-        },
-        _vm._l(_vm.maxPlayers, function(max, key) {
-          return _c("option", { key: key, attrs: { selected: "max" } }, [
-            _vm._v(_vm._s(max))
-          ])
-        })
-      ),
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.selectedNumPlayers,
+                  expression: "selectedNumPlayers"
+                }
+              ],
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.selectedNumPlayers = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            _vm._l(_vm.maxPlayers, function(max, key) {
+              return _c("option", { key: key, attrs: { selected: "max" } }, [
+                _vm._v(_vm._s(max))
+              ])
+            })
+          ),
+          _vm._v("\n                    Bots Difficulty\n                    "),
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.selectedBotType,
+                  expression: "selectedBotType"
+                }
+              ],
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.selectedBotType = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            _vm._l(_vm.botModes, function(bot, key) {
+              return _c("option", { key: key, attrs: { selected: "bot" } }, [
+                _vm._v(_vm._s(bot))
+              ])
+            })
+          )
+        ])
+      ]),
       _vm._v(" "),
       _c("input", {
         directives: [
@@ -47863,7 +48026,14 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [_c("tr", [_c("th", [_vm._v("Nickname")])])])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

@@ -27,7 +27,8 @@ return response()->json(['msg'=>'U have permitions!! :D :D'], 200);
 Route::get('users/order', 'UserControllerApi@allUsersOrderByName');
 Route::post('user', 'UserControllerApi@store');
 
-Route::middleware('auth:api')->get('users/{user}', 'UserControllerApi@show');
+//Route::middleware('auth:api')->get('users/{user}', 'UserControllerApi@show');
+Route::get('users/{user}', 'UserControllerApi@show');
 
 //blocked/unblock route
 Route::put('user/block/{id}', 'UserControllerApi@block');

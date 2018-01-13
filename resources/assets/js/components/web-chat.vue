@@ -59,7 +59,6 @@
         watch: {
             'messages': function (val, oldVal) {
                 this.$nextTick(function () {
-                    console.log("\t\t\tTHICK!");
                     var el = document.getElementById("chatMsgScrollable");
                     el.scrollTop = el.scrollHeight;
                 });
