@@ -81,7 +81,7 @@
             <h2>Reseting Password</h2>
             <div class="form-group">
                 <label for="inputName">Current Password</label>
-                <input  v-model="resetingUser.currentPassword" type="text" class="form-control" id="userReset.currentPassword" required>
+                <input  v-model="resetingUser.currentPassword" type="password" class="form-control" id="userReset.currentPassword" required>
             </div>
             <div class="form-group">
                 <label for="inputName">New Password</label>

@@ -36,16 +36,18 @@
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.nickname }}</td>
-                        <div v-for="userGame in usersGamesPlayed">
-                            <td v-if="user.name === userGame.name && userGame.type == 'singleplayer'">{{ userGame.totalGames }}</td>
-                            <td v-else>0</td>
-                            <td v-if="user.name === userGame.name && userGame.type == 'multiplayer'">{{ userGame.totalGames }}</td>
-                            <td v-else>0</td>
+                        <td>
+                            <span v-for="userGame in usersGamesPlayed">
+                                <td v-if="user.name === userGame.name && userGame.type == 'singleplayer'">{{ userGame.totalGames }}</td>
+                                <td v-else>0</td>
+                                <td v-if="user.name === userGame.name && userGame.type == 'multiplayer'">{{ userGame.totalGames }}</td>
+                                <td v-else>0</td>
 
-                            <!--FALTA AQUI-->
-                            <td>totalplay</td>
-                            <td>totalwin</td>
-                        </div>
+                                <!--FALTA AQUI-->
+                                <td>totalplay</td>
+                                <td>totalwin</td>
+                            </span>
+                        </td>
                     </tr>
                     </tbody>
                 </table>
