@@ -246,7 +246,7 @@ class UserControllerApi extends Controller
             $imageName = $num +1;
             console.log($request->image);
             $image = new Image();
-            $image->path = $imageName ;
+            $image->path = $imageName.'.png' ;
             $image-> face = 'tile';
             $image -> active = 1;
             $image ->save();
