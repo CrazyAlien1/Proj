@@ -60,7 +60,7 @@
                 </game-list>
             </div>
 
-            <div v-if="!showGames && !showUsers && !statistics">
+            <div v-if="!showGames && !showUsers && !statistics && showUploadInput">
                 <h2 class="text-center">Press the button to start your activity</h2>
             </div>
         </div>
