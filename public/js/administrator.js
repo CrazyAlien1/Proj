@@ -43126,9 +43126,6 @@ __webpack_require__(12);
 window.Vue = __webpack_require__(36);
 window.Event = new Vue();
 
-/*Vue.component('user-list',require('./components/userList.vue'));
-Vue.component('game-list',require('./components/gameList.vue'));*/
-
 Vue.component('admin', __webpack_require__(67));
 
 var app = new Vue({
@@ -43225,7 +43222,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43302,6 +43299,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -43314,7 +43317,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             statistichs: false,
             stats: [],
             show: false,
-            usersData: []
+            usersData: [],
+            file: undefined,
+            showUploadInput: false,
+            authUser: undefined
         };
     },
 
@@ -43362,6 +43368,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             } else {
                 this.show = true;
             }
+        },
+        showUpload: function showUpload() {
+            this.showUploadInput = !this.showUploadInput;
+        },
+        processFile: function processFile(event) {
+            console.log(event);
+            console.log(event.target.files[0]);
+            this.file = event.target.files[0];
+        },
+        uploadImages: function uploadImages() {
+            var formData = new FormData();
+            formData.append('image', this.file);
+            axios.post('api/upload', { "image": formData }).then(function (response) {
+                console.log("Uploaded sucessefully");
+            }).catch(function (error) {
+                console.log(error);
+            });
         }
     },
     components: {
@@ -44186,6 +44209,48 @@ var render = function() {
                     on: {
                       click: function($event) {
                         $event.preventDefault()
+                        _vm.showUpload($event)
+                      }
+                    }
+                  },
+                  [_vm._v("Upload")]
+                ),
+                _vm._v(" "),
+                _vm.showUploadInput
+                  ? _c("div", [
+                      _c("input", {
+                        staticStyle: { display: "inline-block" },
+                        attrs: { type: "file" },
+                        on: {
+                          change: function($event) {
+                            _vm.processFile($event)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "btn btn-primary btn-success",
+                          on: {
+                            click: function($event) {
+                              $event.preventDefault()
+                              _vm.uploadImages($event)
+                            }
+                          }
+                        },
+                        [_vm._v("Upload")]
+                      )
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn btn-xs btn-primary",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
                         _vm.showStatistic($event)
                       }
                     }
@@ -44284,7 +44349,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Total multilayer Player games played:")]),
         _vm._v(" "),
-        _c("th", [_vm._v("Total games played:")])
+        _c("th", [_vm._v("Total games played:")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Total Wins:")])
       ])
     ])
   }

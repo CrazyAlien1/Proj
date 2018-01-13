@@ -17,8 +17,14 @@
             <label for="currentUser.password">Password</label>
             <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
+<<<<<<< HEAD
             <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
             <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
+=======
+                <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
+                <button class="btn btn-xs btn-success" @click.prevent="clickReset">Reset Password</button>
+                <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
+>>>>>>> ecf094f6fc829d74e1738bd8bcdcc1177dab8841
 
 
             <span v-if="loginError">
@@ -28,25 +34,72 @@
 
         <div class="jumbotron" v-if="showUserProfile">
             <h2>Profile</h2>
-            <div class="form-group">
+
+            <!-- name -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">Name</label>
                 <output name="name">{{ authUser.name}} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">Name</label>
+                <input value="authUser.name" v-model="editUser.name" type="text" class="form-control" id="editUser.name" required autofocus>
+            </div>
 
-            <div class="form-group">
+            <!-- NickName -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">Nickname</label>
                 <output name="name">{{ authUser.username}} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">Nickname</label>
+                <input value="authUser.username" v-model="editUser.username" type="text" class="form-control" id="editUser.nickname" required autofocus>
+            </div>
 
-            <div class="form-group">
+            <!-- email -->
+            <div class="form-group" v-if="!editingUser">
                 <label for="inputName">email</label>
                 <output name="name">{{authUser.email }} </output>
             </div>
+            <div class="form-group" v-if="editingUser">
+                <label for="inputName">email</label>
+                <input value="authUser.email" v-model="editUser.email" type="email" class="form-control" id="editUser.email" required autofocus>
+            </div>
+
+            <!-- password -->
+            <div class="form-group" v-if="editingUser">
+                <label for="inputPassword">Password</label>
+                <input v-model="editUser.password" type="password" class="form-control" id="editUser.password" required autofocus>
+            </div>
 
             <div class="form-group">
-                <a class="btn btn-primary btn-success" v-on:click.prevent="editUser">Edit profile</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="removeUser">Remove</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="desactive">Desactive account</a>
+                <a class="btn btn-primary btn-success" v-if="!editingUser" v-on:click.prevent="editUserProfile">Edit profile</a>
+                <a class="btn btn-primary btn-danger" v-if="!editingUser" v-on:click.prevent="removeUser">Remove Account</a>
+                <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="desactive">Desactive account</a>
+                <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="backEdit">Back</a>
+                <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="cancelEdit">Cancel</a>
+                <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="saveChanges">Save Changes</a>
+                <a class="btn btn-primary btn-default" v-on:click.prevent="resetPassword">ResetPaword</a>
+            </div>
+        </div>
+
+        <div class="jumbotron" v-if="isAdmin">
+            <h2>Reseting Password</h2>
+            <div class="form-group">
+                <label for="inputName">Current Password</label>
+                <input  v-model="resetingUser.currentPassword" type="text" class="form-control" id="userReset.currentPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName">New Password</label>
+                <input  v-model="resetingUser.newPassword" type="password" class="form-control" id="userReset.newPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName">Confirm Password</label>
+                <input  v-model="resetingUser.confirmPassword" type="password" class="form-control" id="userReset.confirmPassword" required>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-success"  v-on:click.prevent="resetAdminPassword">Reset</a>
+                <a class="btn btn-primary btn-danger"  v-on:click.prevent="cancelReset">Cancel</a>
             </div>
         </div>
 
@@ -72,7 +125,7 @@
                 <label for="inputEmail">Email</label>
                 <input
                         type="email" class="form-control" v-model="newUser.email"
-                        name="email" id="inputEmail"
+                        name="name" id="inputEmail"
                         placeholder="Email address" required/>
             </div>
 
@@ -116,19 +169,6 @@
             <p>Total Multi Player Games: {{this.myStats['multiplayer']}}</p>
             <p>Total Played Games: {{this.myStats['totalPlayed']}}</p>
             <p>Total Wins: {{this.myStats['totalWin']}}</p>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Nickname</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="user in this.allStats['winner']"  :key="user.id">
-                    <td>{{ user }}</td>
-
-                </tr>
-                </tbody>
-            </table>
         </div>
 
             <h3 class="text-center">
@@ -145,12 +185,24 @@
 
 
             <div class="row">
-                <select v-model="selectedGameType">
-                    <option v-for="(type, key) in gameType" :key="key" selected="type">{{type}}</option>
-                </select>
-                <select v-model="selectedNumPlayers">
-                    <option v-for="(max, key) in maxPlayers" :key="key" selected="max">{{max}}</option>
-                </select>
+                <div class="col-xs-2">
+                    <select v-model="selectedGameType">
+                        <option v-for="(type, key) in gameType" :key="key" selected="type">{{type}}</option>
+                    </select>
+                </div>
+                <div class="col-xs-2">
+                    <div>
+                        Max Players
+                        <select v-model="selectedNumPlayers">
+                            <option v-for="(max, key) in maxPlayers" :key="key" selected="max">{{max}}</option>
+                        </select>
+                        Bots Difficulty
+                        <select v-model="selectedBotType">
+                            <option v-for="(bot, key) in botModes" :key="key" selected="bot">{{bot}}</option>
+                        </select>
+                    </div>
+                </div>
+
                 <input v-model="rows">
                 <input v-model="cols">
                 <input v-model="gameName" placeholder="3 Musketeers">
@@ -218,10 +270,17 @@
                 newUser:{name:'',username:'',email: '', password: '' },
                 allStats:[],
                 statistics: false,
+                botModes : [0, 1, 2, 3, 4],
+                selectedBotType : 0,
+                bots : [],
                 myStats:false,
                 userStats:[],
                 showUserProfile:false,
                 authUser:{name:'',username:'',email: '', password: '' },
+                editUser:{name:'',username:'',email: '', password: '' },
+                editingUser : false,
+                isAdmin:false,
+                resetingUser:{currentPassword:'',newPassword:'',confirmPassword:'',email:''}
             }
         },
         sockets:{
@@ -399,15 +458,22 @@
             createGame(){
                 // For this to work, server must handle (on event) the "create_game" message
                 if(this.user !== undefined){
+                    let names = ['Bot.dawey', 'Bot.almeida', 'Bot.DOOM'];
+                    for(let i = 0; i < this.selectedNumPlayers -1; i++){
+                        this.bots.push({botType: this.selectedBotType, name: names[i]});
+                    }
+
                     //Pedir ao Node para criar o Jogo
                     console.log('Asking Node to ask Laravel if everything is OK');
+
                     this.$socket.emit('create_game', {
                                                         userID : this.userID,
                                                         gameName: this.gameName,
                                                         gameType: this.selectedGameType,
                                                         gameMaxPlayers: this.selectedNumPlayers,
                                                         rows : this.rows,
-                                                        cols : this.cols
+                                                        cols : this.cols,
+                                                        bots : this.bots,
                                                     });
                 }
             },
@@ -456,7 +522,6 @@
 
                         this.token = this.tokenType + " " + this.userToken;
 
-                        //console.log(response.data.access_token);  *caso seja necessario para fazer logout
                         console.log("Logged in");
                         this.logedIn = true;
 
@@ -487,13 +552,13 @@
                 this.$socket.emit('send_message', data);
             },
             saveUser(){
-                console.log(this.newUser);
                 axios.post('api/user',
-                    {"name" : this.newUser.name},
-                    {"username" : this.newUser.username},
-                    {"email" : this.newUser.email },
-                    {"password" : this.newUser.password })
+                    {"name" : this.newUser.name,
+                    "username" : this.newUser.username,
+                    "email" : this.newUser.email ,
+                    "password" : this.newUser.password })
                     .then(response=>{
+                        console.log(response);
                         console.log("New User created");
 
                         this.showRegisterDiv = false;
@@ -512,10 +577,12 @@
                 this.newUser.username = '';
                 this.newUser.email = '';
                 this.newUser.password = '';
+
             },
             getOfflineStats(){
                 axios.get('api/allStats')
                     .then(response=>{
+                        console.log(response.data);
                         Object.assign(this.allStats,response.data);
                         this.statistics = !this.statistics;
                     });
@@ -543,18 +610,89 @@
                     console.log(error);
 
                 });
-            },editUser(){
+            },editUserProfile(){
+                this.editingUser= !this.editingUser;
 
             },removeUser(){
+                this.clickLogout();
                 axios.delete('api/removeAccount/'+this.currentUser.email)
                     .then(response => {
                         console.log(response);
                         console.log('User remove sucessufully');
                         this.showUserProfile=!this.showUserProfile;
-                        this.clickLogout();
                     });
             },desactive(){
+                axios.put('api/disable/'+this.currentUser.email
+                )
+                    .then(response => {
+                        console.log(response);
+                        console.log('User remove sucessufully');
+                        this.showUserProfile=!this.showUserProfile;
+                        this.clickLogout();
 
+                    }).catch(function (error){
+                    console.log(error);
+                });
+            },cancelEdit(){
+                this.editingUser = false;
+            },backEdit(){
+                this.showUserProfile = false;
+                this.editingUser = false;
+            },saveChanges(){
+
+                axios.put('api/user/'+this.authUser.email,
+                    {"name" : this.editUser.name,
+                    "username" : this.editUser.username,
+                    "email" : this.editUser.email ,
+                    "password" : this.editUser.password }
+                )
+                    .then(response => {
+                        console.log(response);
+                        console.log('User edited sucessufully');
+                        this.editingUser = false;
+
+                        this.authUser.name = this.editUser.name;
+                        this.authUser.username = this.editUser.username;
+                        this.authUser.email = this.editUser.email;
+                        this.authUser.password = this.editUser.password;
+                    }).catch(function (error){
+                    console.log(error);
+                });
+            },resetPassword(){
+                axios.get('api/authUser/'+this.currentUser.email)
+                    .then(response=>{
+                        console.log(response);
+                            let admin = response.data;
+
+                            if(admin == 1){
+                                this.isAdmin = !this.isAdmin;
+                            }
+
+                    });
+            },resetAdminPassword(){
+                if(this.resetingUser.newPassword !== this.resetingUser.confirmPassword){
+                    //pop up
+                }else{
+                    this.resetingUser.email = this.currentUser.email;
+                    axios.put('api/reset/'+this.resetingUser.email,
+                        {"currentPassword":this.resetingUser.currentPassword,
+                            "newPassword":this.resetingUser.newPassword
+                    })
+                        .then(response => {
+                            console.log(response);
+                        }).catch(function (error){
+                        console.log(error);
+                    });
+                }
+            },cancelReset(){
+                this.isAdmin = false;
+            },clickReset(){
+                axios.put('api/resetPassword/' + this.currentUser.email )
+                    .then(response => {
+                        conolse.log("email send sucessefuly") ;
+                    }).catch(function (error){
+                    console.log(error);
+                });
             }
         },
         computed: {

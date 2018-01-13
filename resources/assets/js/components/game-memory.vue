@@ -15,9 +15,10 @@
             <div class="row">
 
                 <div class="col-xs-12 col-sm-5" v-if="game.type == 'multiplayer'">
-                    <button class="btn btn-primary" v-on:click.prevent="showChat = !showChat">{{loginToogleButton}}</button>
+                    <button class="btn btn-primary" v-on:click.prevent="showChat = !showChat">{{chatToogleButton}}</button>
                         <webchat v-if="showChat" :messages="game.chatMessages" @send-click="sendMessage"></webchat>
                 </div>
+                <h3>{{playerTurn.name}} has the turn</h3>
                 <div class="col-xs-12  col-sm-5 board">
                     <div v-for="(pieceID, key) of game.board">
                         <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
@@ -55,7 +56,6 @@
             },
             clickPiece(index){
                 if(this.game.gameEnded){
-
                     return;
                 }
                 this.$socket.emit('play_piece',
@@ -92,12 +92,23 @@
                     return '';
                 return this.game.name;
             },
-            loginToogleButton : function(){
+            chatToogleButton : function(){
                 if(this.showChat){
                     return 'Collapse Chat';
                 }else{
                     return 'Show Chat';
                 }
+            },
+            playerTurn : function(){
+                let playerId = this.game.players.findIndex((ele)=> {
+                    return ele.ID === this.game.playerTurn;
+                });
+                return this.game.players[playerId];
+            }
+        },
+        watch: {
+            'game': function(val, oldVal){
+
             }
         },
         components: {
