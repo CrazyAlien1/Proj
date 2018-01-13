@@ -6,11 +6,11 @@
         <label>New Password</label>
         <input  type="password" class="form-control" id="currentUser.password" required autofocus>
 
-        <button class="btn btn-xs btn-success">Login</button>
+        <button class="btn btn-xs btn-success">Reset</button>
     </div>
 
 @endsection
 
 @section('pagescript')
-    <script src="js/administrator.js"></script>
+
 @stop
