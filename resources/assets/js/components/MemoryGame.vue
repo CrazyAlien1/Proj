@@ -65,7 +65,7 @@
 
             <div class="form-group">
                 <a class="btn btn-primary btn-success" v-if="!editingUser" v-on:click.prevent="editUserProfile">Edit profile</a>
-                <a class="btn btn-primary btn-danger" v-if="!editingUser" v-on:click.prevent="removeUser">Remove</a>
+                <a class="btn btn-primary btn-danger" v-if="!editingUser" v-on:click.prevent="removeUser">Remove Account</a>
                 <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="desactive">Desactive account</a>
                 <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="backEdit">Back</a>
                 <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="cancelEdit">Cancel</a>
@@ -611,9 +611,10 @@
                     console.log(error);
                 });
             },cancelEdit(){
-                this.showUserProfile = false;
+                this.editingUser = false;
             },backEdit(){
                 this.showUserProfile = false;
+                this.editingUser = false;
             },saveChanges(){
 
                 axios.put('api/user/'+this.authUser.email,
