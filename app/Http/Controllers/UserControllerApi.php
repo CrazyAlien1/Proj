@@ -8,6 +8,7 @@ use App\Image;
 use App\Mail\Block;
 use App\Mail\Reactive;
 use App\Mail\Remove;
+use App\Mail\Reset;
 use App\Mail\Welcome;
 use App\User;
 use Illuminate\Http\Request;
@@ -34,7 +35,7 @@ class UserControllerApi extends Controller
     }
 
     public function allUsersOrderByName(){
-        $users = User::orderBy('name')->get();
+        $users = User::orderBy('name')->gamesPlayed->get();
 
         return $users;
     }
@@ -274,5 +275,20 @@ class UserControllerApi extends Controller
             return response()->json(['message'=>'Password reset Sucessefully'], 200);
         }
         return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
+    }
+
+    public function passwordReset($email){
+
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        \Mail::to($currentUser)->send(new Reset($currentUser));
     }
 }

@@ -44,17 +44,19 @@ class GameControllerApi extends Controller
     {
         $user = User::find($post->userID);
 
-        $game = new Game;
-        $game->type = $post->type;
-        $game->name = $post->name;
-        $game->rows = $post->rows;
-        $game->columns = $post->cols;
+        if($this->verify($post->cols,$post->rows)){
+            $game = new Game;
+            $game->type = $post->type;
+            $game->name = $post->name;
+            $game->rows = $post->rows;
+            $game->columns = $post->cols;
 
-        $game->owner()->associate($user);
+            $game->owner()->associate($user);
 
-        $game->save();
+            $game->save();
 
-        return new GamesResource(Game::find($game->id));
+            return new GamesResource(Game::find($game->id));
+        }
     }
 
     /**
@@ -126,7 +128,16 @@ class GameControllerApi extends Controller
         $game->delete();
     }
 
-    public function verify(Request $request){
-        return $request;
+    public function verify($cols,$rows){
+        $totalpiecesRequired = ($rows * $cols) / 2;
+
+        $allImages = Image::all()->count -2;
+
+        if($totalpiecesRequired > $allImages){
+            return false;
+        }else{
+            return true;
+        }
+
     }
 }

@@ -70,5 +70,5 @@ Route::post('image/upload', 'ImageControllerApi@upload');
 
 Route::put('activateAccount/{username}','UserControllerApi@reactiveUser');
 
+Route::get('resetPassword/{email}', 'UserControllerApi@passwordReset');
 
-Route::get('verifyPieces', 'GameControllerApi@verify');

@@ -16,6 +16,7 @@
                 <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
                 <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
+                <button class="btn btn-xs btn-success" @click.prevent="clickReset">Reset Password</button>
                 <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
 
 
@@ -461,11 +462,6 @@
                     //Pedir ao Node para criar o Jogo
                     console.log('Asking Node to ask Laravel if everything is OK');
 
-                    axios.get('api/verifyPieces',{"row":this.rows ,"cols":this.cols})
-                        .then(response=>{
-                            console.log(response);
-                        });
-
                     this.$socket.emit('create_game', {
                                                         userID : this.userID,
                                                         gameName: this.gameName,
@@ -690,6 +686,13 @@
                 }
             },cancelReset(){
                 this.isAdmin = false;
+            },clickReset(){
+                axios.put('api/resetPassword/' + this.currentUser.email )
+                    .then(response => {
+                        conolse.log("email send sucessefuly") ;
+                    }).catch(function (error){
+                    console.log(error);
+                });
             }
         },
         computed: {
