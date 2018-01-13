@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Game;
+use App\Image;
 use App\Mail\Block;
 use App\Mail\Reactive;
 use App\Mail\Remove;
@@ -11,8 +12,10 @@ use App\Mail\Welcome;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Users as UserResource;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserControllerApi extends Controller
 {
@@ -36,6 +39,20 @@ class UserControllerApi extends Controller
         return $users;
     }
 
+    public function getUserDetails(Request $request,$email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        return $currentUser;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,8 +71,7 @@ class UserControllerApi extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-
+        $user = new User;
         $user->name = $request->name;
         $user -> email = $request->email;
         $user->nickname = $request->username;
@@ -63,7 +79,10 @@ class UserControllerApi extends Controller
 
         \Mail::to($user)->send(new Welcome($user));
 
+        $user->ative = 0;
+
         $user->save();
+
     }
 
     /**
@@ -95,9 +114,24 @@ class UserControllerApi extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $email)
     {
-        //
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->name = $request->name;
+        $currentUser->email = $request->email;
+        $currentUser->nickname = $request->nickname;
+        $currentUser->password = Hash::make($request -> password);
+
+        $currentUser->save();
     }
 
     /**
@@ -126,6 +160,22 @@ class UserControllerApi extends Controller
         //return $user;
     }
 
+    public function removeAccount($email)
+    {
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->delete();
+        //return $user;
+    }
+
     public function block(Request $request, $id){
         $user = User::find($id);
         $user->reason_blocked = $request->reason_blocked;
@@ -151,5 +201,87 @@ class UserControllerApi extends Controller
         return $user;
     }
 
+    public function disableUser($email){
+        $users = User::all();
+        $currentUser= null;
 
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->ative = 0;
+
+        $currentUser->save();
+    }
+
+    public function upload(Request $request){
+
+        if ($request->hasFile('image'))
+        {
+            $num = (Image::all()->count() - 2);
+            $imageName = $num +1;
+            console.log($request->image);
+
+            $image = new Image();
+            $image->path = $imageName ;
+            $image-> face = 'tile';
+            $image -> active = 1;
+            $image ->save();
+            Storage::disk('root')->putFileAs($imageName, $request->file('image'), $image->path);
+        }
+    }
+
+    public function reactiveUser($nickname){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->nickname === $nickname){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        $currentUser->ative = 1;
+        $currentUser->save();
+
+        return redirect()->route('/');
+    }
+
+    public function getAuthUser($email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        return $currentUser->admin;
+    }
+
+    public function resetPassword(Request $request,$email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        if (Hash::check($request->currentPassword, $currentUser->password)) {
+            //funciona
+            //$currentUser->password = bcrypt($request->newPassword);
+            //$currentUser ->save();
+            return response()->json(['message'=>'Password reset Sucessefully'], 200);
+        }
+        return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
+    }
 }

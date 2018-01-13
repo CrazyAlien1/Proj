@@ -45849,7 +45849,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -45864,6 +45864,87 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__lobby_games_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__lobby_games_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__game_memory_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__game_memory_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -46053,7 +46134,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             statistics: false,
             botModes: [0, 1, 2, 3, 4],
             selectedBotType: 0,
-            bots: []
+            bots: [],
+            myStats: false,
+            userStats: [],
+            showUserProfile: false,
+            authUser: { name: '', username: '', email: '', password: '' },
+            editUser: { name: '', username: '', email: '', password: '' },
+            editingUser: false,
+            isAdmin: false,
+            resetingUser: { currentPassword: '', newPassword: '', confirmPassword: '', email: '' }
         };
     },
     sockets: {
@@ -46291,7 +46380,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 _this.token = _this.tokenType + " " + _this.userToken;
 
-                //console.log(response.data.access_token);  *caso seja necessario para fazer logout
                 console.log("Logged in");
                 _this.logedIn = true;
             }).catch(function (error) {
@@ -46320,13 +46408,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.$socket.emit('send_message', data);
         },
         admin: function admin() {
-            //axios.get('');
+            router.push({ name: 'administraton' });
         },
         saveUser: function saveUser() {
             var _this3 = this;
 
-            console.log(this.newUser);
-            axios.post('api/user', { "name": this.newUser.name }, { "username": this.newUser.username }, { "email": this.newUser.email }, { "password": this.newUser.password }).then(function (response) {
+            axios.post('api/user', { "name": this.newUser.name,
+                "username": this.newUser.username,
+                "email": this.newUser.email,
+                "password": this.newUser.password }).then(function (response) {
+                console.log(response);
                 console.log("New User created");
                 console.log('fake i guess   by: cloro');
 
@@ -46351,11 +46442,113 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             axios.get('api/allStats').then(function (response) {
                 Object.assign(_this4.allStats, response.data);
-                _this4.statistics = true;
-                console.log(_this4.allStats['winner']);
+                _this4.statistics = !_this4.statistics;
             });
         },
-        setUpBots: function setUpBots(botDificulty) {}
+        getMyStats: function getMyStats() {
+            var _this5 = this;
+
+            console.log(this.currentUser.email);
+            axios.get('api/myStats/' + this.currentUser.email).then(function (response) {
+                Object.assign(_this5.userStats, response.data);
+                _this5.myStats = !_this5.myStats;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        showProfile: function showProfile() {
+            var _this6 = this;
+
+            axios.get('api/user/' + this.currentUser.email).then(function (response) {
+                console.log(response.data);
+                _this6.authUser.name = response.data.name;
+                _this6.authUser.username = response.data.nickname;
+                _this6.authUser.email = response.data.email;
+                //this.authUser.password = response.data.password;
+                _this6.showUserProfile = !_this6.showUserProfile;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        editUserProfile: function editUserProfile() {
+            this.editingUser = !this.editingUser;
+        },
+        removeUser: function removeUser() {
+            var _this7 = this;
+
+            this.clickLogout();
+            axios.delete('api/removeAccount/' + this.currentUser.email).then(function (response) {
+                console.log(response);
+                console.log('User remove sucessufully');
+                _this7.showUserProfile = !_this7.showUserProfile;
+            });
+        },
+        desactive: function desactive() {
+            var _this8 = this;
+
+            axios.put('api/disable/' + this.currentUser.email).then(function (response) {
+                console.log(response);
+                console.log('User remove sucessufully');
+                _this8.showUserProfile = !_this8.showUserProfile;
+                _this8.clickLogout();
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        cancelEdit: function cancelEdit() {
+            this.showUserProfile = false;
+        },
+        backEdit: function backEdit() {
+            this.showUserProfile = false;
+        },
+        saveChanges: function saveChanges() {
+            var _this9 = this;
+
+            axios.put('api/user/' + this.authUser.email, { "name": this.editUser.name,
+                "username": this.editUser.username,
+                "email": this.editUser.email,
+                "password": this.editUser.password }).then(function (response) {
+                console.log(response);
+                console.log('User edited sucessufully');
+                _this9.editingUser = false;
+
+                _this9.authUser.name = _this9.editUser.name;
+                _this9.authUser.username = _this9.editUser.username;
+                _this9.authUser.email = _this9.editUser.email;
+                _this9.authUser.password = _this9.editUser.password;
+            }).catch(function (error) {
+                console.log(error);
+            });
+        },
+        resetPassword: function resetPassword() {
+            var _this10 = this;
+
+            axios.get('api/authUser/' + this.currentUser.email).then(function (response) {
+                console.log(response);
+                var admin = response.data;
+
+                if (admin == 1) {
+                    _this10.isAdmin = !_this10.isAdmin;
+                }
+            });
+        },
+        resetAdminPassword: function resetAdminPassword() {
+            if (this.resetingUser.newPassword !== this.resetingUser.confirmPassword) {
+                //pop up
+            } else {
+                this.resetingUser.email = this.currentUser.email;
+                axios.put('api/reset/' + this.resetingUser.email, { "currentPassword": this.resetingUser.currentPassword,
+                    "newPassword": this.resetingUser.newPassword
+                }).then(function (response) {
+                    console.log(response);
+                }).catch(function (error) {
+                    console.log(error);
+                });
+            }
+        },
+        cancelReset: function cancelReset() {
+            this.isAdmin = false;
+        }
     },
     computed: {
         title: function title() {
@@ -47357,215 +47550,106 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _vm.logedIn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-primary",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.admin($event)
-              }
-            }
-          },
-          [_vm._v("Administration")]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.logedIn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-primary btn-danger",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.clickLogout($event)
-              }
-            }
-          },
-          [_vm._v("Logout")]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    !_vm.logedIn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-primary btn-success",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.showLogin = !_vm.showLogin
-              }
-            }
-          },
-          [_vm._v("Log me")]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    !_vm.logedIn
-      ? _c(
-          "button",
-          {
-            staticClass: "btn btn-primary btn-success",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.getOfflineStats($event)
-              }
-            }
-          },
-          [_vm._v("Offline Statistics")]
-        )
-      : _vm._e(),
-    _vm._v(" "),
-    _c("br"),
-    _c("br"),
-    _vm._v(" "),
-    _vm.showLogin && !_vm.logedIn
-      ? _c("span", [
-          _c("label", { attrs: { for: "currentUser.email" } }, [
-            _vm._v("E-Mail Address")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.currentUser.email,
-                expression: "currentUser.email"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "email",
-              id: "currentUser.email",
-              required: "",
-              autofocus: ""
+  return _c(
+    "div",
+    { staticClass: "row" },
+    [
+      _vm.logedIn
+        ? _c(
+            "router-link",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { to: { name: "administration" } }
             },
-            domProps: { value: _vm.currentUser.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.currentUser, "email", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "currentUser.password" } }, [
-            _vm._v("Password")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.currentUser.password,
-                expression: "currentUser.password"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "password",
-              id: "currentUser.password",
-              required: "",
-              autofocus: ""
-            },
-            domProps: { value: _vm.currentUser.password },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.currentUser, "password", $event.target.value)
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c(
+            [_vm._v("Administration")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.logedIn
+        ? _c(
             "button",
             {
-              staticClass: "btn btn-xs btn-success",
+              staticClass: "btn btn-primary btn-danger",
               on: {
                 click: function($event) {
                   $event.preventDefault()
-                  _vm.clickLogin($event)
+                  _vm.clickLogout($event)
                 }
               }
             },
-            [_vm._v("Login")]
-          ),
-          _vm._v(" "),
-          _c(
+            [_vm._v("Logout")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      !_vm.logedIn
+        ? _c(
             "button",
             {
-              staticClass: "btn btn-xs btn-primary",
+              staticClass: "btn btn-primary btn-success",
               on: {
                 click: function($event) {
                   $event.preventDefault()
-                  _vm.showRegisterDiv = !_vm.showRegisterDiv
+                  _vm.showLogin = !_vm.showLogin
                 }
               }
             },
-            [_vm._v("Register")]
-          ),
-          _vm._v(" "),
-          _vm.loginError
-            ? _c("span", [
-                _c("h4", { staticClass: "text-danger" }, [
-                  _vm._v(_vm._s(_vm.loginError))
-                ])
-              ])
-            : _vm._e()
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.showRegisterDiv
-      ? _c("div", { staticClass: "jumbotron" }, [
-          _c("h2", [_vm._v("Register")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "inputName" } }, [_vm._v("Name")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.newUser.name,
-                  expression: "newUser.name"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "name",
-                id: "inputName",
-                placeholder: "Fullname",
-                required: ""
-              },
-              domProps: { value: _vm.newUser.name },
+            [_vm._v("Log me")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary btn-success",
+          on: {
+            click: function($event) {
+              $event.preventDefault()
+              _vm.getOfflineStats($event)
+            }
+          }
+        },
+        [_vm._v("Offline statistics")]
+      ),
+      _vm._v(" "),
+      _vm.logedIn
+        ? _c(
+            "button",
+            {
+              staticClass: "btn btn-primary btn-success",
               on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.newUser, "name", $event.target.value)
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.getMyStats($event)
                 }
               }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "inputUserName" } }, [
-              _vm._v("User Name")
+            },
+            [_vm._v("My statistics")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.logedIn
+        ? _c(
+            "button",
+            {
+              staticClass: "btn btn-primary btn-success",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.showProfile($event)
+                }
+              }
+            },
+            [_vm._v("Profile")]
+          )
+        : _vm._e(),
+      _vm._v(" "),
+      _c("br"),
+      _c("br"),
+      _vm._v(" "),
+      _vm.showLogin && !_vm.logedIn
+        ? _c("span", [
+            _c("label", { attrs: { for: "currentUser.email" } }, [
+              _vm._v("E-Mail Address")
             ]),
             _vm._v(" "),
             _c("input", {
@@ -47573,64 +47657,29 @@ var render = function() {
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.newUser.username,
-                  expression: "newUser.username"
-                }
-              ],
-              staticClass: "form-control",
-              attrs: {
-                type: "text",
-                name: "name",
-                id: "inputUserName",
-                placeholder: "User Name",
-                required: ""
-              },
-              domProps: { value: _vm.newUser.username },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.newUser, "username", $event.target.value)
-                }
-              }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "inputEmail" } }, [_vm._v("Email")]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.newUser.email,
-                  expression: "newUser.email"
+                  value: _vm.currentUser.email,
+                  expression: "currentUser.email"
                 }
               ],
               staticClass: "form-control",
               attrs: {
                 type: "email",
-                name: "email",
-                id: "inputEmail",
-                placeholder: "Email address",
-                required: ""
+                id: "currentUser.email",
+                required: "",
+                autofocus: ""
               },
-              domProps: { value: _vm.newUser.email },
+              domProps: { value: _vm.currentUser.email },
               on: {
                 input: function($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.$set(_vm.newUser, "email", $event.target.value)
+                  _vm.$set(_vm.currentUser, "email", $event.target.value)
                 }
               }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
-            _c("label", { attrs: { for: "inputPassword" } }, [
+            }),
+            _vm._v(" "),
+            _c("label", { attrs: { for: "currentUser.password" } }, [
               _vm._v("Password")
             ]),
             _vm._v(" "),
@@ -47639,392 +47688,1037 @@ var render = function() {
                 {
                   name: "model",
                   rawName: "v-model",
-                  value: _vm.newUser.password,
-                  expression: "newUser.password"
+                  value: _vm.currentUser.password,
+                  expression: "currentUser.password"
                 }
               ],
               staticClass: "form-control",
               attrs: {
                 type: "password",
-                name: "name",
-                id: "inputPassword",
-                placeholder: "Password",
-                required: ""
+                id: "currentUser.password",
+                required: "",
+                autofocus: ""
               },
-              domProps: { value: _vm.newUser.password },
+              domProps: { value: _vm.currentUser.password },
               on: {
                 input: function($event) {
                   if ($event.target.composing) {
                     return
                   }
-                  _vm.$set(_vm.newUser, "password", $event.target.value)
+                  _vm.$set(_vm.currentUser, "password", $event.target.value)
                 }
               }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "form-group" }, [
+            }),
+            _vm._v(" "),
             _c(
-              "a",
+              "button",
               {
-                staticClass: "btn btn-primary btn-success",
+                staticClass: "btn btn-xs btn-success",
                 on: {
                   click: function($event) {
                     $event.preventDefault()
-                    _vm.saveUser($event)
+                    _vm.clickLogin($event)
+                  }
+                }
+              },
+              [_vm._v("Login")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-xs btn-primary",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.showRegisterDiv = !_vm.showRegisterDiv
                   }
                 }
               },
               [_vm._v("Register")]
             ),
             _vm._v(" "),
-            _c(
-              "a",
-              {
-                staticClass: "btn btn-primary btn-danger",
+            _vm.loginError
+              ? _c("span", [
+                  _c("h4", { staticClass: "text-danger" }, [
+                    _vm._v(_vm._s(_vm.loginError))
+                  ])
+                ])
+              : _vm._e()
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.showUserProfile
+        ? _c("div", { staticClass: "jumbotron" }, [
+            _c("h2", [_vm._v("Profile")]),
+            _vm._v(" "),
+            !_vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("Name")
+                  ]),
+                  _vm._v(" "),
+                  _c("output", { attrs: { name: "name" } }, [
+                    _vm._v(_vm._s(_vm.authUser.name) + " ")
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("Name")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editUser.name,
+                        expression: "editUser.name"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      value: "authUser.name",
+                      type: "text",
+                      id: "editUser.name",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.editUser.name },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.editUser, "name", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("Nickname")
+                  ]),
+                  _vm._v(" "),
+                  _c("output", { attrs: { name: "name" } }, [
+                    _vm._v(_vm._s(_vm.authUser.username) + " ")
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("Nickname")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editUser.username,
+                        expression: "editUser.username"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      value: "authUser.username",
+                      type: "text",
+                      id: "editUser.nickname",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.editUser.username },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.editUser, "username", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("email")
+                  ]),
+                  _vm._v(" "),
+                  _c("output", { attrs: { name: "name" } }, [
+                    _vm._v(_vm._s(_vm.authUser.email) + " ")
+                  ])
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputName" } }, [
+                    _vm._v("email")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editUser.email,
+                        expression: "editUser.email"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      value: "authUser.email",
+                      type: "email",
+                      id: "editUser.email",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.editUser.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.editUser, "email", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.editingUser
+              ? _c("div", { staticClass: "form-group" }, [
+                  _c("label", { attrs: { for: "inputPassword" } }, [
+                    _vm._v("Password")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.editUser.password,
+                        expression: "editUser.password"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "password",
+                      id: "editUser.password",
+                      required: "",
+                      autofocus: ""
+                    },
+                    domProps: { value: _vm.editUser.password },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.editUser, "password", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              !_vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-success",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.editUserProfile($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Edit profile")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-danger",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.removeUser($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Remove")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-default",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.desactive($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Desactive account")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-default",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.backEdit($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Back")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-default",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.cancelEdit($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Cancel")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.editingUser
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "btn btn-primary btn-default",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.saveChanges($event)
+                        }
+                      }
+                    },
+                    [_vm._v("Save Changes")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-default",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.resetPassword($event)
+                    }
+                  }
+                },
+                [_vm._v("ResetPaword")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.isAdmin
+        ? _c("div", { staticClass: "jumbotron" }, [
+            _c("h2", [_vm._v("Reseting Password")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputName" } }, [
+                _vm._v("Current Password")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.resetingUser.currentPassword,
+                    expression: "resetingUser.currentPassword"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  id: "userReset.currentPassword",
+                  required: ""
+                },
+                domProps: { value: _vm.resetingUser.currentPassword },
                 on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.cancelRegister($event)
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.resetingUser,
+                      "currentPassword",
+                      $event.target.value
+                    )
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputName" } }, [
+                _vm._v("New Password")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.resetingUser.newPassword,
+                    expression: "resetingUser.newPassword"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "password",
+                  id: "userReset.newPassword",
+                  required: ""
+                },
+                domProps: { value: _vm.resetingUser.newPassword },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.resetingUser,
+                      "newPassword",
+                      $event.target.value
+                    )
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputName" } }, [
+                _vm._v("Confirm Password")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.resetingUser.confirmPassword,
+                    expression: "resetingUser.confirmPassword"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "password",
+                  id: "userReset.confirmPassword",
+                  required: ""
+                },
+                domProps: { value: _vm.resetingUser.confirmPassword },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(
+                      _vm.resetingUser,
+                      "confirmPassword",
+                      $event.target.value
+                    )
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-success",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.resetAdminPassword($event)
+                    }
+                  }
+                },
+                [_vm._v("Reset")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-danger",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.cancelReset($event)
+                    }
+                  }
+                },
+                [_vm._v("Cancel")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.showRegisterDiv
+        ? _c("div", { staticClass: "jumbotron" }, [
+            _c("h2", [_vm._v("Register")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputName" } }, [_vm._v("Name")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newUser.name,
+                    expression: "newUser.name"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  name: "name",
+                  id: "inputName",
+                  placeholder: "Fullname",
+                  required: ""
+                },
+                domProps: { value: _vm.newUser.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.newUser, "name", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputUserName" } }, [
+                _vm._v("User Name")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newUser.username,
+                    expression: "newUser.username"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  name: "name",
+                  id: "inputUserName",
+                  placeholder: "User Name",
+                  required: ""
+                },
+                domProps: { value: _vm.newUser.username },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.newUser, "username", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputEmail" } }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newUser.email,
+                    expression: "newUser.email"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "email",
+                  name: "name",
+                  id: "inputEmail",
+                  placeholder: "Email address",
+                  required: ""
+                },
+                domProps: { value: _vm.newUser.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.newUser, "email", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "inputPassword" } }, [
+                _vm._v("Password")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.newUser.password,
+                    expression: "newUser.password"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "password",
+                  name: "name",
+                  id: "inputPassword",
+                  placeholder: "Password",
+                  required: ""
+                },
+                domProps: { value: _vm.newUser.password },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.newUser, "password", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-success",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.saveUser($event)
+                    }
+                  }
+                },
+                [_vm._v("Register")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btn-primary btn-danger",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.cancelRegister($event)
+                    }
+                  }
+                },
+                [_vm._v("Cancel")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.statistics
+        ? _c("div", [
+            _c("h2", [_vm._v("Statistics")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Single Player Games: " +
+                  _vm._s(this.allStats["singlePlayer"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Multi Player Games: " +
+                  _vm._s(this.allStats["multiplayer"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Played Games: " + _vm._s(this.allStats["totalPlayed"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("table", { staticClass: "table table-striped" }, [
+              _vm._m(0, false, false),
+              _vm._v(" "),
+              _c(
+                "tbody",
+                _vm._l(this.allStats["winner"], function(user) {
+                  return _c("tr", { key: user.id }, [
+                    _c("td", [_vm._v(_vm._s(user))])
+                  ])
+                })
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.myStats
+        ? _c("div", [
+            _c("h2", [_vm._v("My statistics")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Single Player Games: " +
+                  _vm._s(this.myStats["singlePlayer"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Multi Player Games: " +
+                  _vm._s(this.myStats["multiplayer"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Total Played Games: " + _vm._s(this.myStats["totalPlayed"])
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [_vm._v("Total Wins: " + _vm._s(this.myStats["totalWin"]))])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("h3", { staticClass: "text-center" }, [
+        _vm.isConnected
+          ? _c("span", { staticClass: "text-success" }, [_vm._v("Online")])
+          : _vm._e(),
+        _vm._v(" "),
+        !_vm.isConnected
+          ? _c("span", { staticClass: "text-danger" }, [_vm._v("Offline")])
+          : _vm._e(),
+        _vm._v("\n\n            Mrs Derp:\n            "),
+        _vm.logedIn
+          ? _c("span", [_vm._v(_vm._s(_vm.currentUser.email))])
+          : _vm._e(),
+        _vm._v("\n            " + _vm._s(_vm.title) + "\n        ")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-primary",
+            on: {
+              click: function($event) {
+                $event.preventDefault()
+                _vm.showLobby = !_vm.showLobby
+              }
+            }
+          },
+          [_vm._v("Lobby")]
+        ),
+        _vm._v(" "),
+        _c("br")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-xs-2" }, [
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.selectedGameType,
+                  expression: "selectedGameType"
+                }
+              ],
+              on: {
+                change: function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.selectedGameType = $event.target.multiple
+                    ? $$selectedVal
+                    : $$selectedVal[0]
+                }
+              }
+            },
+            _vm._l(_vm.gameType, function(type, key) {
+              return _c("option", { key: key, attrs: { selected: "type" } }, [
+                _vm._v(_vm._s(type))
+              ])
+            })
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xs-2" }, [
+          _c("div", [
+            _vm._v("\n                    Max Players\n                    "),
+            _c(
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedNumPlayers,
+                    expression: "selectedNumPlayers"
+                  }
+                ],
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.selectedNumPlayers = $event.target.multiple
+                      ? $$selectedVal
+                      : $$selectedVal[0]
                   }
                 }
               },
-              [_vm._v("Cancel")]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.statistics
-      ? _c("div", [
-          _c("h2", [_vm._v("Statistics")]),
-          _vm._v(" "),
-          _c("p", [
+              _vm._l(_vm.maxPlayers, function(max, key) {
+                return _c("option", { key: key, attrs: { selected: "max" } }, [
+                  _vm._v(_vm._s(max))
+                ])
+              })
+            ),
             _vm._v(
-              "Total Single Player Games: " +
-                _vm._s(this.allStats["singlePlayer"])
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Total Multi Player Games: " +
-                _vm._s(this.allStats["multiplayer"])
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "Total Played Games: " + _vm._s(this.allStats["totalPlayed"])
-            )
-          ]),
-          _vm._v(" "),
-          _c("table", { staticClass: "table table-striped" }, [
-            _vm._m(0, false, false),
-            _vm._v(" "),
+              "\n                    Bots Difficulty\n                    "
+            ),
             _c(
-              "tbody",
-              _vm._l(this.allStats["winner"], function(user) {
-                return _c("tr", { key: user.id }, [
-                  _c("td", [_vm._v(_vm._s(user))])
+              "select",
+              {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.selectedBotType,
+                    expression: "selectedBotType"
+                  }
+                ],
+                on: {
+                  change: function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.selectedBotType = $event.target.multiple
+                      ? $$selectedVal
+                      : $$selectedVal[0]
+                  }
+                }
+              },
+              _vm._l(_vm.botModes, function(bot, key) {
+                return _c("option", { key: key, attrs: { selected: "bot" } }, [
+                  _vm._v(_vm._s(bot))
                 ])
               })
             )
           ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c("h3", { staticClass: "text-center" }, [
-      _vm.isConnected
-        ? _c("span", { staticClass: "text-success" }, [_vm._v("Online")])
-        : _vm._e(),
-      _vm._v(" "),
-      !_vm.isConnected
-        ? _c("span", { staticClass: "text-danger" }, [_vm._v("Offline")])
-        : _vm._e(),
-      _vm._v("\n\n            Mrs Derp:\n            "),
-      _vm.logedIn
-        ? _c("span", [_vm._v(_vm._s(_vm.currentUser.email))])
-        : _vm._e(),
-      _vm._v("\n            " + _vm._s(_vm.title) + "\n        ")
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.rows,
+              expression: "rows"
+            }
+          ],
+          domProps: { value: _vm.rows },
           on: {
-            click: function($event) {
-              $event.preventDefault()
-              _vm.showLobby = !_vm.showLobby
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.rows = $event.target.value
             }
           }
-        },
-        [_vm._v("Lobby")]
-      ),
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.cols,
+              expression: "cols"
+            }
+          ],
+          domProps: { value: _vm.cols },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.cols = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.gameName,
+              expression: "gameName"
+            }
+          ],
+          attrs: { placeholder: "3 Musketeers" },
+          domProps: { value: _vm.gameName },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.gameName = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c("p", [
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-success",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  _vm.createGame($event)
+                }
+              }
+            },
+            [_vm._v("Create a New Game")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("hr")
+      ]),
       _vm._v(" "),
-      _c("br")
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xs-2" }, [
+      _c("div", { staticClass: "row" }, [
         _c(
-          "select",
+          "div",
           {
             directives: [
               {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.selectedGameType,
-                expression: "selectedGameType"
+                name: "show",
+                rawName: "v-show",
+                value: _vm.showLobby,
+                expression: "showLobby"
               }
             ],
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.selectedGameType = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              }
-            }
+            class: _vm.lobbySize
           },
-          _vm._l(_vm.gameType, function(type, key) {
-            return _c("option", { key: key, attrs: { selected: "type" } }, [
-              _vm._v(_vm._s(type))
-            ])
-          })
+          [
+            _c("h3", { staticClass: "text-center" }, [_vm._v("Lobby")]),
+            _vm._v(" "),
+            _c("h4", [
+              _vm._v("Pending games ("),
+              _c(
+                "a",
+                {
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.loadLobby($event)
+                    }
+                  }
+                },
+                [_vm._v("Refresh")]
+              ),
+              _vm._v(")")
+            ]),
+            _vm._v(" "),
+            _c("lobby", {
+              attrs: { games: _vm.lobbyGames },
+              on: {
+                "join-click": _vm.join,
+                "start-game": _vm.start,
+                "delete-click": _vm.deleteGame,
+                "remove-click": _vm.removePlayer,
+                "leave-click": _vm.leaveGame,
+                "send-click": _vm.sendMessage
+              }
+            })
+          ],
+          1
         )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-xs-2" }, [
-        _c("div", [
-          _vm._v("\n                    Max Players\n                    "),
-          _c(
-            "select",
-            {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.selectedNumPlayers,
-                  expression: "selectedNumPlayers"
-                }
-              ],
-              on: {
-                change: function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.selectedNumPlayers = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
-                }
-              }
-            },
-            _vm._l(_vm.maxPlayers, function(max, key) {
-              return _c("option", { key: key, attrs: { selected: "max" } }, [
-                _vm._v(_vm._s(max))
-              ])
-            })
-          ),
-          _vm._v("\n                    Bots Difficulty\n                    "),
-          _c(
-            "select",
-            {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.selectedBotType,
-                  expression: "selectedBotType"
-                }
-              ],
-              on: {
-                change: function($event) {
-                  var $$selectedVal = Array.prototype.filter
-                    .call($event.target.options, function(o) {
-                      return o.selected
-                    })
-                    .map(function(o) {
-                      var val = "_value" in o ? o._value : o.value
-                      return val
-                    })
-                  _vm.selectedBotType = $event.target.multiple
-                    ? $$selectedVal
-                    : $$selectedVal[0]
-                }
-              }
-            },
-            _vm._l(_vm.botModes, function(bot, key) {
-              return _c("option", { key: key, attrs: { selected: "bot" } }, [
-                _vm._v(_vm._s(bot))
-              ])
-            })
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.rows,
-            expression: "rows"
-          }
-        ],
-        domProps: { value: _vm.rows },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.rows = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.cols,
-            expression: "cols"
-          }
-        ],
-        domProps: { value: _vm.cols },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.cols = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.gameName,
-            expression: "gameName"
-          }
-        ],
-        attrs: { placeholder: "3 Musketeers" },
-        domProps: { value: _vm.gameName },
-        on: {
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.gameName = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("p", [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-xs btn-success",
-            on: {
-              click: function($event) {
-                $event.preventDefault()
-                _vm.createGame($event)
-              }
-            }
-          },
-          [_vm._v("Create a New Game")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("hr")
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
       _c(
         "div",
-        {
-          directives: [
-            {
-              name: "show",
-              rawName: "v-show",
-              value: _vm.showLobby,
-              expression: "showLobby"
-            }
-          ],
-          class: _vm.lobbySize
-        },
+        { staticClass: "row" },
         [
-          _c("h3", { staticClass: "text-center" }, [_vm._v("Lobby")]),
+          _c("h1", [_vm._v("GAMES!")]),
           _vm._v(" "),
-          _c("h4", [
-            _vm._v("Pending games ("),
-            _c(
-              "a",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.loadLobby($event)
-                  }
-                }
-              },
-              [_vm._v("Refresh")]
-            ),
-            _vm._v(")")
-          ]),
-          _vm._v(" "),
-          _c("lobby", {
-            attrs: { games: _vm.lobbyGames },
-            on: {
-              "join-click": _vm.join,
-              "start-game": _vm.start,
-              "delete-click": _vm.deleteGame,
-              "remove-click": _vm.removePlayer,
-              "leave-click": _vm.leaveGame,
-              "send-click": _vm.sendMessage
-            }
+          _vm._l(_vm.myGames, function(game) {
+            return [
+              _c("game", {
+                attrs: { game: game, user: _vm.user },
+                on: { close_game: _vm.closeGame, "send-click": _vm.sendMessage }
+              })
+            ]
           })
         ],
-        1
+        2
       )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      [
-        _c("h1", [_vm._v("GAMES!")]),
-        _vm._v(" "),
-        _vm._l(_vm.myGames, function(game) {
-          return [
-            _c("game", {
-              attrs: { game: game, user: _vm.user },
-              on: { close_game: _vm.closeGame, "send-click": _vm.sendMessage }
-            })
-          ]
-        })
-      ],
-      2
-    )
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
