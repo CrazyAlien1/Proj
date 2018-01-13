@@ -179,12 +179,24 @@
 
 
             <div class="row">
-                <select v-model="selectedGameType">
-                    <option v-for="(type, key) in gameType" :key="key" selected="type">{{type}}</option>
-                </select>
-                <select v-model="selectedNumPlayers">
-                    <option v-for="(max, key) in maxPlayers" :key="key" selected="max">{{max}}</option>
-                </select>
+                <div class="col-xs-2">
+                    <select v-model="selectedGameType">
+                        <option v-for="(type, key) in gameType" :key="key" selected="type">{{type}}</option>
+                    </select>
+                </div>
+                <div class="col-xs-2">
+                    <div>
+                        Max Players
+                        <select v-model="selectedNumPlayers">
+                            <option v-for="(max, key) in maxPlayers" :key="key" selected="max">{{max}}</option>
+                        </select>
+                        Bots Difficulty
+                        <select v-model="selectedBotType">
+                            <option v-for="(bot, key) in botModes" :key="key" selected="bot">{{bot}}</option>
+                        </select>
+                    </div>
+                </div>
+
                 <input v-model="rows">
                 <input v-model="cols">
                 <input v-model="gameName" placeholder="3 Musketeers">
@@ -254,6 +266,9 @@
                 newUser:{name:'',username:'',email: '', password: '' },
                 allStats:[],
                 statistics: false,
+                botModes : [0, 1, 2, 3, 4],
+                selectedBotType : 0,
+                bots : [],
                 myStats:false,
                 userStats:[],
                 showUserProfile:false,
@@ -438,6 +453,11 @@
             createGame(){
                 // For this to work, server must handle (on event) the "create_game" message
                 if(this.user !== undefined){
+                    let names = ['Bot.dawey', 'Bot.almeida', 'Bot.DOOM'];
+                    for(let i = 0; i < this.selectedNumPlayers -1; i++){
+                        this.bots.push({botType: this.selectedBotType, name: names[i]});
+                    }
+
                     //Pedir ao Node para criar o Jogo
                     console.log('Asking Node to ask Laravel if everything is OK');
 
@@ -452,7 +472,8 @@
                                                         gameType: this.selectedGameType,
                                                         gameMaxPlayers: this.selectedNumPlayers,
                                                         rows : this.rows,
-                                                        cols : this.cols
+                                                        cols : this.cols,
+                                                        bots : this.bots,
                                                     });
                 }
             },
