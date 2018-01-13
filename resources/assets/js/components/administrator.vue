@@ -33,23 +33,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="user in usersData"  :key="user.id">
+                    <tr v-for="user in usersGamesPlayed"  :key="user.id">
                         <td>{{ user.name }}</td>
                         <td>{{ user.email }}</td>
                         <td>{{ user.nickname }}</td>
-                        <td>{{ usersGamesPlayed }}</td>
-                        <!--<td>
-                            <span v-for="userGame in usersGamesPlayed">
-                                <td v-if="user.name === userGame.name && userGame.type == 'singleplayer'">{{ userGame.totalGames }}</td>
-                                <td v-else>0</td>
-                                <td v-if="user.name === userGame.name && userGame.type == 'multiplayer'">{{ userGame.totalGames }}</td>
-                                <td v-else>0</td>
+                        <td >{{ user.totalGames }}</td>
 
-                                <--FALTA AQUI--
-                                <td>totalplay</td>
-                                <td>totalwin</td>
-                            </span>
-                        </td>-->
+                        <td>{{ user.totalGames }}</td>
+
+                        <td>{{ user.totalGames }}</td>
+                        <td>{{ user.totalGames }}</td>
                     </tr>
                     </tbody>
                 </table>
