@@ -234,19 +234,11 @@ class UserControllerApi extends Controller
         }
     }
 
-    public function reactiveUser($nickname){
-        $users = User::all();
-        $currentUser= null;
+    public function reactiveUser($id){
+        $user = User::find($id);
 
-        foreach ($users as $user){
-            if($user->nickname === $nickname){
-                $currentUser = $user;
-                break;
-            }
-        }
-
-        $currentUser->ative = 1;
-        $currentUser->save();
+        $user->ative = 1;
+        $user->save();
 
         return redirect()->route('/');
     }
