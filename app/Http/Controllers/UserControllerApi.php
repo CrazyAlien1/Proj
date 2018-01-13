@@ -43,9 +43,9 @@ class UserControllerApi extends Controller
     public function usersGamesPlayedStats(){
         $games = DB::table('games')
                     ->join('game_user', 'games.id', '=', 'game_user.game_id')
-                    ->join('users', 'users.id', '=', 'game_user.user_id')
-                    ->groupBy('games.type')
-                    ->select('users.name', 'users.email', 'users.nickname', 'games.type', DB::raw('count(*) as totalGames, games.type'), DB::raw('count(games.winner) as totalWins, games.type'))
+                    ->leftJoin('users', 'users.id', '=', 'game_user.user_id')
+                    ->groupBy('games.type', 'users.id')
+                    ->select('users.id', 'games.type', DB::raw('count(*) as totalGames, games.type'), DB::raw('count(games.winner) as totalWins, games.type'))
                     ->orderBy('games.type')
                     ->get();
 
