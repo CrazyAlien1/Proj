@@ -1,5 +1,4 @@
 @component('mail::message')
-# Introduction
 
 Dear {{$user->name}} , click the link bellow to ative your account
 
@@ -7,6 +6,6 @@ Dear {{$user->name}} , click the link bellow to ative your account
 Activate
 @endcomponent
 
-Thanks,<br>
+Thanks,MemoryGame<br>
 
 @endcomponent

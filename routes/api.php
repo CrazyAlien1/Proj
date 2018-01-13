@@ -35,6 +35,8 @@ Route::put('user/block/{id}', 'UserControllerApi@block');
 Route::put('user/unblock/{id}', 'UserControllerApi@unBlock');
 
 Route::get('users', 'UserControllerApi@allUsers');
+Route::get('authUser/{email}', 'UserControllerApi@getAuthUser');
+Route::put('reset/{email}', 'UserControllerApi@resetPassword');
 
 Route::put('disable/{email}', 'UserControllerApi@disableUser');
 Route::put('user/{email}', 'UserControllerApi@update');

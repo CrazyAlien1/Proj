@@ -70,7 +70,28 @@
                 <a class="btn btn-primary btn-default" v-if="!editingUser" v-on:click.prevent="backEdit">Back</a>
                 <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="cancelEdit">Cancel</a>
                 <a class="btn btn-primary btn-default" v-if="editingUser" v-on:click.prevent="saveChanges">Save Changes</a>
-                <a class="btn btn-primary btn-default" v-if="isAdmin" v-on:click.prevent="resetPassword">ResetPaword</a>
+                <a class="btn btn-primary btn-default" v-on:click.prevent="resetPassword">ResetPaword</a>
+            </div>
+        </div>
+
+        <div class="jumbotron" v-if="isAdmin">
+            <h2>Reseting Password</h2>
+            <div class="form-group">
+                <label for="inputName">Current Password</label>
+                <input  v-model="resetingUser.currentPassword" type="text" class="form-control" id="userReset.currentPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName">New Password</label>
+                <input  v-model="resetingUser.newPassword" type="password" class="form-control" id="userReset.newPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="inputName">Confirm Password</label>
+                <input  v-model="resetingUser.confirmPassword" type="password" class="form-control" id="userReset.confirmPassword" required>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-success"  v-on:click.prevent="resetAdminPassword">Reset</a>
+                <a class="btn btn-primary btn-danger"  v-on:click.prevent="cancelReset">Cancel</a>
             </div>
         </div>
 
@@ -96,7 +117,7 @@
                 <label for="inputEmail">Email</label>
                 <input
                         type="email" class="form-control" v-model="newUser.email"
-                        name="email" id="inputEmail"
+                        name="name" id="inputEmail"
                         placeholder="Email address" required/>
             </div>
 
@@ -140,19 +161,6 @@
             <p>Total Multi Player Games: {{this.myStats['multiplayer']}}</p>
             <p>Total Played Games: {{this.myStats['totalPlayed']}}</p>
             <p>Total Wins: {{this.myStats['totalWin']}}</p>
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Nickname</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr v-for="user in this.allStats['winner']"  :key="user.id">
-                    <td>{{ user }}</td>
-
-                </tr>
-                </tbody>
-            </table>
         </div>
 
             <h3 class="text-center">
@@ -253,6 +261,7 @@
                 editUser:{name:'',username:'',email: '', password: '' },
                 editingUser : false,
                 isAdmin:false,
+                resetingUser:{currentPassword:'',newPassword:'',confirmPassword:'',email:''}
             }
         },
         sockets:{
@@ -519,15 +528,13 @@
                 router.push({ name: 'administraton'});
             },
             saveUser(){
-                console.log(this.newUser);
-                console.log(this.newUser.email);
-
                 axios.post('api/user',
-                    {"name" : this.newUser.name},
-                    {"username" : this.newUser.username},
-                    {"email" : this.newUser.email },
-                    {"password" : this.newUser.password })
+                    {"name" : this.newUser.name,
+                    "username" : this.newUser.username,
+                    "email" : this.newUser.email ,
+                    "password" : this.newUser.password })
                     .then(response=>{
+                        console.log(response);
                         console.log("New User created");
                         console.log('fake i guess   by: cloro');
 
@@ -608,11 +615,12 @@
             },backEdit(){
                 this.showUserProfile = false;
             },saveChanges(){
+
                 axios.put('api/user/'+this.authUser.email,
-                    {"name" : this.editUser.name ,
-                        "nickname" :this.editUser.username,
-                        "email" :this.editUser.email,
-                        "password" :this.editUser.password},
+                    {"name" : this.editUser.name,
+                    "username" : this.editUser.username,
+                    "email" : this.editUser.email ,
+                    "password" : this.editUser.password }
                 )
                     .then(response => {
                         console.log(response);
@@ -626,6 +634,34 @@
                     }).catch(function (error){
                     console.log(error);
                 });
+            },resetPassword(){
+                axios.get('api/authUser/'+this.currentUser.email)
+                    .then(response=>{
+                        console.log(response);
+                            let admin = response.data;
+
+                            if(admin == 1){
+                                this.isAdmin = !this.isAdmin;
+                            }
+
+                    });
+            },resetAdminPassword(){
+                if(this.resetingUser.newPassword !== this.resetingUser.confirmPassword){
+                    //pop up
+                }else{
+                    this.resetingUser.email = this.currentUser.email;
+                    axios.put('api/reset/'+this.resetingUser.email,
+                        {"currentPassword":this.resetingUser.currentPassword,
+                            "newPassword":this.resetingUser.newPassword
+                    })
+                        .then(response => {
+                            console.log(response);
+                        }).catch(function (error){
+                        console.log(error);
+                    });
+                }
+            },cancelReset(){
+                this.isAdmin = false;
             }
         },
         computed: {

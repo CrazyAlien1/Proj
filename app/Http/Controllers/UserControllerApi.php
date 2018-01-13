@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Game;
+use App\Image;
 use App\Mail\Block;
 use App\Mail\Reactive;
 use App\Mail\Remove;
@@ -38,7 +39,7 @@ class UserControllerApi extends Controller
         return $users;
     }
 
-    public function getUserDetails($email){
+    public function getUserDetails(Request $request,$email){
         $users = User::all();
         $currentUser= null;
 
@@ -70,8 +71,7 @@ class UserControllerApi extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User();
-        print_r($request->email);
+        $user = new User;
         $user->name = $request->name;
         $user -> email = $request->email;
         $user->nickname = $request->username;
@@ -82,6 +82,7 @@ class UserControllerApi extends Controller
         $user->ative = 0;
 
         $user->save();
+
     }
 
     /**
@@ -223,9 +224,13 @@ class UserControllerApi extends Controller
             $num = (Image::all()->count() - 2);
             $imageName = $num +1;
             console.log($request->image);
-            $image = $request->image;
-            Storage::disk('local/public/storage ')->putFileAs($imageName, $request->file('image'), $image->path);
-            //Storage::disk('local')->putFileAs($imageName, $request->file('image'), $image->path);
+
+            $image = new Image();
+            $image->path = $imageName ;
+            $image-> face = 'tile';
+            $image -> active = 1;
+            $image ->save();
+            Storage::disk('root')->putFileAs($imageName, $request->file('image'), $image->path);
         }
     }
 
@@ -244,5 +249,39 @@ class UserControllerApi extends Controller
         $currentUser->save();
 
         return redirect()->route('/');
+    }
+
+    public function getAuthUser($email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        return $currentUser->admin;
+    }
+
+    public function resetPassword(Request $request,$email){
+        $users = User::all();
+        $currentUser= null;
+
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        if (Hash::check($request->currentPassword, $currentUser->password)) {
+            //funciona
+            //$currentUser->password = bcrypt($request->newPassword);
+            //$currentUser ->save();
+            return response()->json(['message'=>'Password reset Sucessefully'], 200);
+        }
+        return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
     }
 }

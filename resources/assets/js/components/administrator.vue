@@ -16,11 +16,6 @@
                                     <a class="btn btn-primary btn-success" v-on:click.prevent="uploadImages">Upload</a>
                                 </div>
 
-                                <a class="btn btn-xs btn-primary" v-on:click.prevent="showResestPassowrd">Reset Password</a>
-                                <div v-if="showUploadInput">
-
-                                </div>
-
                                 <a class="btn btn-xs btn-primary" v-on:click.prevent="showStatistic">Statistics</a>
 
                                 <!-- Statistics -->
