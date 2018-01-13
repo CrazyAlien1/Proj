@@ -18,7 +18,7 @@
                     <button class="btn btn-primary" v-on:click.prevent="showChat = !showChat">{{chatToogleButton}}</button>
                         <webchat v-if="showChat" :messages="game.chatMessages" @send-click="sendMessage"></webchat>
                 </div>
-                <h3>{{playerTurn.name}}</h3>
+                <h3>{{playerTurn.name}} has the turn</h3>
                 <div class="col-xs-12  col-sm-5 board">
                     <div v-for="(pieceID, key) of game.board">
                         <img v-bind:src="pieceImageURL(pieceID)" v-on:click="clickPiece(key)">
