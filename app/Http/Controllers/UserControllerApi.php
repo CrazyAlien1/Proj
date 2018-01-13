@@ -225,4 +225,68 @@ class UserControllerApi extends Controller
 
         return $currentUser->admin;
     }
+
+    public function disableUser($email){
+        $users = User::all();
+        $currentUser= null;
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+        $currentUser->ative = 0;
+        $currentUser->save();
+    }
+
+    public function upload(Request $request){
+        if ($request->hasFile('image'))
+        {
+            $num = (Image::all()->count() - 2);
+            $imageName = $num +1;
+            console.log($request->image);
+            $image = new Image();
+            $image->path = $imageName ;
+            $image-> face = 'tile';
+            $image -> active = 1;
+            $image ->save();
+            Storage::disk('upload')->putFileAs($imageName, $request->file('image'), $image->path);
+        }
+    }
+
+    public function reactiveUser($id){
+        $user = User::find($id);
+        $user->ative = 1;
+        $user->save();
+        return redirect()->route('/');
+    }
+
+    public function resetPassword(Request $request,$email){
+        $users = User::all();
+        $currentUser= null;
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+        if (Hash::check($request->currentPassword, $currentUser->password)) {
+            $currentUser->password = bcrypt($request->newPassword);
+            $currentUser ->save();
+            return response()->json(['message'=>'Password reset Sucessefully'], 200);
+        }
+        return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
+    }
+    public function passwordReset($email){
+        $users = User::all();
+        $currentUser= null;
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+
+        \Mail::to($currentUser)->send(new Reset($currentUser));
+    }
 }
