@@ -65,3 +65,6 @@ Route::get('statistics', 'StatisticsControllerApi@getStatistics');
 Route::post('image/upload', 'ImageControllerApi@upload');
 
 Route::put('activateAccount/{username}','UserControllerApi@reactiveUser');
+
+
+Route::get('verifyPieces', 'GameControllerApi@verify');

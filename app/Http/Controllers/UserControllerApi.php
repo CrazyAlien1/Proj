@@ -230,7 +230,7 @@ class UserControllerApi extends Controller
             $image-> face = 'tile';
             $image -> active = 1;
             $image ->save();
-            Storage::disk('root')->putFileAs($imageName, $request->file('image'), $image->path);
+            Storage::disk('local')->putFileAs($imageName, $request->file('image'), $image->path);
         }
     }
 
@@ -269,9 +269,8 @@ class UserControllerApi extends Controller
         }
 
         if (Hash::check($request->currentPassword, $currentUser->password)) {
-            //funciona
-            //$currentUser->password = bcrypt($request->newPassword);
-            //$currentUser ->save();
+            $currentUser->password = bcrypt($request->newPassword);
+            $currentUser ->save();
             return response()->json(['message'=>'Password reset Sucessefully'], 200);
         }
         return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);

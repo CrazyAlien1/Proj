@@ -125,4 +125,8 @@ class GameControllerApi extends Controller
         $game = Game::find($id);
         $game->delete();
     }
+
+    public function verify(Request $request){
+        return $request;
+    }
 }
