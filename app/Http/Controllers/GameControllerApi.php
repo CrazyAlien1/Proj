@@ -109,6 +109,7 @@ class GameControllerApi extends Controller
         $winner = User::find($request->winner);
 
         $game->winner()->associate($winner);
+
         $game->save();
         //adicionar o winner á relacao e os players
     }

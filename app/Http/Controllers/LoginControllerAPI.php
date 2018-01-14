@@ -1,21 +1,16 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
 define('YOUR_SERVER_URL', 'http://proj_dad.teste');  //alterar para cada um de voces
 // Check "oauth_clients" table for next 2 values:
 define('CLIENT_ID', '2');
-define('CLIENT_SECRET','COTyHoR0vf2GKmc2FC9kE1MCLMSqWMpifP1d2HHx');
-
+define('CLIENT_SECRET','FHZqeZndGGg2yxgnTIjJ1HVeGP2h0MIYlBNfT4TR');
 class LoginControllerAPI extends Controller
 {
     //
     public function login(Request $request)
     {
         $http = new \GuzzleHttp\Client;
-
         $response = $http->post(YOUR_SERVER_URL.'/oauth/token', [
             'form_params' => [
                 'grant_type' => 'password',
@@ -27,7 +22,6 @@ class LoginControllerAPI extends Controller
             ],
             'exceptions' => false,
         ]);
-
         $errorCode= $response->getStatusCode();
         if ($errorCode=='200') {
             return json_decode((string) $response->getBody(), true);
@@ -35,7 +29,6 @@ class LoginControllerAPI extends Controller
             return response()->json(['msg'=>'User credentials are invalid'], $errorCode);
         }
     }
-
     public function logout()
     {
         \Auth::guard('api')->user()->token()->revoke();
