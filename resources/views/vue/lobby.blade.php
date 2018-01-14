@@ -2,10 +2,7 @@
 
 @section('content')
     <div>
-        <router-link to="/memorygame">My Games</router-link>
-        <router-link to="/profile">Profile</router-link>
-
-            <router-view></router-view>
+        <router-view></router-view>
     </div>
 @endsection
 

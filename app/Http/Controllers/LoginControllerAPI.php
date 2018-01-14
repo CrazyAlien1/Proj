@@ -1,10 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-define('YOUR_SERVER_URL', 'http://proj_dad.teste');  //alterar para cada um de voces
+
+define('YOUR_SERVER_URL', 'http://dadproj.dad');  //alterar para cada um de voces
 // Check "oauth_clients" table for next 2 values:
 define('CLIENT_ID', '2');
-define('CLIENT_SECRET','FHZqeZndGGg2yxgnTIjJ1HVeGP2h0MIYlBNfT4TR');
+define('CLIENT_SECRET','FUSeGf07oWEhO7BwNxdqP2pFu8PdRMKhkC1MZZpi');
+
 class LoginControllerAPI extends Controller
 {
     //

@@ -1,28 +1,31 @@
 <template>
     <div class="row">
-            <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
-            <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
-            <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
-            <button class="btn btn-primary btn-success" @click.prevent="getOfflineStats">Offline statistics</button>
-            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="getMyStats">My statistics</button>
-            <button v-if="logedIn" class="btn btn-primary btn-success" @click.prevent="showProfile">Profile</button>
+        <br><br>
+        <router-link :to="{ name: 'administration' }" class="btn btn-primary" v-if="logedIn">Administration</router-link>
+        <!--<a class="btn btn-primary" href="http://dadproj.dad/administration" v-if="logedIn">Administration</a>-->
+        <button v-if="logedIn" class="btn btn-primary btn-danger" @click.prevent="clickLogout">Logout</button>
+        <button v-if="!logedIn" class="btn btn-primary btn-success" @click.prevent="showLogin = !showLogin">Log me</button>
+        <button class="btn btn-primary" @click.prevent="getOfflineStats">Offline statistics</button>
+        <button v-if="logedIn" class="btn btn-primary" @click.prevent="getMyStats">My statistics</button>
+        <button v-if="logedIn" class="btn btn-primary" @click.prevent="showProfile">Profile</button>
 
-            <br></br>
-            <span v-if="showLogin && !logedIn">
-                <label for="currentUser.email">E-Mail Address</label>
-                <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
+        <br></br>
+        <span v-if="showLogin && !logedIn">
+            <label for="currentUser.email">E-Mail Address</label>
+            <input v-model="currentUser.email" type="email" class="form-control" id="currentUser.email" required autofocus>
 
-                <label for="currentUser.password">Password</label>
-                <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
+            <label for="currentUser.password">Password</label>
+            <input v-model="currentUser.password" type="password" class="form-control" id="currentUser.password" required autofocus>
 
                 <button class="btn btn-xs btn-success" @click.prevent="clickLogin">Login</button>
+                <button class="btn btn-xs btn-success" @click.prevent="clickReset">Reset Password</button>
                 <button class="btn btn-xs btn-primary" @click.prevent="showRegisterDiv = !showRegisterDiv">Register</button>
 
 
-                <span v-if="loginError">
-                    <h4 class="text-danger">{{ loginError }}</h4>
-                </span>
+            <span v-if="loginError">
+                <h4 class="text-danger">{{ loginError }}</h4>
             </span>
+        </span>
 
         <div class="jumbotron" v-if="showUserProfile">
             <h2>Profile</h2>
@@ -78,7 +81,7 @@
             <h2>Reseting Password</h2>
             <div class="form-group">
                 <label for="inputName">Current Password</label>
-                <input  v-model="resetingUser.currentPassword" type="text" class="form-control" id="userReset.currentPassword" required>
+                <input  v-model="resetingUser.currentPassword" type="password" class="form-control" id="userReset.currentPassword" required>
             </div>
             <div class="form-group">
                 <label for="inputName">New Password</label>
@@ -130,25 +133,25 @@
             </div>
 
             <div class="form-group">
-                <a class="btn btn-primary btn-success" v-on:click.prevent="saveUser">Register</a>
-                <a class="btn btn-primary btn-danger" v-on:click.prevent="cancelRegister">Cancel</a>
+                <a class="btn btn-primary btn-success" @click.prevent="saveUser">Register</a>
+                <a class="btn btn-primary btn-danger" @click.prevent="cancelRegister">Cancel</a>
             </div>
         </div>
 
         <div v-if="statistics">
             <h2>Statistics</h2>
-            <p>Total Single Player Games: {{this.allStats['singlePlayer']}}</p>
-            <p>Total Multi Player Games: {{this.allStats['multiplayer']}}</p>
-            <p>Total Played Games: {{this.allStats['totalPlayed']}}</p>
+            <p>Total Single Player Games: {{allStats['singlePlayer']}}</p>
+            <p>Total Multi Player Games: {{allStats['multiplayer']}}</p>
+            <p>Total Played Games: {{allStats['totalPlayed']}}</p>
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Nickname</th>
+                        <th>Username</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr v-for="user in this.allStats['winner']"  :key="user.id">
-                        <td>{{ user }}</td>
+                    <tr v-for="user in this.allStats['winner']"  :key="user.nickname">
+                        <td>{{ user.nickname }}</td>
 
                     </tr>
                     </tbody>
@@ -157,17 +160,19 @@
 
         <div v-if="myStats">
             <h2>My statistics</h2>
-            <p>Total Single Player Games: {{this.myStats['singlePlayer']}}</p>
-            <p>Total Multi Player Games: {{this.myStats['multiplayer']}}</p>
-            <p>Total Played Games: {{this.myStats['totalPlayed']}}</p>
-            <p>Total Wins: {{this.myStats['totalWin']}}</p>
+            <p v-if="myStats['singlePlayer']">Total Single Player Games: {{myStats['singlePlayer']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['multiplayer']">Total Multi Player Games: {{myStats['multiplayer']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['totalPlayed']">Total Played Games: {{myStats['totalPlayed']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
+            <p v-if="myStats['totalWin']">Total Wins: {{myStats['totalWin']}}</p>
+            <p v-else>Total Single Player Games: 0</p>
         </div>
 
             <h3 class="text-center">
                 <span v-if="isConnected" class="text-success">Online</span>
                 <span v-if="!isConnected" class="text-danger">Offline</span>
-
-                Mrs Derp:
                 <span v-if="logedIn" >{{ currentUser.email }}</span>
                 {{ title }}
             </h3>
@@ -204,7 +209,6 @@
                 <hr>
             </div>
             <div class="row" >
-
                 <div v-bind:class="lobbySize" v-show="showLobby">
                     <h3 class="text-center">Lobby</h3>
 
@@ -225,7 +229,6 @@
                     <game :game="game" :user="user" @close_game="closeGame"  @send-click="sendMessage"></game>
                 </template>
             </div>
-
     </div>
 </template>
 
@@ -395,7 +398,8 @@
             },
             joinServer(){
                 console.log("Joining Server...");
-                this.$socket.emit('authenticate_server', {userID: this.userID});
+
+                this.$socket.emit('authenticate_server', {userID: this.userID, token: this.token});
             },
             loadLobby(){
                 /// send message to server to load the list of games on the lobby
@@ -460,11 +464,6 @@
 
                     //Pedir ao Node para criar o Jogo
                     console.log('Asking Node to ask Laravel if everything is OK');
-
-                    axios.get('api/verifyPieces',{"row":this.rows ,"cols":this.cols})
-                        .then(response=>{
-                            console.log(response);
-                        });
 
                     this.$socket.emit('create_game', {
                                                         userID : this.userID,
@@ -551,9 +550,6 @@
                 console.log("Sending message", data);
                 this.$socket.emit('send_message', data);
             },
-            admin(){
-                router.push({ name: 'administraton'});
-            },
             saveUser(){
                 axios.post('api/user',
                     {"name" : this.newUser.name,
@@ -563,7 +559,6 @@
                     .then(response=>{
                         console.log(response);
                         console.log("New User created");
-                        console.log('fake i guess   by: cloro');
 
                         this.showRegisterDiv = false;
                         this.newUser.name = '';
@@ -586,6 +581,7 @@
             getOfflineStats(){
                 axios.get('api/allStats')
                     .then(response=>{
+                        console.log(response.data);
                         Object.assign(this.allStats,response.data);
                         this.statistics = !this.statistics;
                     });
@@ -624,7 +620,6 @@
                         console.log('User remove sucessufully');
                         this.showUserProfile=!this.showUserProfile;
                     });
-
             },desactive(){
                 axios.put('api/disable/'+this.currentUser.email
                 )
@@ -690,6 +685,13 @@
                 }
             },cancelReset(){
                 this.isAdmin = false;
+            },clickReset(){
+                axios.put('api/resetPassword/' + this.currentUser.email )
+                    .then(response => {
+                        conolse.log("email send sucessefuly") ;
+                    }).catch(function (error){
+                    console.log(error);
+                });
             }
         },
         computed: {

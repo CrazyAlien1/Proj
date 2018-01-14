@@ -8,6 +8,7 @@ use App\Image;
 use App\Mail\Block;
 use App\Mail\Reactive;
 use App\Mail\Remove;
+use App\Mail\Reset;
 use App\Mail\Welcome;
 use App\User;
 use Illuminate\Http\Request;
@@ -15,6 +16,7 @@ use App\Http\Resources\Users as UserResource;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class UserControllerApi extends Controller
@@ -34,12 +36,30 @@ class UserControllerApi extends Controller
     }
 
     public function allUsersOrderByName(){
-        $users = User::orderBy('name')->get();
-
+        $users = DB::table('users')->select('name', 'email', 'nickname')->orderBy('name')->get();
         return $users;
     }
 
-    public function getUserDetails(Request $request,$email){
+    public function usersGamesPlayedStats(){
+        $games = DB::table('users')
+                    ->leftJoin('game_user', 'users.id', '=', 'game_user.user_id')
+                    ->leftJoin('games', 'games.id', '=', 'game_user.game_id')
+                    ->groupBy('users.id', 'games.type')
+                    ->selectRaw('users.id, users.name, users.email, users.nickname, games.type, count(games.type) as totalGames')
+                    ->orderBy('users.name')
+                    ->get();
+
+        $gamesTypeTotal =array (
+            "type"  => "total",
+            "totalGames" => Game::all()->count()
+        );
+
+        //$games->push($gamesTypeTotal);
+
+        return $games;
+    }
+
+    public function getUserDetails($email){
         $users = User::all();
         $currentUser= null;
 
@@ -201,48 +221,6 @@ class UserControllerApi extends Controller
         return $user;
     }
 
-    public function disableUser($email){
-        $users = User::all();
-        $currentUser= null;
-
-        foreach ($users as $user){
-            if($user->email === $email){
-                $currentUser = $user;
-                break;
-            }
-        }
-
-        $currentUser->ative = 0;
-
-        $currentUser->save();
-    }
-
-    public function upload(Request $request){
-
-        if ($request->hasFile('image'))
-        {
-            $num = (Image::all()->count() - 2);
-            $imageName = $num +1;
-            console.log($request->image);
-
-            $image = new Image();
-            $image->path = $imageName ;
-            $image-> face = 'tile';
-            $image -> active = 1;
-            $image ->save();
-            Storage::disk('local')->putFileAs($imageName, $request->file('image'), $image->path);
-        }
-    }
-
-    public function reactiveUser($id){
-        $user = User::find($id);
-
-        $user->ative = 1;
-        $user->save();
-
-        return redirect()->route('/');
-    }
-
     public function getAuthUser($email){
         $users = User::all();
         $currentUser= null;
@@ -257,10 +235,60 @@ class UserControllerApi extends Controller
         return $currentUser->admin;
     }
 
+    public function disableUser($email){
+        $users = User::all();
+        $currentUser= null;
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+        $currentUser->ative = 0;
+        $currentUser->save();
+    }
+
+    public function upload(Request $request){
+        if ($request->hasFile('image'))
+        {
+            $num = (Image::all()->count() - 2);
+            $imageName = $num +1;
+            console.log($request->image);
+            $image = new Image();
+            $image->path = $imageName.'.png' ;
+            $image-> face = 'tile';
+            $image -> active = 1;
+            $image ->save();
+            Storage::disk('upload')->putFileAs($imageName, $request->file('image'), $image->path);
+        }
+    }
+
+    public function reactiveUser($id){
+        $user = User::find($id);
+        $user->ative = 1;
+        $user->save();
+        return redirect()->route('/');
+    }
+
     public function resetPassword(Request $request,$email){
         $users = User::all();
         $currentUser= null;
-
+        foreach ($users as $user){
+            if($user->email === $email){
+                $currentUser = $user;
+                break;
+            }
+        }
+        if (Hash::check($request->currentPassword, $currentUser->password)) {
+            $currentUser->password = bcrypt($request->newPassword);
+            $currentUser ->save();
+            return response()->json(['message'=>'Password reset Sucessefully'], 200);
+        }
+        return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
+    }
+    public function passwordReset($email){
+        $users = User::all();
+        $currentUser= null;
         foreach ($users as $user){
             if($user->email === $email){
                 $currentUser = $user;
@@ -268,11 +296,6 @@ class UserControllerApi extends Controller
             }
         }
 
-        if (Hash::check($request->currentPassword, $currentUser->password)) {
-            $currentUser->password = bcrypt($request->newPassword);
-            $currentUser ->save();
-            return response()->json(['message'=>'Password reset Sucessefully'], 200);
-        }
-        return response()->json(['message'=>'Verify if you insert the correct old password' ], 400);
+        \Mail::to($currentUser)->send(new Reset($currentUser));
     }
 }

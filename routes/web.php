@@ -28,6 +28,10 @@ Route::get('/administration', function(){
     return view('vue.administration');
 });
 
+Route::get('/reset', function(){
+    return view('vue.reset');
+});
+
 
 //Route::resource('users', 'AdministratorController');
 //Route::resource('games', 'AdministratorController');

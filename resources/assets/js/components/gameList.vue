@@ -17,8 +17,9 @@
             <td>{{ game.type }}</td>
             <td>{{ game.status }}</td>
             <td>{{ game.total_players }}</td>
-            <td>{{ game.created_by }}</td>
-            <td>{{ game.winner }}</td>
+            <td>{{ game.created_by.nickname }}</td>
+            <td v-if="game.winner == null">{{ game.winner }}</td>
+            <td v-else>{{ 'Not terminated' }}</td>
         </tr>
         </tbody>
     </table>
