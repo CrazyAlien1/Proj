@@ -516,10 +516,13 @@
                 this.loginError = '';
                 axios.post('api/login', { email: this.currentUser.email, password: this.currentUser.password })
                     .then(response=>{
+
                         this.tokenType = response.data.token_type;
                         this.userToken = response.data.access_token;
 
                         this.token = this.tokenType + " " + this.userToken;
+
+                        this.joinServer();
 
                         console.log("Logged in");
                         this.logedIn = true;
