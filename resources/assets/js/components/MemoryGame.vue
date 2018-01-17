@@ -295,7 +295,7 @@
             },
             request_authenticate(){
                 console.log("SERVER ASKED TO AUTHENTICATE");
-                  this.joinServer();
+                  //this.joinServer();
             },
             disconnect(){
                 console.log('socket disconnected');
@@ -522,10 +522,20 @@
 
                         this.token = this.tokenType + " " + this.userToken;
 
-                        this.joinServer();
+                        console.log(this.token);
 
-                        console.log("Logged in");
-                        this.logedIn = true;
+                        axios.get('api/user/' + this.currentUser.email, {headers: {'Authorization': this.token}})
+                            .then(response=>{
+
+                                this.userID = response.data.id;
+                                this.joinServer();
+
+                                console.log("Logged in");
+                                this.logedIn = true;
+                            })
+                            .catch(error=>{
+                                console.log(error);
+                            })
 
                     })
                     .catch(error=>{
@@ -707,10 +717,11 @@
             'game': GameMemory,
         },
         mounted() {
-            this.userID = prompt("Enter user ID to fake login", "1");
+            //this.userID = prompt("Enter user ID to fake login", "1");
 
             this.loadLobby();
-            this.joinServer();
+            //this.joinServer();
+
             //Send node the username and password you want to login
 
         }

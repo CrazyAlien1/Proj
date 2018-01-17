@@ -7,6 +7,7 @@ use App\Http\Requests\StoreGamePost;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Resources\Games as GamesResource;
+use App\Image;
 
 class GameControllerApi extends Controller
 {
@@ -56,6 +57,9 @@ class GameControllerApi extends Controller
             $game->save();
 
             return new GamesResource(Game::find($game->id));
+        }
+        else{
+            dd("verify Falhou Game Controller");
         }
     }
 
@@ -132,7 +136,7 @@ class GameControllerApi extends Controller
     public function verify($cols,$rows){
         $totalpiecesRequired = ($rows * $cols) / 2;
 
-        $allImages = Image::all()->count -2;
+        $allImages = Image::all()->count()-2;
 
         if($totalpiecesRequired > $allImages){
             return false;
